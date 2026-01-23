@@ -1,0 +1,4 @@
+*.AutoSave*
+**/.versions/*
+**/EtherDreamx64/*
+export/

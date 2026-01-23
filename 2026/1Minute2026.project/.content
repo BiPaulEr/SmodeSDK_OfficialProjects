@@ -1,0 +1,2158 @@
+
+{
+  softwareVersion = 
+  {
+    programName = "Smode Internal", 
+    branchName = "master", 
+    majorVersion = 9, 
+    minorVersion = 1, 
+    buildRevision = 935, 
+    commitHash = "0173b43dc3"
+  }, 
+  content = => @4e8f687881d87f06 
+  {
+    pipeline = 
+    {
+      parameters = {defaultTarget = {"data", -> @cfb3902c0950766a, "rootArea"}}, 
+      contentMaps = 
+      {
+        => @cfb3902c0950766a 
+        {
+          rasterizer = {resolution = #1 {preset = "custom", width = 4320, height = 11238}}, 
+          rootArea = 
+          {
+            resolution = #1 {width = 4320, height = 11238}, 
+            placement = => 'Parametric2dPlacement @a3aa00d575da72d 
+            {
+              scale = => 'SizePlacement2dScale @d9a6275c7a8e9c34 
+              {
+                size = {width = 1.000000000000, height = 1.000000000000, ratio = 1.000000000000}
+              }
+            }
+          }
+        }, 
+        => @a54e9de7066b183b 
+        {
+          rasterizer = {resolution = #1 {preset = "custom", width = 4320, height = 11238}}, 
+          rootArea = 
+          {
+            resolution = #1 {width = 4320, height = 11238}, 
+            placement = => 'Parametric2dPlacement @60c7adc65866c97c 
+            {
+              scale = => 'SizePlacement2dScale @b35b2a9775b5f265 
+              {
+                size = {width = 1.000000000000, height = 1.000000000000, ratio = 1.000000000000}
+              }
+            }
+          }
+        }
+      }, 
+      processors = 
+      {
+        => @1b423797819df9ed 
+        {
+          label = "PreviewSmallResolution", 
+          rasterizer = #1 {resolution = #1 {preset = "custom", width = 432, height = 540}}, 
+          defaultCamera = 
+          {
+            placement = => 'TargetOrientationDistance3dPlacement @434c27f50b4a57f4 {distance = 3.500000000000}, 
+            focusParameters = {distance = 3.500000000000}, 
+            frustum = => 'FieldOfViewPerspectiveFrustum @a177c40d469caaef #2 
+            {
+              clippingDistances = {center = 175.017500000000, size = 349.965000000000, begin = 0.035000000000, end = 350.000000000000}, 
+              customAspectRatio = {value = {p = 4, q = 5}}, 
+              horizontal = 1.047197551197, 
+              vertical = 1.250267490684
+            }
+          }, 
+          layers = 
+          {
+            => 'TextureLayer @ec6c669dff2cd517 
+            {
+              generator = => 'PipelineTextureGenerator @a729ec1950bd64d6 
+              {
+                extractor = => 'Parametric2dPlacement @605e98a12843329 
+                {
+                  scale = => 'SizePlacement2dScale @44433276600c9e80 
+                  {
+                    size = {width = 1.000000000000, height = 1.000000000000, ratio = 1.000000000000}
+                  }
+                }, 
+                source = {"data", -> @cfb3902c0950766a, "rootArea"}
+              }, 
+              renderer = => 'SingleTextureRenderer @7c9d6c4759c67c8b 
+              {
+                placement = => 'Parametric2dPlacement @f0d086bbe78be93a 
+                {
+                  anchor = {x = 0.000000000000, y = 0.000000000000}, 
+                  position = {x = 0.000000000000, y = -0.540000000000}, 
+                  scale = => 'ScaleFactorPlacement2dScale @8f968766979469bd 
+                  {
+                    scaleFactor = {width = 0.100000000000, height = 0.100000000000, ratio = 1.000000000000}
+                  }
+                }
+              }
+            }
+          }
+        }, 
+        => @3fc3b4e6da34c612 
+        {
+          label = "PreviewSmallResolution 2", 
+          rasterizer = #1 {resolution = #1 {preset = "custom", width = 864, height = 1080}}, 
+          defaultCamera = 
+          {
+            placement = => 'TargetOrientationDistance3dPlacement @67cda48450e3680b {distance = 3.500000000000}, 
+            focusParameters = {distance = 3.500000000000}, 
+            frustum = => 'FieldOfViewPerspectiveFrustum @85f6477c1d359510 #2 
+            {
+              clippingDistances = {center = 175.017500000000, size = 349.965000000000, begin = 0.035000000000, end = 350.000000000000}, 
+              customAspectRatio = {value = {p = 4, q = 5}}, 
+              horizontal = 1.047197551197, 
+              vertical = 1.250267490684
+            }
+          }, 
+          layers = 
+          {
+            => 'TextureLayer @c8ede5eca485eae8 
+            {
+              generator = => 'PipelineTextureGenerator @83a86f680b145b29 
+              {
+                extractor = => 'Parametric2dPlacement @22846afb492d0cd6 
+                {
+                  scale = => 'SizePlacement2dScale @60c2b1073ba5a17f 
+                  {
+                    size = {width = 1.000000000000, height = 1.000000000000, ratio = 1.000000000000}
+                  }
+                }, 
+                source = {"data", -> @cfb3902c0950766a, "rootArea"}
+              }, 
+              renderer = => 'SingleTextureRenderer @581cef36026f4374 
+              {
+                placement = => 'Parametric2dPlacement @d45105cabc22d6c5 
+                {
+                  anchor = {x = 0.000000000000, y = 0.000000000000}, 
+                  position = {x = 0.000000000000, y = 0.000000000000}, 
+                  scale = => 'ScaleFactorPlacement2dScale @ab170417cc3d5642 
+                  {
+                    scaleFactor = {width = 0.200000000000, height = 0.200000000000, ratio = 1.000000000000}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }, 
+      outputs = 
+      {
+        => @a3d7acd218d57999 
+        {
+          source = {"data", -> @cfb3902c0950766a, "rootArea"}, 
+          outputDevice = {factory = "Remote Video Output", deviceName = "Video Output 1"}
+        }, 
+        => @877cbc0025303c30 {outputDevice = {factory = "Remote Video Output", deviceName = "Video Output 2"}}, 
+        => @eb57771247dcc07b {outputDevice = {factory = "Remote Video Output", deviceName = "Video Output 3"}}
+      }
+    }, 
+    masterScene = 
+    {
+      tools = 
+      {
+        => 'SharedElement(TextureGenerator) @59645372a1a7179b 
+        {
+          label = "Full_Resol", 
+          expose = false, 
+          content = => 'Compo @d16df451a04e7380 
+          {
+            rasterizer = #1 {resolution = #1 {preset = "custom", width = 4320, height = 11328}}, 
+            defaultCamera = 
+            {
+              placement = => 'TargetOrientationDistance3dPlacement @1b1e6ec3372c2d8b {distance = 3.500000000000}, 
+              focusParameters = {distance = 3.500000000000}, 
+              frustum = => 'FieldOfViewPerspectiveFrustum @5d249c9fb4de463a #2 
+              {
+                clippingDistances = {center = 175.017500000000, size = 349.965000000000, begin = 0.035000000000, end = 350.000000000000}, 
+                customAspectRatio = {value = {p = 45, q = 118}}, 
+                horizontal = 1.047197551197, 
+                vertical = 1.974111423669
+              }
+            }, 
+            layers = 
+            {
+              => 'TextureLayer @60bdd3d1d616b2f1 
+              {
+                generator = => 'ImageFileTextureGenerator @28ac417f809ab6a8 
+                {
+                  extractor = => 'Parametric2dPlacement @8a46bb22d4dab593 
+                  {
+                    scale = => 'SizePlacement2dScale @4d366804fdc561a2 
+                    {
+                      size = {width = 1.000000000000, height = 1.000000000000, ratio = 1.000000000000}
+                    }
+                  }, 
+                  file = {path = "1MinuteData/2026/AI_AE_data_/1minutePM2026_Trace.jpg"}
+                }, 
+                renderer = => 'SingleTextureRenderer @ef24cae9e01a1e05 
+                {
+                  placement = => 'Parametric2dPlacement @216c5920e4b3462c 
+                  {
+                    scale = => 'ScaleFactorPlacement2dScale @bb5c2b7549f068c7 void
+                  }
+                }
+              }
+            }
+          }
+        }
+      }, 
+      layers = 
+      {
+        => 'TextureLayer @c8f77fc78e46000e 
+        {
+          label = "Content Test Pattern", 
+          generator = => 'TestPatternTextureGenerator @8ee48ea4a8c29a01 {resolution = #1 {width = 4320, height = 11238}}, 
+          renderer = => 'SingleTextureRenderer @c56a02b288247878 
+          {
+            placement = => 'Parametric2dPlacement @43eb08c3da631b23 
+            {
+              scale = => 'ScaleFactorPlacement2dScale @44d17e2d64d7fff2 void
+            }, 
+            target = {"data", -> @cfb3902c0950766a, "rootArea"}
+          }
+        }, 
+        => 'TextureLayer @7fa785e32d380e24 
+        {
+          activation = "inactive", 
+          generator = => 'Compo @2d5aaefedec25d5f 
+          {
+            activation = "activationRequested", 
+            rasterizer = #1 {activation = "activationRequested", resolution = #1 {preset = "custom", width = 4320, height = 5400}}, 
+            defaultCamera = 
+            {
+              activation = "activationRequested", 
+              placement = => 'TargetOrientationDistance3dPlacement @7ac339a8ee391b7e 
+              {
+                activation = "activationRequested", 
+                distance = 3.500000000000
+              }, 
+              focusParameters = {distance = 3.500000000000}, 
+              frustum = => 'FieldOfViewPerspectiveFrustum @f85bfee7592be8b1 #2 
+              {
+                activation = "activationRequested", 
+                clippingDistances = {center = 175.017500000000, size = 349.965000000000, begin = 0.035000000000, end = 350.000000000000}, 
+                customAspectRatio = {value = {p = 4, q = 5}}, 
+                horizontal = 1.047197551197, 
+                vertical = 1.250267490684
+              }
+            }, 
+            layers = 
+            {
+              => 'TextureLayer @ee2065ba364c3c29 
+              {
+                activation = "activationRequested", 
+                generator = => 'ReferenceTextureGenerator @b0cfe794203e4f0a 
+                {
+                  activation = "activationRequested", 
+                  extractor = => 'Parametric2dPlacement @a44ffc373ec2a34d 
+                  {
+                    activation = "activationRequested", 
+                    scale = => 'SizePlacement2dScale @77cfdb74e892b5d4 
+                    {
+                      size = {width = 1.000000000000, height = 1.000000000000, ratio = 1.000000000000}
+                    }
+                  }, 
+                  referencer = {shared = true, address = {elementPointer = {"data", -> @59645372a1a7179b, "content"}}}
+                }, 
+                renderer = => 'SingleTextureRenderer @f7b90970bf3402bd 
+                {
+                  activation = "activationRequested", 
+                  placement = => 'Parametric2dPlacement @ee07bccd8fd6f884 
+                  {
+                    activation = "activationRequested", 
+                    position = {y = 1.048257460000}, 
+                    scale = => 'ScaleFactorPlacement2dScale @6c5bf304f37e683f void
+                  }
+                }
+              }
+            }
+          }, 
+          renderer = => 'SingleTextureRenderer @c0a536576bed1968 
+          {
+            activation = "activationRequested", 
+            placement = => 'Parametric2dPlacement @78fb47d394a74153 
+            {
+              activation = "activationRequested", 
+              scale = => 'ScaleFactorPlacement2dScale @dec00819c26b6262 void
+            }, 
+            target = {"data", -> @cfb3902c0950766a, "rootArea"}
+          }
+        }, 
+        => 'TextureLayer @2a37118477bdc3a3 
+        {
+          generator = => 'Compo @78ca3a99844790d8 
+          {
+            rasterizer = #1 {resolution = #1 {preset = "custom", width = 4320, height = 11238}}, 
+            defaultCamera = 
+            {
+              placement = => 'TargetOrientationDistance3dPlacement @2f53adcfb4bcd6f9 {distance = 3.500000000000}, 
+              focusParameters = {distance = 3.500000000000}, 
+              frustum = => 'FieldOfViewPerspectiveFrustum @adcb6a8003ae2536 #2 
+              {
+                clippingDistances = {center = 175.017500000000, size = 349.965000000000, begin = 0.035000000000, end = 350.000000000000}, 
+                customAspectRatio = {value = {p = 720, q = 1873}}, 
+                horizontal = 1.047197551197, 
+                vertical = 1.966763410571
+              }
+            }, 
+            layers = 
+            {
+              => 'TextureLayer @bbb0f1dd6cc9f1ae 
+              {
+                generator = => 'ReferenceTextureGenerator @e55f73f37abb828d 
+                {
+                  extractor = => 'Parametric2dPlacement @f1df685064476eca 
+                  {
+                    scale = => 'SizePlacement2dScale @225f4f13b2177853 
+                    {
+                      size = {width = 1.000000000000, height = 1.000000000000, ratio = 1.000000000000}
+                    }
+                  }, 
+                  referencer = {shared = true, address = {elementPointer = {"data", -> @59645372a1a7179b, "content"}}}
+                }, 
+                renderer = => 'SingleTextureRenderer @a2299d17e5b1cf3a 
+                {
+                  placement = => 'Parametric2dPlacement @bb9728aad5533503 
+                  {
+                    scale = => 'ScaleFactorPlacement2dScale @39cb6763a9fba5b8 void
+                  }
+                }
+              }
+            }
+          }, 
+          renderer = => 'SingleTextureRenderer @9535a2303168d4ef 
+          {
+            placement = => 'Parametric2dPlacement @2d6bd3b4ce228cd4 
+            {
+              scale = => 'ScaleFactorPlacement2dScale @8b509c7e98eeafe5 void
+            }, 
+            target = {"data", -> @cfb3902c0950766a, "rootArea"}
+          }
+        }
+      }
+    }
+  }, 
+  uiState = => 'ProjectDocumentEditor 
+  {
+    state = 
+    {
+      currentVisualizedElement = {"data", -> @4e8f687881d87f06, "masterScene"}, 
+      currentElementWithFile = {"data", -> @28ac417f809ab6a8}, 
+      currentViewport = => 'SceneViewportSelector {source = {"data", -> @3fc3b4e6da34c612}}, 
+      currentElementEditor = GizmoPipelineEditor, 
+      currentElement = {"data", -> @3fc3b4e6da34c612}, 
+      currentReferenceTarget = {"data", -> @d16df451a04e7380}, 
+      currentPipelineElement = {"data", -> @3fc3b4e6da34c612}, 
+      currentPipelineMode = "pipeline", 
+      currentElementTree = {"data", -> @3fc3b4e6da34c612}
+    }, 
+    internal = => 'ToolsAndContentLayout 
+    {
+      content = 'SplitLayout 
+      {
+        first = 'SplitLayout 
+        {
+          ratio = 0.689102564103, 
+          first = 'GizmoViewportEditor 
+          {
+            widget = 'ToolsAndContentLayout 
+            {
+              content = 'DocumentWeakPointerContextualEditor 
+              {
+                state = 
+                {
+                  {
+                    key = => 'ObjectWeakPointer {"data", -> @4e8f687881d87f06, "masterScene"}, 
+                    value = => => 'SceneViewportEditor 
+                    {
+                      widget = 'ToolsAndContentLayout 
+                      {
+                        content = 'ElementViewportContent 
+                        {
+                          rootViewport = 'ProcessorViewport 
+                          {
+                            widget = 'ViewportGraphicsWidgetContainer 
+                            {
+                              graphicsWidget = => 'ProcessorGraphicsWidget 
+                              {
+                                target = {"data", -> @4e8f687881d87f06, "masterScene"}, 
+                                viewportCamera = 
+                                {
+                                  placement = => 'TargetOrientationDistance3dPlacement 
+                                  {
+                                    orientation = {x = -0.785398185253, y = 0.785398185253}, 
+                                    distance = 20.000000000000
+                                  }, 
+                                  focusParameters = {distance = 20.000000000000}, 
+                                  frustum = => 'FieldOfViewPerspectiveFrustum #2 
+                                  {
+                                    clippingDistances = 
+                                    {
+                                      center = 1000.100000000000, 
+                                      size = 1999.800000000000, 
+                                      begin = 0.200000000000, 
+                                      end = 2000.000000000000
+                                    }, 
+                                    customAspectRatio = {value = {p = 4, q = 5}}, 
+                                    vertical = 1.817458844748
+                                  }
+                                }, 
+                                camera = {"engine", -> @2128b88cddac83a4, "viewportCamera"}, 
+                                cameraHelper = 
+                                {
+                                  helper = => 'PerspectiveCameraInteractiveHelper 
+                                  {
+                                    target = {"engine", -> @2128b88cddac83a4, "viewportCamera"}, 
+                                    orbitalMoveHelper = {target = {"engine", -> @529baa88f3e964df}}, 
+                                    panningHelper = {target = {"engine", -> @2128b88cddac83a4, "viewportCamera"}}, 
+                                    distanceHelper = {target = {"engine", -> @2128b88cddac83a4, "viewportCamera"}}, 
+                                    fovHelper = {target = {"engine", -> @c4d2e070ea944cfe, "horizontal"}}
+                                  }
+                                }, 
+                                currentTool = => 'ManipulationTool void, 
+                                showWireframe = false, 
+                                currentElementTree = {"data", -> @3fc3b4e6da34c612}, 
+                                viewCamera = 
+                                {
+                                  placement = => 'TargetOrientationDistance3dPlacement 
+                                  {
+                                    target = {x = 0.548306465149, y = 0.396734535694, z = 0.999999940395}, 
+                                    orientation = {x = 3.141592741013}
+                                  }, 
+                                  focusParameters = {distance = 1.000000000000}, 
+                                  frustum = => 'OrthographicFrustum #1 
+                                  {
+                                    clippingDistances = {automatic = false}, 
+                                    customAspectRatio = {value = {p = 4, q = 5}}, 
+                                    size = {width = 0.894698728542, height = 1.118373394012, ratio = 0.800000011921}
+                                  }
+                                }, 
+                                viewCameraHelper = 
+                                {
+                                  target = {"engine", -> @2128b88cddac83a4, "viewCamera"}, 
+                                  frustumSizeHelper = {target = {"engine", -> @2128b88cddac83a4, "viewCamera"}}, 
+                                  panningMoveHelper = {target = {"engine", -> @2128b88cddac83a4, "viewCamera"}}
+                                }, 
+                                rasterizer = {"data", -> @3fc3b4e6da34c612, "rasterizer"}
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      state = 
+                      {
+                        transformModeTranslate = true, 
+                        currentView = => 'SceneViewportSelector {source = {"data", -> @3fc3b4e6da34c612}}
+                      }
+                    }
+                  }, 
+                  {
+                    key = => 'ObjectWeakPointer {"data", -> @1b423797819df9ed}, 
+                    value = => => 'TextureGeneratorViewportEditor 
+                    {
+                      widget = 'ToolsAndContentLayout 
+                      {
+                        content = 'ElementViewportContent 
+                        {
+                          rootViewport = 'Leaf2dViewport 
+                          {
+                            widget = 'ViewportGraphicsWidgetContainer 
+                            {
+                              graphicsWidget = => 'TextureGenerator2dGraphicsWidget 
+                              {
+                                target = {"data", -> @1b423797819df9ed}, 
+                                viewportCamera = 
+                                {
+                                  placement = => 'TargetOrientationDistance3dPlacement {distance = 3.500000000000}, 
+                                  focusParameters = {distance = 3.500000000000}, 
+                                  frustum = => 'FieldOfViewPerspectiveFrustum #2 
+                                  {
+                                    clippingDistances = 
+                                    {
+                                      center = 175.017500000000, 
+                                      size = 349.965000000000, 
+                                      begin = 0.035000000000, 
+                                      end = 350.000000000000
+                                    }, 
+                                    customAspectRatio = {value = {p = 108, q = 283}}, 
+                                    horizontal = 1.047197551197, 
+                                    vertical = 1.973461569731
+                                  }
+                                }, 
+                                camera = {"engine", -> @698cca6d5f267b71, "viewportCamera"}, 
+                                cameraHelper = 
+                                {
+                                  helper = => 'PerspectiveCameraInteractiveHelper 
+                                  {
+                                    target = {"engine", -> @698cca6d5f267b71, "viewportCamera"}, 
+                                    orbitalMoveHelper = {target = {"engine", -> @bfe7f3c8e0761528}}, 
+                                    panningHelper = {target = {"engine", -> @698cca6d5f267b71, "viewportCamera"}}, 
+                                    distanceHelper = {target = {"engine", -> @698cca6d5f267b71, "viewportCamera"}}, 
+                                    fovHelper = {target = {"engine", -> @6ced032dda28f213, "horizontal"}}
+                                  }
+                                }, 
+                                currentTool = => 'ManipulationTool void, 
+                                showWireframe = false, 
+                                currentSelection = {{"data", -> @1b423797819df9ed}}, 
+                                currentElementTree = {"data", -> @1b423797819df9ed}, 
+                                viewCamera = 
+                                {
+                                  placement = => 'TargetOrientationDistance3dPlacement 
+                                  {
+                                    target = {x = 0.216000005603, y = 0.565999984741, z = 1.000000000000}, 
+                                    orientation = {x = 3.141592653590}
+                                  }, 
+                                  focusParameters = {distance = 1.000000000000}, 
+                                  frustum = => 'OrthographicFrustum #1 
+                                  {
+                                    customAspectRatio = {enabled = true, value = {p = 523, q = 400}}, 
+                                    size = {width = 1.689167965102, height = 1.291913032532, ratio = 1.307493556119}
+                                  }
+                                }, 
+                                viewCameraHelper = 
+                                {
+                                  target = {"engine", -> @698cca6d5f267b71, "viewCamera"}, 
+                                  frustumSizeHelper = {target = {"engine", -> @698cca6d5f267b71, "viewCamera"}}, 
+                                  panningMoveHelper = {target = {"engine", -> @698cca6d5f267b71, "viewCamera"}}
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      state = 
+                      {
+                        transformModeTranslate = true, 
+                        currentView = => 'TextureGeneratorViewportSelector "twoDimensions"
+                      }
+                    }
+                  }, 
+                  {
+                    key = => 'ObjectWeakPointer {"data", -> @d16df451a04e7380}, 
+                    value = => => 'TextureGeneratorViewportEditor 
+                    {
+                      widget = 'ToolsAndContentLayout 
+                      {
+                        content = 'ElementViewportContent 
+                        {
+                          rootViewport = 'Leaf2dViewport 
+                          {
+                            widget = 'ViewportGraphicsWidgetContainer 
+                            {
+                              graphicsWidget = => 'TextureGenerator2dGraphicsWidget 
+                              {
+                                target = {"data", -> @d16df451a04e7380}, 
+                                viewportCamera = 
+                                {
+                                  placement = => 'TargetOrientationDistance3dPlacement {distance = 3.500000000000}, 
+                                  focusParameters = {distance = 3.500000000000}, 
+                                  frustum = => 'FieldOfViewPerspectiveFrustum #2 
+                                  {
+                                    clippingDistances = 
+                                    {
+                                      center = 175.017500000000, 
+                                      size = 349.965000000000, 
+                                      begin = 0.035000000000, 
+                                      end = 350.000000000000
+                                    }, 
+                                    customAspectRatio = {value = {p = 45, q = 118}}, 
+                                    horizontal = 1.047197551197, 
+                                    vertical = 1.974111423669
+                                  }
+                                }, 
+                                camera = {"engine", -> @50ce608e67d211cd, "viewportCamera"}, 
+                                cameraHelper = 
+                                {
+                                  helper = => 'PerspectiveCameraInteractiveHelper 
+                                  {
+                                    target = {"engine", -> @50ce608e67d211cd, "viewportCamera"}, 
+                                    orbitalMoveHelper = {target = {"engine", -> @5b0948021f6bc254}}, 
+                                    panningHelper = {target = {"engine", -> @50ce608e67d211cd, "viewportCamera"}}, 
+                                    distanceHelper = {target = {"engine", -> @50ce608e67d211cd, "viewportCamera"}}, 
+                                    fovHelper = {target = {"engine", -> @eff4c6a22ee935cf, "horizontal"}}
+                                  }
+                                }, 
+                                currentTool = => 'ManipulationTool void, 
+                                showWireframe = false, 
+                                currentSelection = {{"data", -> @ee2065ba364c3c29}}, 
+                                currentElementTree = {"data", -> @4e8f687881d87f06, "masterScene"}, 
+                                viewCamera = 
+                                {
+                                  placement = => 'TargetOrientationDistance3dPlacement 
+                                  {
+                                    target = {x = 2.160000085831, y = 5.664000034332, z = 1.000000000000}, 
+                                    orientation = {x = 3.141592653590}
+                                  }, 
+                                  focusParameters = {distance = 1.000000000000}, 
+                                  frustum = => 'OrthographicFrustum #1 
+                                  {
+                                    customAspectRatio = {enabled = true, value = {p = 3329, q = 2500}}, 
+                                    size = {width = 4.554012488818, height = 3.420009374619, ratio = 1.331578949056}
+                                  }
+                                }, 
+                                viewCameraHelper = 
+                                {
+                                  target = {"engine", -> @50ce608e67d211cd, "viewCamera"}, 
+                                  frustumSizeHelper = {target = {"engine", -> @50ce608e67d211cd, "viewCamera"}}, 
+                                  panningMoveHelper = {target = {"engine", -> @50ce608e67d211cd, "viewCamera"}}
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      state = 
+                      {
+                        transformModeTranslate = true, 
+                        currentView = => 'TextureGeneratorViewportSelector "twoDimensions"
+                      }
+                    }
+                  }, 
+                  {
+                    key = => 'ObjectWeakPointer {"data", -> @2d5aaefedec25d5f}, 
+                    value = => => 'TextureGeneratorViewportEditor 
+                    {
+                      widget = 'ToolsAndContentLayout 
+                      {
+                        content = 'ElementViewportContent 
+                        {
+                          rootViewport = 'Leaf2dViewport 
+                          {
+                            widget = 'ViewportGraphicsWidgetContainer 
+                            {
+                              graphicsWidget = => 'TextureGenerator2dGraphicsWidget 
+                              {
+                                target = {"data", -> @2d5aaefedec25d5f}, 
+                                viewportCamera = 
+                                {
+                                  placement = => 'TargetOrientationDistance3dPlacement {distance = 3.500000000000}, 
+                                  focusParameters = {distance = 3.500000000000}, 
+                                  frustum = => 'FieldOfViewPerspectiveFrustum #2 
+                                  {
+                                    clippingDistances = 
+                                    {
+                                      center = 175.017500000000, 
+                                      size = 349.965000000000, 
+                                      begin = 0.035000000000, 
+                                      end = 350.000000000000
+                                    }, 
+                                    customAspectRatio = {value = {p = 4, q = 5}}, 
+                                    horizontal = 1.047197551197, 
+                                    vertical = 1.250267490684
+                                  }
+                                }, 
+                                camera = {"engine", -> @eb560470f6f951f, "viewportCamera"}, 
+                                cameraHelper = 
+                                {
+                                  helper = => 'PerspectiveCameraInteractiveHelper 
+                                  {
+                                    target = {"engine", -> @eb560470f6f951f, "viewportCamera"}, 
+                                    orbitalMoveHelper = {target = {"engine", -> @e5ccbde92d10583e}}, 
+                                    panningHelper = {target = {"engine", -> @eb560470f6f951f, "viewportCamera"}}, 
+                                    distanceHelper = {target = {"engine", -> @eb560470f6f951f, "viewportCamera"}}, 
+                                    fovHelper = {target = {"engine", -> @f427cb91fc654671, "horizontal"}}
+                                  }
+                                }, 
+                                currentTool = => 'ManipulationTool void, 
+                                showWireframe = false, 
+                                currentSelection = {{"data", -> @bf6371a755c6dc02}}, 
+                                currentElementTree = {"data", -> @1b423797819df9ed}, 
+                                viewCamera = 
+                                {
+                                  placement = => 'TargetOrientationDistance3dPlacement 
+                                  {
+                                    target = {x = 2.160000085831, y = 2.700000047684, z = 1.000000000000}, 
+                                    orientation = {x = 3.141592653590}
+                                  }, 
+                                  focusParameters = {distance = 1.000000000000}, 
+                                  frustum = => 'OrthographicFrustum #1 
+                                  {
+                                    customAspectRatio = {enabled = true, value = {p = 3329, q = 2500}}, 
+                                    size = {width = 7.368626892855, height = 5.533751487732, ratio = 1.331578931434}
+                                  }
+                                }, 
+                                viewCameraHelper = 
+                                {
+                                  target = {"engine", -> @eb560470f6f951f, "viewCamera"}, 
+                                  frustumSizeHelper = {target = {"engine", -> @eb560470f6f951f, "viewCamera"}}, 
+                                  panningMoveHelper = {target = {"engine", -> @eb560470f6f951f, "viewCamera"}}
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      state = 
+                      {
+                        transformModeTranslate = true, 
+                        currentView = => 'TextureGeneratorViewportSelector "twoDimensions"
+                      }
+                    }
+                  }
+                }
+              }
+            }, 
+            state = 
+            {
+              targetPointer = {"data", -> @4e8f687881d87f06, "masterScene"}, 
+              targetPointerAsSelection = {{"data", -> @4e8f687881d87f06, "masterScene"}}
+            }
+          }, 
+          second = 'ElementEditorsTabbedLayout 
+          {
+            widgets = 
+            {
+              'GizmoPipelineEditor 
+              {
+                widget = 'ToolsAndContentLayout 
+                {
+                  content = 'DocumentWeakPointerContextualEditor 
+                  {
+                    state = 
+                    {
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @4e8f687881d87f06, "pipeline"}, 
+                        value = => => 'PipelineEditor 
+                        {
+                          internal = => 'ViewportLayout {viewPosition = {y = 147}}
+                        }
+                      }
+                    }
+                  }
+                }, 
+                state = 
+                {
+                  targetPointer = {"data", -> @4e8f687881d87f06, "pipeline"}, 
+                  targetPointerAsSelection = {{"data", -> @4e8f687881d87f06, "pipeline"}}
+                }
+              }, 
+              'GizmoElementFileEditor 
+              {
+                widget = 'ToolsAndContentLayout 
+                {
+                  content = 'DocumentWeakPointerContextualEditor 
+                  {
+                    state = 
+                    {
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @28ac417f809ab6a8}, 
+                        value = => => 'ElementFileEditor 
+                        {
+                          widget = 'FileBrowser 
+                          {
+                            internal = => 'SplitLayout 
+                            {
+                              ratio = 0.333300000000, 
+                              first = 'FolderNavigator 
+                              {
+                                widget = 'TableWidget 
+                                {
+                                  state = 
+                                  {
+                                    header = => 'TableHeader 
+                                    {
+                                      stretchToFit = true, 
+                                      columns = 
+                                      {
+                                        => {name = "name", width = 166}
+                                      }
+                                    }, 
+                                    expandedRowTargets = 
+                                    {
+                                      {"data", -> @1}, 
+                                      {"data", -> @1, "mediaDirectories"}, 
+                                      {"data", -> @968fa160cb587c30}, 
+                                      {"data", -> @7652ca9ade6f6cec}
+                                    }, 
+                                    selectedRowTargets = {{"data", -> @1f107f99789d94c5}}, 
+                                    lastSelectedRowTarget = {"data", -> @1f107f99789d94c5}
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }, 
+                state = {targetPointer = {"data", -> @28ac417f809ab6a8}, targetPointerAsSelection = {{"data", -> @28ac417f809ab6a8}}}
+              }, 
+              'GizmoReferenceTargetEditor 
+              {
+                widget = 'ToolsAndContentLayout 
+                {
+                  content = 'DocumentWeakPointerContextualEditor 
+                  {
+                    state = 
+                    {
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @d16df451a04e7380}, 
+                        value = => => 'ElementTableEditor 
+                        {
+                          widget = 'ToolsAndContentLayout 
+                          {
+                            content = 'ElementTableWidget 
+                            {
+                              state = 
+                              {
+                                header = => 'TableHeader 
+                                {
+                                  stretchToFit = true, 
+                                  columns = 
+                                  {
+                                    => {name = "visualize", width = 22}, 
+                                    => {name = "elements", width = 192}, 
+                                    => {name = "status", width = 22}, 
+                                    => {name = "activation", width = 22}, 
+                                    => {name = "solo", width = 22}, 
+                                    => {name = "colorLabel", width = 22}, 
+                                    => {name = "editable", width = 22}, 
+                                    => {name = "value", width = 209}, 
+                                    => {name = "profile", visible = false, width = 180}, 
+                                    => {name = "activity", width = 22}, 
+                                    => {name = "loading", visible = false, width = 22}, 
+                                    => {name = "type", visible = false, width = 100}, 
+                                    => {name = "menu", visible = false, width = 22}
+                                  }
+                                }, 
+                                expandedRowTargets = {{"data", -> @d16df451a04e7380, "layers"}, {"data", -> @d16df451a04e7380}}, 
+                                selectedRowTargets = {{"data", -> @60bdd3d1d616b2f1}}, 
+                                lastSelectedRowTarget = {"data", -> @60bdd3d1d616b2f1}
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }, 
+                state = {targetPointer = {"data", -> @d16df451a04e7380}, targetPointerAsSelection = {{"data", -> @d16df451a04e7380}}}
+              }
+            }, 
+            currentTabIndex = 0
+          }
+        }, 
+        second = 'SplitLayout 
+        {
+          ratio = 0.650000000000, 
+          first = 'GizmoCurrentElementTreeEditor 
+          {
+            widget = 'ToolsAndContentLayout 
+            {
+              content = 'DocumentWeakPointerContextualEditor 
+              {
+                state = 
+                {
+                  {
+                    key = => 'ObjectWeakPointer {"data", -> @4e8f687881d87f06, "masterScene"}, 
+                    value = => => 'ElementTableEditor 
+                    {
+                      widget = 'ToolsAndContentLayout 
+                      {
+                        content = 'ElementTableWidget 
+                        {
+                          state = 
+                          {
+                            header = => 'TableHeader 
+                            {
+                              stretchToFit = true, 
+                              columns = 
+                              {
+                                => {name = "visualize", width = 22}, 
+                                => {name = "elements", width = 194}, 
+                                => {name = "status", width = 22}, 
+                                => {name = "activation", width = 22}, 
+                                => {name = "solo", width = 22}, 
+                                => {name = "colorLabel", width = 22}, 
+                                => {name = "editable", width = 22}, 
+                                => {name = "value", width = 211}, 
+                                => {name = "profile", visible = false, width = 180}, 
+                                => {name = "activity", width = 22}, 
+                                => {name = "loading", visible = false, width = 22}, 
+                                => {name = "type", visible = false, width = 100}, 
+                                => {name = "menu", visible = false, width = 22}
+                              }
+                            }, 
+                            expandedRowTargets = 
+                            {
+                              {"data", -> @4e8f687881d87f06, "masterScene"}, 
+                              {"data", -> @2d5aaefedec25d5f, "layers"}, 
+                              {"data", -> @4e8f687881d87f06, "masterScene.layers"}, 
+                              {"data", -> @59645372a1a7179b}, 
+                              {"data", -> @7fa785e32d380e24}, 
+                              {"data", -> @7fa785e32d380e24, "generator"}, 
+                              {"data", -> @2d5aaefedec25d5f}, 
+                              {"data", -> @2a37118477bdc3a3}
+                            }, 
+                            selectedRowTargets = {{"data", -> @bbb0f1dd6cc9f1ae}}, 
+                            lastSelectedRowTarget = {"data", -> @bbb0f1dd6cc9f1ae}
+                          }
+                        }
+                      }
+                    }
+                  }, 
+                  {
+                    key = => 'ObjectWeakPointer {"data", -> @cfb3902c0950766a}, 
+                    value = => => 'ElementTableEditor 
+                    {
+                      widget = 'ToolsAndContentLayout 
+                      {
+                        content = 'ElementTableWidget 
+                        {
+                          state = 
+                          {
+                            header = => 'TableHeader 
+                            {
+                              stretchToFit = true, 
+                              columns = 
+                              {
+                                => {name = "visualize", width = 22}, 
+                                => {name = "elements", width = 194}, 
+                                => {name = "status", width = 22}, 
+                                => {name = "activation", width = 22}, 
+                                => {name = "solo", width = 22}, 
+                                => {name = "colorLabel", width = 22}, 
+                                => {name = "editable", width = 22}, 
+                                => {name = "value", width = 211}, 
+                                => {name = "profile", visible = false, width = 180}, 
+                                => {name = "activity", width = 22}, 
+                                => {name = "loading", visible = false, width = 22}, 
+                                => {name = "type", visible = false, width = 100}, 
+                                => {name = "menu", visible = false, width = 22}
+                              }
+                            }, 
+                            expandedRowTargets = {{"data", -> @cfb3902c0950766a}}, 
+                            selectedRowTargets = {{"data", -> @cfb3902c0950766a}}, 
+                            lastSelectedRowTarget = {"data", -> @cfb3902c0950766a}
+                          }
+                        }
+                      }
+                    }
+                  }, 
+                  {
+                    key = => 'ObjectWeakPointer {"data", -> @1b423797819df9ed}, 
+                    value = => => 'ElementTableEditor 
+                    {
+                      widget = 'ToolsAndContentLayout 
+                      {
+                        content = 'ElementTableWidget 
+                        {
+                          state = 
+                          {
+                            header = => 'TableHeader 
+                            {
+                              stretchToFit = true, 
+                              columns = 
+                              {
+                                => {name = "visualize", width = 22}, 
+                                => {name = "elements", width = 194}, 
+                                => {name = "status", width = 22}, 
+                                => {name = "activation", width = 22}, 
+                                => {name = "solo", width = 22}, 
+                                => {name = "colorLabel", width = 22}, 
+                                => {name = "editable", width = 22}, 
+                                => {name = "value", width = 211}, 
+                                => {name = "profile", visible = false, width = 180}, 
+                                => {name = "activity", width = 22}, 
+                                => {name = "loading", visible = false, width = 22}, 
+                                => {name = "type", visible = false, width = 100}, 
+                                => {name = "menu", visible = false, width = 22}
+                              }
+                            }, 
+                            expandedRowTargets = {{"data", -> @1b423797819df9ed}, {"data", -> @1b423797819df9ed, "layers"}}, 
+                            selectedRowTargets = {{"data", -> @1b423797819df9ed}}, 
+                            lastSelectedRowTarget = {"data", -> @1b423797819df9ed}
+                          }
+                        }
+                      }
+                    }
+                  }, 
+                  {
+                    key = => 'ObjectWeakPointer {"data", -> @3fc3b4e6da34c612}, 
+                    value = => => 'ElementTableEditor 
+                    {
+                      widget = 'ToolsAndContentLayout 
+                      {
+                        content = 'ElementTableWidget 
+                        {
+                          state = 
+                          {
+                            header = => 'TableHeader 
+                            {
+                              stretchToFit = true, 
+                              columns = 
+                              {
+                                => {name = "visualize", width = 22}, 
+                                => {name = "elements", width = 194}, 
+                                => {name = "status", width = 22}, 
+                                => {name = "activation", width = 22}, 
+                                => {name = "solo", width = 22}, 
+                                => {name = "colorLabel", width = 22}, 
+                                => {name = "editable", width = 22}, 
+                                => {name = "value", width = 211}, 
+                                => {name = "profile", visible = false, width = 180}, 
+                                => {name = "activity", width = 22}, 
+                                => {name = "loading", visible = false, width = 22}, 
+                                => {name = "type", visible = false, width = 100}, 
+                                => {name = "menu", visible = false, width = 22}
+                              }
+                            }, 
+                            expandedRowTargets = {{"data", -> @3fc3b4e6da34c612}, {"data", -> @3fc3b4e6da34c612, "layers"}}, 
+                            selectedRowTargets = {{"data", -> @3fc3b4e6da34c612}}, 
+                            lastSelectedRowTarget = {"data", -> @3fc3b4e6da34c612}
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }, 
+            state = {targetPointer = {"data", -> @3fc3b4e6da34c612}, targetPointerAsSelection = {{"data", -> @3fc3b4e6da34c612}}}
+          }, 
+          second = 'ElementEditorsTabbedLayout 
+          {
+            widgets = 
+            {
+              'GizmoParametersEditor 
+              {
+                widget = 'ToolsAndContentLayout 
+                {
+                  content = 'DocumentWeakPointerContextualEditor 
+                  {
+                    state = 
+                    {
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @bf6371a755c6dc02}, 
+                        value = => => 'ElementParametersEditor 
+                        {
+                          widget = 'WeakPointerContextualEditor 
+                          {
+                            state = 
+                            {
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @bf6371a755c6dc02, "generator"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 33}}}, 
+                                      state = 
+                                      {
+                                        viewPosition = {y = 33}, 
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = {{"data", -> @bf6371a755c6dc02, "generator"}}, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @bf6371a755c6dc02, "generator"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @64fb8d76bd2d78e5, "resolution"}, 
+                                            value = => 55
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }, 
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @bf6371a755c6dc02, "renderer"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 156}}}, 
+                                      state = 
+                                      {
+                                        viewPosition = {y = 156}, 
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = 
+                                        {
+                                          {"data", -> @bf6371a755c6dc02, "renderer"}, 
+                                          {"data", -> @967d5a72aff62726, "placement"}, 
+                                          {"data", -> @534b4abfc3eb7150}
+                                        }, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @bf6371a755c6dc02, "renderer"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @967d5a72aff62726, "placement"}, 
+                                            value = => 40
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @4e8f687881d87f06}, 
+                        value = => => 'ProjectParametersEditor 
+                        {
+                          widget = 'ToolsAndContentLayout 
+                          {
+                            content = 'FileTableWidget 
+                            {
+                              state = 
+                              {
+                                header = => 'TableHeader 
+                                {
+                                  stretchToFit = true, 
+                                  columns = 
+                                  {
+                                    => {name = "editable", width = 22}, 
+                                    => {name = "file", width = 290}, 
+                                    => {name = "value", width = 221}, 
+                                    => {name = "lastModificationTime", visible = false}, 
+                                    => {name = "openingStatus", width = 22}
+                                  }
+                                }, 
+                                expandedRowTargets = {{"data", -> @4e8f687881d87f06}}
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @a54e9de7066b183b}, 
+                        value = => => 'ElementParametersEditor 
+                        {
+                          widget = 'WeakPointerContextualEditor 
+                          {
+                            state = 
+                            {
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @a54e9de7066b183b}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      state = 
+                                      {
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = 
+                                        {
+                                          {"data", -> @a54e9de7066b183b}, 
+                                          {"data", -> @a54e9de7066b183b, "rootArea"}, 
+                                          {"data", -> @a54e9de7066b183b, "rasterizer"}, 
+                                          {
+                                            "data", 
+                                            -> @a54e9de7066b183b, 
+                                            "rasterizer.quality"
+                                          }
+                                        }, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @a54e9de7066b183b}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @a54e9de7066b183b, "rootArea"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @a54e9de7066b183b, "rasterizer"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @a54e9de7066b183b, "rasterizer.resolution"}, 
+                                            value = => 55
+                                          }, 
+                                          {
+                                            key = => {"data", -> @a54e9de7066b183b, "rasterizer.quality"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @a54e9de7066b183b, "rootArea.resolution"}, 
+                                            value = => 55
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @c8ede5eca485eae8}, 
+                        value = => => 'ElementParametersEditor 
+                        {
+                          widget = 'WeakPointerContextualEditor 
+                          {
+                            state = 
+                            {
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @c8ede5eca485eae8, "generator"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      state = 
+                                      {
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = {{"data", -> @c8ede5eca485eae8, "generator"}}, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @c8ede5eca485eae8, "generator"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @83a86f680b145b29, "resolution"}, 
+                                            value = => 55
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }, 
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @c8ede5eca485eae8, "renderer"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 156}}}, 
+                                      state = 
+                                      {
+                                        viewPosition = {y = 156}, 
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = 
+                                        {
+                                          {"data", -> @c8ede5eca485eae8, "renderer"}, 
+                                          {"data", -> @581cef36026f4374, "placement"}, 
+                                          {"data", -> @ab170417cc3d5642}
+                                        }, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @c8ede5eca485eae8, "renderer"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @581cef36026f4374, "placement"}, 
+                                            value = => 40
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @cfb3902c0950766a}, 
+                        value = => => 'ElementParametersEditor 
+                        {
+                          widget = 'WeakPointerContextualEditor 
+                          {
+                            state = 
+                            {
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @cfb3902c0950766a}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      state = 
+                                      {
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = 
+                                        {
+                                          {"data", -> @cfb3902c0950766a}, 
+                                          {"data", -> @cfb3902c0950766a, "rootArea"}, 
+                                          {"data", -> @cfb3902c0950766a, "rasterizer"}, 
+                                          {
+                                            "data", 
+                                            -> @cfb3902c0950766a, 
+                                            "rasterizer.quality"
+                                          }
+                                        }, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @cfb3902c0950766a, "rasterizer.quality"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @cfb3902c0950766a}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @cfb3902c0950766a, "rootArea"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @cfb3902c0950766a, "rasterizer"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @cfb3902c0950766a, "rasterizer.resolution"}, 
+                                            value = => 55
+                                          }, 
+                                          {
+                                            key = => {"data", -> @cfb3902c0950766a, "rootArea.resolution"}, 
+                                            value = => 55
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @ec6c669dff2cd517}, 
+                        value = => => 'ElementParametersEditor 
+                        {
+                          widget = 'WeakPointerContextualEditor 
+                          {
+                            state = 
+                            {
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @ec6c669dff2cd517, "generator"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      state = 
+                                      {
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = {{"data", -> @ec6c669dff2cd517, "generator"}}, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @ec6c669dff2cd517, "generator"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @a729ec1950bd64d6, "resolution"}, 
+                                            value = => 55
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }, 
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @ec6c669dff2cd517, "renderer"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 156}}}, 
+                                      state = 
+                                      {
+                                        viewPosition = {y = 156}, 
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = 
+                                        {
+                                          {"data", -> @ec6c669dff2cd517, "renderer"}, 
+                                          {"data", -> @7c9d6c4759c67c8b, "placement"}, 
+                                          {"data", -> @8f968766979469bd}
+                                        }, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @ec6c669dff2cd517, "renderer"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @7c9d6c4759c67c8b, "placement"}, 
+                                            value = => 40
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @1b423797819df9ed}, 
+                        value = => => 'ElementParametersEditor 
+                        {
+                          widget = 'WeakPointerContextualEditor 
+                          {
+                            state = 
+                            {
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @1b423797819df9ed}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      state = 
+                                      {
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = 
+                                        {
+                                          {"data", -> @1b423797819df9ed}, 
+                                          {"data", -> @1b423797819df9ed, "rasterizer"}, 
+                                          {
+                                            "data", 
+                                            -> @1b423797819df9ed, 
+                                            "rasterizer.quality"
+                                          }
+                                        }, 
+                                        selectedRowTargets = {{"data", -> @ec6c669dff2cd517}}, 
+                                        lastSelectedRowTarget = {"data", -> @ec6c669dff2cd517}, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @1b423797819df9ed}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @1b423797819df9ed, "rasterizer"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @1b423797819df9ed, "rasterizer.resolution"}, 
+                                            value = => 55
+                                          }, 
+                                          {
+                                            key = => {"data", -> @1b423797819df9ed, "rasterizer.quality"}, 
+                                            value = => 40
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @ee2065ba364c3c29}, 
+                        value = => => 'ElementParametersEditor 
+                        {
+                          widget = 'WeakPointerContextualEditor 
+                          {
+                            state = 
+                            {
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @ee2065ba364c3c29, "renderer"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 104}}}, 
+                                      state = 
+                                      {
+                                        viewPosition = {y = 104}, 
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = 
+                                        {
+                                          {"data", -> @ee2065ba364c3c29, "renderer"}, 
+                                          {"data", -> @f7b90970bf3402bd, "placement"}, 
+                                          {"data", -> @6c5bf304f37e683f}
+                                        }, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @ee2065ba364c3c29, "renderer"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @f7b90970bf3402bd, "placement"}, 
+                                            value = => 40
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }, 
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @ee2065ba364c3c29, "generator"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      state = 
+                                      {
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = 
+                                        {
+                                          {"data", -> @ee2065ba364c3c29, "generator"}, 
+                                          {"data", -> @b0cfe794203e4f0a, "referencer"}, 
+                                          {
+                                            "data", 
+                                            -> @b0cfe794203e4f0a, 
+                                            "referencer.dynamicVariables"
+                                          }
+                                        }, 
+                                        selectedRowTargets = {{"data", -> @60bdd3d1d616b2f1}}, 
+                                        lastSelectedRowTarget = {"data", -> @60bdd3d1d616b2f1}, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @ee2065ba364c3c29, "generator"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @b0cfe794203e4f0a, "resolution"}, 
+                                            value = => 55
+                                          }, 
+                                          {
+                                            key = => {"data", -> @b0cfe794203e4f0a, "referencer"}, 
+                                            value = => 40
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @c8f77fc78e46000e}, 
+                        value = => => 'ElementParametersEditor 
+                        {
+                          widget = 'WeakPointerContextualEditor 
+                          {
+                            state = 
+                            {
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @c8f77fc78e46000e, "generator"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 52}}}, 
+                                      state = 
+                                      {
+                                        viewPosition = {y = 52}, 
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = {{"data", -> @c8f77fc78e46000e, "generator"}}, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @c8f77fc78e46000e, "generator"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @8ee48ea4a8c29a01, "resolution"}, 
+                                            value = => 55
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @60bdd3d1d616b2f1}, 
+                        value = => => 'ElementParametersEditor 
+                        {
+                          widget = 'WeakPointerContextualEditor 
+                          {
+                            state = 
+                            {
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @60bdd3d1d616b2f1, "generator"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      state = 
+                                      {
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = {{"data", -> @60bdd3d1d616b2f1, "generator"}}, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @60bdd3d1d616b2f1, "generator"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @28ac417f809ab6a8, "resolution"}, 
+                                            value = => 55
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @7fa785e32d380e24}, 
+                        value = => => 'ElementParametersEditor 
+                        {
+                          widget = 'WeakPointerContextualEditor 
+                          {
+                            state = 
+                            {
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @7fa785e32d380e24, "renderer"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 260}}}, 
+                                      state = 
+                                      {
+                                        viewPosition = {y = 260}, 
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = 
+                                        {
+                                          {"data", -> @7fa785e32d380e24, "renderer"}, 
+                                          {"data", -> @c0a536576bed1968, "placement"}, 
+                                          {"data", -> @dec00819c26b6262}
+                                        }, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @7fa785e32d380e24, "renderer"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @c0a536576bed1968, "placement"}, 
+                                            value = => 40
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }, 
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @7fa785e32d380e24, "generator"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 104}}}, 
+                                      state = 
+                                      {
+                                        viewPosition = {y = 104}, 
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = 
+                                        {
+                                          {"data", -> @7fa785e32d380e24, "generator"}, 
+                                          {"data", -> @2d5aaefedec25d5f, "rasterizer"}, 
+                                          {
+                                            "data", 
+                                            -> @2d5aaefedec25d5f, 
+                                            "rasterizer.quality"
+                                          }
+                                        }, 
+                                        selectedRowTargets = {{"data", -> @ee2065ba364c3c29}}, 
+                                        lastSelectedRowTarget = {"data", -> @ee2065ba364c3c29}, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @7fa785e32d380e24, "generator"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @2d5aaefedec25d5f, "rasterizer"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @2d5aaefedec25d5f, "rasterizer.resolution"}, 
+                                            value = => 55
+                                          }, 
+                                          {
+                                            key = => {"data", -> @2d5aaefedec25d5f, "rasterizer.quality"}, 
+                                            value = => 40
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @2a37118477bdc3a3}, 
+                        value = => => 'ElementParametersEditor 
+                        {
+                          widget = 'WeakPointerContextualEditor 
+                          {
+                            state = 
+                            {
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @2a37118477bdc3a3, "generator"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 156}}}, 
+                                      state = 
+                                      {
+                                        viewPosition = {y = 156}, 
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = 
+                                        {
+                                          {"data", -> @2a37118477bdc3a3, "generator"}, 
+                                          {"data", -> @78ca3a99844790d8, "rasterizer.quality"}, 
+                                          {
+                                            "data", 
+                                            -> @78ca3a99844790d8, 
+                                            "rasterizer"
+                                          }
+                                        }, 
+                                        selectedRowTargets = {{"data", -> @bbb0f1dd6cc9f1ae}}, 
+                                        lastSelectedRowTarget = {"data", -> @bbb0f1dd6cc9f1ae}, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @2a37118477bdc3a3, "generator"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @78ca3a99844790d8, "rasterizer"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @78ca3a99844790d8, "rasterizer.resolution"}, 
+                                            value = => 55
+                                          }, 
+                                          {
+                                            key = => {"data", -> @78ca3a99844790d8, "rasterizer.quality"}, 
+                                            value = => 40
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @bbb0f1dd6cc9f1ae}, 
+                        value = => => 'ElementParametersEditor 
+                        {
+                          widget = 'WeakPointerContextualEditor 
+                          {
+                            state = 
+                            {
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @bbb0f1dd6cc9f1ae, "generator"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      state = 
+                                      {
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = 
+                                        {
+                                          {"data", -> @bbb0f1dd6cc9f1ae, "generator"}, 
+                                          {"data", -> @e55f73f37abb828d, "referencer"}, 
+                                          {
+                                            "data", 
+                                            -> @e55f73f37abb828d, 
+                                            "referencer.dynamicVariables"
+                                          }
+                                        }, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @bbb0f1dd6cc9f1ae, "generator"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @e55f73f37abb828d, "resolution"}, 
+                                            value = => 55
+                                          }, 
+                                          {
+                                            key = => {"data", -> @e55f73f37abb828d, "referencer"}, 
+                                            value = => 40
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }, 
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @bbb0f1dd6cc9f1ae, "renderer"}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 156}}}, 
+                                      state = 
+                                      {
+                                        viewPosition = {y = 156}, 
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = 
+                                        {
+                                          {"data", -> @bbb0f1dd6cc9f1ae, "renderer"}, 
+                                          {"data", -> @a2299d17e5b1cf3a, "placement"}, 
+                                          {"data", -> @39cb6763a9fba5b8}
+                                        }, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @bbb0f1dd6cc9f1ae, "renderer"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @a2299d17e5b1cf3a, "placement"}, 
+                                            value = => 40
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }, 
+                      {
+                        key = => 'ObjectWeakPointer {"data", -> @3fc3b4e6da34c612}, 
+                        value = => => 'ElementParametersEditor 
+                        {
+                          widget = 'WeakPointerContextualEditor 
+                          {
+                            state = 
+                            {
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @3fc3b4e6da34c612}, 
+                                value = => => 'ParametersSectionEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'TableWidget 
+                                    {
+                                      state = 
+                                      {
+                                        header = => 'TableHeader 
+                                        {
+                                          stretchToFit = true, 
+                                          columns = 
+                                          {
+                                            => {name = "name", width = 206}, 
+                                            => {name = "pointerToSources", width = 22}, 
+                                            => {name = "value", width = 305}
+                                          }
+                                        }, 
+                                        expandedRowTargets = 
+                                        {
+                                          {"data", -> @3fc3b4e6da34c612}, 
+                                          {"data", -> @3fc3b4e6da34c612, "rasterizer"}, 
+                                          {
+                                            "data", 
+                                            -> @3fc3b4e6da34c612, 
+                                            "rasterizer.quality"
+                                          }
+                                        }, 
+                                        selectedRowTargets = {{"data", -> @c8ede5eca485eae8}}, 
+                                        lastSelectedRowTarget = {"data", -> @c8ede5eca485eae8}, 
+                                        rowHeightByTarget = 
+                                        {
+                                          {
+                                            key = => {"data", -> @3fc3b4e6da34c612}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @3fc3b4e6da34c612, "rasterizer"}, 
+                                            value = => 40
+                                          }, 
+                                          {
+                                            key = => {"data", -> @3fc3b4e6da34c612, "rasterizer.resolution"}, 
+                                            value = => 55
+                                          }, 
+                                          {
+                                            key = => {"data", -> @3fc3b4e6da34c612, "rasterizer.quality"}, 
+                                            value = => 40
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }, 
+                state = {targetPointer = {"data", -> @3fc3b4e6da34c612}, targetPointerAsSelection = {{"data", -> @3fc3b4e6da34c612}}}
+              }, 
+              'HistoryEditor 
+              {
+                widget = 'ToolsAndContentLayout 
+                {
+                  content = 'TableWidget 
+                  {
+                    state = 
+                    {
+                      header = => 'TableHeader 
+                      {
+                        stretchToFit = true, 
+                        columns = 
+                        {
+                          => {name = "name", width = 542}
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }, 
+            currentTabIndex = 0
+          }
+        }
+      }
+    }
+  }
+}
