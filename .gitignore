@@ -2,3 +2,4 @@
 **/.versions/*
 **/EtherDreamx64/*
 export/
+*.bin
