@@ -299,7 +299,7 @@
                 target = {"data", -> @e320049a-ad5c-4ae1-a8fa-d4bf818c590d, "value"}
               }
             }, 
-            value = 0.180555555556
+            value = 0.333333333333
           }, 
           => 'Parameter(ActivationState) @e320049a-bce1-4ae1-a8fa-7b23793384d8 
           {
@@ -848,7 +848,8 @@ Important Video input To adjust for the Texture in Output
                 target = {"data", -> @a8d25b33-7d8b-43c3-a60b-e1bcd3e7fd44, "activation"}
               }
             }, 
-            expose = false
+            expose = false, 
+            value = "inactive"
           }
         }, 
         states = 
@@ -914,8 +915,8 @@ Important Video input To adjust for the Texture in Output
             }
           }
         }, 
-        currentStateIndex = {value = 3, bound = 4}, 
-        currentState = {"data", -> @a8d25b33-aa0a-43c3-a60b-c1f220e962e2}
+        currentStateIndex = {value = 2, bound = 4}, 
+        currentState = {"data", -> @a8d25b33-ab50-43c3-a60b-fcdcc78be950}
       }, 
       => 'AnimationBank @9c80255e-d9e5-4bc1-a8c8-9938dc3f8fd4 
       {
@@ -923,7 +924,7 @@ Important Video input To adjust for the Texture in Output
         {
           => 'FunctionCue(Percentage) @7c3da599-3ca8-4095-9efa-1beb477ad70d 
           {
-            transport = {state = "playing", position = 0.541666666667, length = 3., timeBase = {value = {p = 50}}}, 
+            transport = {state = "playing", position = 1., length = 3., timeBase = {value = {p = 50}}}, 
             parameters = {launchMode = "restartWithActivation", out = {value = 3.}, looping = true}, 
             targets = 
             {
@@ -945,7 +946,7 @@ Important Video input To adjust for the Texture in Output
         label = "Orchestrator", 
         bankSelected = "H/V", 
         bankStateSelected = "B/H State 1", 
-        stateParameters = "2d Transform Y_max(x1), Color Override_max(x4), H Pos R_max(x1)", 
+        stateParameters = "V Pos R_max(x3), H R Act_max(x4), 2d Transform Y_max(x1)", 
         duoParameterNavigator = => 'RandomDuoParameterNavigator @ff3af757-943e-415a-81c3-b71e65ed49a9 void, 
         stateNavigator = => 'RandomStateNavigator @426b9b06-2fb7-404c-8cbd-1319808d2bb9 void, 
         bankNavigator = => 'RandomBankNavigator @b5286508-2cda-444c-9343-6d5d6974cdbb void, 
@@ -1042,32 +1043,32 @@ Important Video input To adjust for the Texture in Output
             label = "H/V", 
             parameters = 
             {
-              => 'Parameter(Percentage) @1d9df268-b8f3-4126-b000-54d25abbad65 {label = "V Pos L_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @f6e7a39f-243e-4a25-9f50-6a57c5c351ec {label = "V Pos L_period"}, 
-              => 'Parameter(Percentage) @72a08110-aa35-46d8-8d98-18fb056113d6 {label = "V Pos R_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @84ecf8fb-4455-4be1-85c1-292bcb54b8a5 {label = "V Pos R_period"}, 
-              => 'Parameter(Percentage) @c616f283-8dc1-4882-86af-22a99fe3acaf {label = "H Pos L_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @458ebce5-4b96-498f-8a13-5209a567257f {label = "H Pos L_period"}, 
-              => 'Parameter(Percentage) @c655bfdb-a6a7-409c-81c9-08c5e7f2c88d {label = "H Pos R_max", value = 0.6}, 
-              => 'Parameter(StrictlyPositiveInteger) @3e68009a-0ddf-4b2c-b67b-0d4b6be1ce66 {label = "H Pos R_period"}, 
-              => 'Parameter(Percentage) @54773174-b0c5-4f55-a259-a800bde05aba {label = "V L Act_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @90fd6af5-763f-40e7-ad10-9a89bca49048 {label = "V L Act_period"}, 
-              => 'Parameter(Percentage) @336393c6-6cf7-4940-bff9-0a9cd7e0be9d {label = "V R Act_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @70ffd6e6-82de-4e8a-b5e9-bc23f3919135 {label = "V R Act_period"}, 
-              => 'Parameter(Percentage) @bd4e7a1b-7aaa-4437-a635-0ece137dafd9 {label = "H L Act_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @bb5b43d6-5e32-4765-b08f-6ae1c18f10a7 {label = "H L Act_period"}, 
-              => 'Parameter(Percentage) @a12d1823-bff2-4bb5-a72c-b32724c22e51 {label = "H R Act_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @63ccfc83-f812-4747-8bae-2ebef247cd50 {label = "H R Act_period"}, 
-              => 'Parameter(Percentage) @9a1dfb89-6585-4dbf-994c-22a98bb9886c {label = "V Flip_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @5e9bbec8-f789-446e-8c5d-9f5ea1267e6e {label = "V Flip_period"}, 
-              => 'Parameter(Percentage) @5f0890d5-3bbb-48ee-aa42-e1b2caf45fa0 {label = "H Flip_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @680d6613-f4c1-4fb1-b551-bb54df5d92f5 {label = "H Flip_period"}, 
-              => 'Parameter(Percentage) @c671d526-e438-478e-a231-db64c019c18d {label = "2d Transform X_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @9b0f58d1-8b15-4cf4-8ec6-6e434aad6955 {label = "2d Transform X_period"}, 
-              => 'Parameter(Percentage) @05e3f3e9-930b-498a-be8f-18fbbb84a243 {label = "2d Transform Y_max", value = 1.}, 
-              => 'Parameter(StrictlyPositiveInteger) @0b7c7ee8-5a41-4611-b723-9b08f0ee8071 {label = "2d Transform Y_period"}, 
-              => 'Parameter(Percentage) @30761570-15d5-4b1f-b543-6b0c6f5cd3cd {label = "Color Override_max", value = 0.8}, 
-              => 'Parameter(StrictlyPositiveInteger) @5cf4faf1-1bb1-4fa5-8d26-a803a2bcc431 {label = "Color Override_period", value = 4}
+              => 'Parameter(Percentage) @75b756ad-a071-46c4-892c-da7faf8664c6 {label = "V Pos L_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @5d31baf9-f445-4bc9-a641-54f4702dfc4c {label = "V Pos L_period"}, 
+              => 'Parameter(Percentage) @3e6e3e1e-4d50-4ea3-887c-c362b882d7af {label = "V Pos R_max", value = 1.}, 
+              => 'Parameter(StrictlyPositiveInteger) @d23176d3-f9f7-4a33-9d7c-f56dd2fea91e {label = "V Pos R_period"}, 
+              => 'Parameter(Percentage) @2a9856a0-b8fb-4b6a-b2e3-12112e95a9f3 {label = "H Pos L_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @276e0655-278b-4fcd-95c5-8c0ff8190058 {label = "H Pos L_period"}, 
+              => 'Parameter(Percentage) @edeee0b3-5461-4aa6-ae0e-bdde7b8a8458 {label = "H Pos R_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @11816708-1851-4199-8609-4ca6152ceb5e {label = "H Pos R_period"}, 
+              => 'Parameter(Percentage) @f01c286f-abc9-4a4d-8202-f98d86b6f8ba {label = "V L Act_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @fc89c399-75b0-4008-aded-8d134d8b4487 {label = "V L Act_period"}, 
+              => 'Parameter(Percentage) @4433d4ef-b8fa-490f-b31c-503182cfa97a {label = "V R Act_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @f6afe70c-738d-429a-9c67-916dfa48b994 {label = "V R Act_period"}, 
+              => 'Parameter(Percentage) @2a56ee75-22e1-4374-b0c5-f8a2e1601814 {label = "H L Act_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @823f8410-2391-4b4e-a097-9ab73014e750 {label = "H L Act_period"}, 
+              => 'Parameter(Percentage) @f1a5cace-0a3e-4443-a617-fddadaf013f8 {label = "H R Act_max", value = 0.8}, 
+              => 'Parameter(StrictlyPositiveInteger) @a5f56e92-09b3-48ce-b550-fd4ecd860ddc {label = "H R Act_period"}, 
+              => 'Parameter(Percentage) @7df3dac1-3338-4a96-aa94-72c304a63d9c {label = "V Flip_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @b37ba15c-4084-4fcd-8c41-004904c1ce97 {label = "V Flip_period"}, 
+              => 'Parameter(Percentage) @163e7cad-4b5f-45ab-98dd-885de0090e52 {label = "H Flip_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @348e8ac1-38cc-4bb2-a1df-a45bcf7d00ac {label = "H Flip_period"}, 
+              => 'Parameter(Percentage) @1d018a1f-4113-4c5d-b1ae-ca25ca71b444 {label = "2d Transform X_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @da7159cf-c84e-4cca-9bd0-932ae828e361 {label = "2d Transform X_period"}, 
+              => 'Parameter(Percentage) @d0080a1e-9cd6-4b1c-908d-14b33d46644f {label = "2d Transform Y_max", value = 0.6}, 
+              => 'Parameter(StrictlyPositiveInteger) @2d62aa16-2da0-4288-9c6a-8b842dd5ad90 {label = "2d Transform Y_period"}, 
+              => 'Parameter(Percentage) @6bfe54db-ee3d-4a42-aace-2324f7da003e {label = "Color Override_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @3c9be2b2-a056-4fa4-8c63-01539293af20 {label = "Color Override_period"}
             }
           }, 
           => @69ff2826-e135-4ef0-9384-389d128c3275 
@@ -1075,18 +1076,18 @@ Important Video input To adjust for the Texture in Output
             label = "Spectrum", 
             parameters = 
             {
-              => 'Parameter(Percentage) @e6e09292-d91d-44fe-9c9e-97a0bd31a7cc {label = "Position 2d Transform_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @b755725e-0eee-4c61-8b52-55216f08a521 {label = "Position 2d Transform_period"}, 
-              => 'Parameter(Percentage) @90d93c9e-aad6-4062-8f48-9d911319252d {label = "V Flip_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @b0447953-37c3-428e-8e52-bf9e988f0485 {label = "V Flip_period"}, 
-              => 'Parameter(Percentage) @ae70e116-e914-4848-afa7-4c032579eb0f {label = "H Flip_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @e06f92ba-eed0-4430-a91d-55b321065fb8 {label = "H Flip_period"}, 
-              => 'Parameter(Percentage) @8b9fbedc-e012-4c2a-aedc-181da3c3d071 {label = "2d Transform X_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @6181b228-4258-40d2-a175-13e5400bf9f8 {label = "2d Transform X_period"}, 
-              => 'Parameter(Percentage) @145cb95e-feac-4023-a843-339b14243b8f {label = "2d Transform Y_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @7f98acbe-616d-4226-a558-c623608474b9 {label = "2d Transform Y_period"}, 
-              => 'Parameter(Percentage) @86e4debc-22e7-485c-9101-1024558653b5 {label = "Color Override_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @c91fb1b5-4dd3-41c9-bb34-7abd2800a422 {label = "Color Override_period"}
+              => 'Parameter(Percentage) @60a1aef3-2d56-4427-802f-7d85818616af {label = "Position 2d Transform_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @f1e45f27-6537-4154-bc16-dd438c020719 {label = "Position 2d Transform_period"}, 
+              => 'Parameter(Percentage) @7fe10223-e577-484f-b883-2af2d90d6d77 {label = "V Flip_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @d6310a29-cd12-4179-8306-12a46c4b6f83 {label = "V Flip_period"}, 
+              => 'Parameter(Percentage) @3cce5ca3-5c2d-4eb2-b64a-c09f799c0931 {label = "H Flip_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @4a9ccbc8-e04f-4974-9e88-d8abd00c06d4 {label = "H Flip_period"}, 
+              => 'Parameter(Percentage) @00ddcf24-7624-495b-b447-c6c33c3538a8 {label = "2d Transform X_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @3f1d9ab4-1b1e-4097-8bf2-7d10322900ba {label = "2d Transform X_period"}, 
+              => 'Parameter(Percentage) @ba2b2080-f9c7-4b01-8d7c-d26f25d18053 {label = "2d Transform Y_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @f4d12b90-68a4-45d2-b3fd-3ddf1d8032e7 {label = "2d Transform Y_period"}, 
+              => 'Parameter(Percentage) @d66e9eda-c38e-445e-9efa-0ecdfbd81a29 {label = "Color Override_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @0fad4768-ec50-4015-8208-c1fd1da07827 {label = "Color Override_period"}
             }
           }, 
           => @cd300967-0c5e-40d1-b95e-76fd3a69874f 
@@ -1094,22 +1095,22 @@ Important Video input To adjust for the Texture in Output
             label = "Waveform", 
             parameters = 
             {
-              => 'Parameter(Percentage) @a04153f3-9e56-4a09-8509-3bb7901d02bc {label = "Feedback_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @51060193-0ed4-4db0-870b-5d5d7e8dfe4e {label = "Feedback_period"}, 
-              => 'Parameter(Percentage) @ce515321-793a-4d68-a1a1-a5bd200677a4 {label = "Smoke II _max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @f532cc52-4f5d-4a5d-8444-aae34eecff16 {label = "Smoke II _period"}, 
-              => 'Parameter(Percentage) @0a033e8d-54fd-43e5-82be-cffdd3d03efa {label = "Gaussian Blur_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @a63347b6-0463-452f-b969-b065a6dc3121 {label = "Gaussian Blur_period"}, 
-              => 'Parameter(Percentage) @ca6e9596-e25f-4184-8953-561bfcdf91d0 {label = "V Flip_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @d3edf227-d66d-42b0-a4c7-e3fb46c4f602 {label = "V Flip_period"}, 
-              => 'Parameter(Percentage) @76c5d91e-4ecc-4ed3-ab75-7b2218649643 {label = "H Flip_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @c283fba9-7f3a-40b5-aed1-9c0d07a40271 {label = "H Flip_period"}, 
-              => 'Parameter(Percentage) @0e110a38-022d-4a94-9a21-ac9f3f5b49b8 {label = "2d Transform X_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @d61c4b8d-44b7-4404-ad39-964c970e89ae {label = "2d Transform X_period"}, 
-              => 'Parameter(Percentage) @448cfccb-78d6-4530-a47e-0ee276f2b603 {label = "2d Transform Y_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @98acc603-b25d-4a6c-ab90-94161cf73805 {label = "2d Transform Y_period"}, 
-              => 'Parameter(Percentage) @28590030-309b-42e4-a66d-a35ad8851060 {label = "Color Override_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @0814f381-2c0f-47a7-8996-7278580b9036 {label = "Color Override_period"}
+              => 'Parameter(Percentage) @f1764a92-f6c3-44ba-97b2-594a444a6d7d {label = "Feedback_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @5eb1b3a0-76a2-4dcb-a19e-be3cc82ca053 {label = "Feedback_period"}, 
+              => 'Parameter(Percentage) @c22bc778-267c-49cb-be20-343bfeda7385 {label = "Smoke II _max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @556af0a7-ded6-4cdd-b59b-c4662e5df596 {label = "Smoke II _period"}, 
+              => 'Parameter(Percentage) @ce679dcc-9aeb-4932-865d-f25c61004c27 {label = "Gaussian Blur_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @a132b98f-303c-4bfb-b4f5-2392dacb4765 {label = "Gaussian Blur_period"}, 
+              => 'Parameter(Percentage) @244205db-3200-4aa6-9cb6-ac33ade05cf6 {label = "V Flip_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @91d4c9c8-5414-4e0d-b944-075d5f2548ea {label = "V Flip_period"}, 
+              => 'Parameter(Percentage) @90a307bd-a864-49a7-96f4-5d8f75480aa4 {label = "H Flip_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @512d7bd6-e918-4b55-9bc3-8786933de0b9 {label = "H Flip_period"}, 
+              => 'Parameter(Percentage) @237909af-741b-4cb6-b18f-cf61edd3167e {label = "2d Transform X_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @707fe5db-c69b-497d-af41-7dcc31450c98 {label = "2d Transform X_period"}, 
+              => 'Parameter(Percentage) @0b8697b5-ff88-442b-bf74-3cb996d19c66 {label = "2d Transform Y_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @9621e558-51f6-404a-b189-1af0a7ca17ae {label = "2d Transform Y_period"}, 
+              => 'Parameter(Percentage) @3d34656a-4b8d-4c0e-890d-1ac8757486b4 {label = "Color Override_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @0192f53d-7014-46c1-afe7-0a1cddf48da6 {label = "Color Override_period"}
             }
           }, 
           => @ece638db-99a0-4a3b-9846-d103e47e4cf8 
@@ -1117,20 +1118,20 @@ Important Video input To adjust for the Texture in Output
             label = "Stack", 
             parameters = 
             {
-              => 'Parameter(Percentage) @9a484a37-07ee-43d8-94ee-c777d7f48fd6 {label = "Mirror 1_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @a44bb092-6527-48a0-9a31-3462ff02de3e {label = "Mirror 1_period"}, 
-              => 'Parameter(Percentage) @5e160928-5b46-4e25-a8d8-60a1bd225d8e {label = "Mirror 2_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @37568c81-0ac6-4077-988a-20af9ab9709a {label = "Mirror 2_period"}, 
-              => 'Parameter(Percentage) @cac1da2c-00ec-4053-a6f1-3a2dda4e1aaa {label = "V Flip_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @b61d5d62-1016-435a-8e93-c5b7dbcc087c {label = "V Flip_period"}, 
-              => 'Parameter(Percentage) @cee0d0f2-1b01-4f1e-a975-4740e5c2d3f5 {label = "H Flip_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @32476092-132f-4cf3-b52c-e0e065cdc9a7 {label = "H Flip_period"}, 
-              => 'Parameter(Percentage) @cb82efe5-7c75-46be-a0c1-84290c3bb3d9 {label = "2d Transform X_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @45be7ccc-a89c-4b1a-aec0-c564121393d0 {label = "2d Transform X_period"}, 
-              => 'Parameter(Percentage) @d3675827-1c34-4c41-b123-98bf62a64417 {label = "2d Transform Y_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @e1d49543-17a9-4e12-86db-4bcd10bd94a1 {label = "2d Transform Y_period"}, 
-              => 'Parameter(Percentage) @98d134f6-2f87-463c-8911-600b9acb52ad {label = "Color Override_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @a88b57dd-b49e-4e3b-97c7-a273343cf0e6 {label = "Color Override_period"}
+              => 'Parameter(Percentage) @837f9f83-9540-4c61-84be-2f26c788784b {label = "Mirror 1_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @1e4db9d3-f4a5-4de3-bb29-08cf4af0d97e {label = "Mirror 1_period"}, 
+              => 'Parameter(Percentage) @ca3ea5a1-a6de-44c7-bb3d-b1f3b2a93a0a {label = "Mirror 2_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @371023c5-a0d9-4c82-aa05-7a32f6c07e17 {label = "Mirror 2_period"}, 
+              => 'Parameter(Percentage) @983f1722-0839-4cd4-82a7-9a948282fdd2 {label = "V Flip_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @fb1a420b-a392-4a41-b2b6-9709e0abd226 {label = "V Flip_period"}, 
+              => 'Parameter(Percentage) @8c95e9ad-7abc-46d7-9691-1c7c74526d72 {label = "H Flip_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @b6fc17bb-a317-4fa5-9a28-f134decac072 {label = "H Flip_period"}, 
+              => 'Parameter(Percentage) @d18d94dc-d4be-4112-ad18-50626b213b76 {label = "2d Transform X_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @446d32a7-0d9c-4609-b053-00a9a0fb751f {label = "2d Transform X_period"}, 
+              => 'Parameter(Percentage) @aa281329-5fd4-481b-b9dd-dcd9555e5e2b {label = "2d Transform Y_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @009ad6a6-75fb-4f24-ad35-e710e01b10e4 {label = "2d Transform Y_period"}, 
+              => 'Parameter(Percentage) @249f0cd6-0dc7-41d3-95e7-82cbfd87e4b6 {label = "Color Override_max"}, 
+              => 'Parameter(StrictlyPositiveInteger) @81bf2a82-52b1-4792-825f-735991ba14e3 {label = "Color Override_period"}
             }
           }
         }
@@ -1970,7 +1971,8 @@ Important Video input To adjust for the Texture in Output
                       => 'Parameter(Percentage) @a8d25b33-dbf4-43c3-a60b-d24afd61f50b 
                       {
                         label = "V Pos R", 
-                        activation = "activationRequested"
+                        activation = "activationRequested", 
+                        value = 0.333333333333
                       }, 
                       => 'Parameter(Trigger) @a8d25b33-a5e6-43c3-a60b-a7a9aaff9887 
                       {
@@ -2018,8 +2020,7 @@ Important Video input To adjust for the Texture in Output
                       => 'Parameter(Percentage) @a8d25b33-667b-43c3-a60b-4357d9c57cc2 
                       {
                         label = "H Pos R", 
-                        activation = "activationRequested", 
-                        value = 0.108333333333
+                        activation = "activationRequested"
                       }, 
                       => 'Parameter(Trigger) @a8d25b33-9f1e-43c3-a60b-78b62ae58cfa 
                       {
@@ -2175,7 +2176,8 @@ Important Video input To adjust for the Texture in Output
                             }, 
                             target = {"data", -> @a8d25b33-6260-43c3-a60b-e549191f17f7, "probability"}
                           }
-                        }
+                        }, 
+                        value = 0.266666666667
                       }, 
                       => 'Parameter(Trigger) @a8d25b33-c526-43c3-a60b-26c941bb30fe 
                       {
@@ -3275,11 +3277,13 @@ Important Video input To adjust for the Texture in Output
             => 'GroupTextureModifier @a8d25b33-7d8b-43c3-a60b-e1bcd3e7fd44 
             {
               label = "PixellateForVerticalWoodenBox", 
+              activation = "inactive", 
               modifiers = 
               {
                 => 'IsfFileTextureModifier @a8d25b33-0a96-43c3-a60b-3c006f061c82 
                 {
                   label = "Pixellate Custom", 
+                  activation = "activationRequested", 
                   file = {path = "Standard Pack/ISF/Stylize/Tile/Pixellate.fs"}, 
                   dynamicVariables = 
                   {
@@ -3327,13 +3331,16 @@ Important Video input To adjust for the Texture in Output
                 => 'Transform2dTextureModifier @a8d25b33-0b6b-43c3-a60b-bc9b3af84ada 
                 {
                   label = "Fix Jonction Bas", 
+                  activation = "activationRequested", 
                   masks = 
                   {
                     => 'PlacementTextureMask @a8d25b33-ecff-43c3-a60b-c3fe7bacc79f 
                     {
+                      activation = "activationRequested", 
                       resolution = #1 {width = 16, height = 40}, 
                       placement = => 'Parametric2dPlacement @a8d25b33-d071-43c3-a60b-e9e556e71386 
                       {
+                        activation = "activationRequested", 
                         position = {y = 0.835861742496}, 
                         scale = => 'ScaleFactorPlacement2dScale @a8d25b33-c070-43c3-a60b-ee6d50f7629d 
                         {
@@ -3344,6 +3351,7 @@ Important Video input To adjust for the Texture in Output
                   }, 
                   frame = => 'Parametric2dPlacement @a8d25b33-66ba-43c3-a60b-8d6682b361e1 
                   {
+                    activation = "activationRequested", 
                     position = {y = 0.55}, 
                     scale = => 'ScaleFactorPlacement2dScale @a8d25b33-92f4-43c3-a60b-1092c93a6bd0 void
                   }
@@ -3351,13 +3359,16 @@ Important Video input To adjust for the Texture in Output
                 => 'Transform2dTextureModifier @a8d25b33-f375-43c3-a60b-2486af748bbf 
                 {
                   label = "Fix Jonction Bas 2", 
+                  activation = "activationRequested", 
                   masks = 
                   {
                     => 'PlacementTextureMask @a8d25b33-14e1-43c3-a60b-5be3ee2006fa 
                     {
+                      activation = "activationRequested", 
                       resolution = #1 {width = 16, height = 40}, 
                       placement = => 'Parametric2dPlacement @a8d25b33-286f-43c3-a60b-71f8c36bd2e3 
                       {
+                        activation = "activationRequested", 
                         position = {y = 0.16386174}, 
                         scale = => 'ScaleFactorPlacement2dScale @a8d25b33-386e-43c3-a60b-7670c57ba3f8 
                         {
@@ -3368,6 +3379,7 @@ Important Video input To adjust for the Texture in Output
                   }, 
                   frame = => 'Parametric2dPlacement @a8d25b33-9ea4-43c3-a60b-157b173fa084 
                   {
+                    activation = "activationRequested", 
                     position = {y = 0.45}, 
                     scale = => 'ScaleFactorPlacement2dScale @a8d25b33-6aea-43c3-a60b-888f5cb6aab5 void
                   }
@@ -3792,7 +3804,7 @@ Important Video input To adjust for the Texture in Output
                                       transport = 
                                       {
                                         state = "playing", 
-                                        position = 742.25, 
+                                        position = 877., 
                                         timeBase = {value = {p = 50}}, 
                                         player = => @a8d25b33-26c5-43c3-a60b-19d5797cb3cf 
                                         {
@@ -4290,7 +4302,7 @@ Important Video input To adjust for the Texture in Output
                       target = {"data", -> @e320049a-2375-4ae1-a8fa-8b404ea925d9, "value"}
                     }
                   }, 
-                  value = 0.180555555556
+                  value = 0.319444444444
                 }
               }
             }, 
@@ -4327,7 +4339,7 @@ Important Video input To adjust for the Texture in Output
                     }
                   }, 
                   expose = false, 
-                  value = 0.180555555556
+                  value = 0.319444444444
                 }, 
                 => 'Parameter(Trigger) @e320049a-c284-4ae1-a8fa-c51f16a6a20d 
                 {
@@ -4361,7 +4373,7 @@ Important Video input To adjust for the Texture in Output
                     }
                   }, 
                   expose = false, 
-                  value = 0.541666666667
+                  value = 0.958333333333
                 }, 
                 => 'Parameter(Percentage) @e320049a-2d4c-4ae1-a8fa-39d6570301a1 
                 {
@@ -4379,7 +4391,7 @@ Important Video input To adjust for the Texture in Output
                     }
                   }, 
                   expose = false, 
-                  value = 0.541666666667
+                  value = 0.958333333333
                 }, 
                 => 'Parameter(Trigger) @e320049a-1cb7-4ae1-a8fa-885cc3c92d4a 
                 {
@@ -4699,7 +4711,7 @@ Important Video input To adjust for the Texture in Output
                   source = => 'ParameterLinkSource @a4a39231-ecaf-4f55-8807-64624f504f6d 
                   {
                     target = {"data", -> @e320049a-d4ab-4ae1-a8fa-c4eb96d70054, "state"}, 
-                    numChanges = 53
+                    numChanges = 72
                   }, 
                   targets = 
                   {
@@ -4810,15 +4822,35 @@ Ui RS Report"
                 {
                   target = {"data", -> @e320049a-ec13-4ae1-a8fa-9273ff3723d5, "value"}, 
                   key = "BPMx5 -> Invert Proba"
+                }, 
+                => @aa2b3a0c-9572-49db-98b6-d249b48f258d 
+                {
+                  target = {"data", -> @a8d25b33-3f45-43c3-a60b-bab2c9cea146, "value"}, 
+                  key = "StackBuffer Exp Window Size"
+                }, 
+                => @e78df1dc-b04b-48ef-b500-099bc277ace3 
+                {
+                  target = {"data", -> @a8d25b33-d0f5-43c3-a60b-a340bede1088, "value"}, 
+                  key = "StackBuffer Float Buffer Size"
+                }, 
+                => @b8db0384-0df7-4853-ae45-8cc39296c58d 
+                {
+                  target = {"data", -> @a8d25b33-1183-43c3-a60b-005c81d83682, "value"}, 
+                  key = "ColorEffectProbaChgt"
+                }, 
+                => @ef17d72f-21c1-4452-bb64-dddd868efbea 
+                {
+                  target = {"data", -> @a8d25b33-e5da-43c3-a60b-63669f4ea30f, "state"}, 
+                  key = "Color Effect State"
                 }
               }, 
               autoUpdate = true, 
               state = "{ \"Identifier\": \"Led 16x40\",
 \"Bank Selected\": \"H/V\",
 \"Bank State Selected\": \"B/H State 1\",
-\"State Parameters\": \"2d Transform Y_max(x1), Color Override_max(x4), H Pos R_max(x1)\",
+\"State Parameters\": \"V Pos R_max(x3), H R Act_max(x4), 2d Transform Y_max(x1)\",
 \"CDP\": 0,
-\"CBS\": 0,
+\"CBS\": 4,
 \"CBT\": 0,
 \"Invert\": 0,
 \"Shape\": 0,
@@ -4826,7 +4858,11 @@ Ui RS Report"
 \"Energy -> CS Proba\": 0.0,
 \"Energy -> CBT Proba\": 0.033,
 \"BPMx5 -> Modificator Proba\": 0.0,
-\"BPMx5 -> Invert Proba\": 0.0
+\"BPMx5 -> Invert Proba\": 0.0,
+\"StackBuffer Exp Window Size\": 2,
+\"StackBuffer Float Buffer Size\": 40,
+\"ColorEffectProbaChgt\": 0.0,
+\"Color Effect State\": \"White\"
 }
 "
             }, 
@@ -4839,9 +4875,9 @@ Ui RS Report"
               stringValue = "{ \"Identifier\": \"Led 16x40\",
 \"Bank Selected\": \"H/V\",
 \"Bank State Selected\": \"B/H State 1\",
-\"State Parameters\": \"2d Transform Y_max(x1), Color Override_max(x4), H Pos R_max(x1)\",
+\"State Parameters\": \"V Pos R_max(x3), H R Act_max(x4), 2d Transform Y_max(x1)\",
 \"CDP\": 0,
-\"CBS\": 0,
+\"CBS\": 4,
 \"CBT\": 0,
 \"Invert\": 0,
 \"Shape\": 0,
@@ -4849,7 +4885,11 @@ Ui RS Report"
 \"Energy -> CS Proba\": 0.0,
 \"Energy -> CBT Proba\": 0.033,
 \"BPMx5 -> Modificator Proba\": 0.0,
-\"BPMx5 -> Invert Proba\": 0.0
+\"BPMx5 -> Invert Proba\": 0.0,
+\"StackBuffer Exp Window Size\": 2,
+\"StackBuffer Float Buffer Size\": 40,
+\"ColorEffectProbaChgt\": 0.0,
+\"Color Effect State\": \"White\"
 }
 ", 
               send = {condition = "onChange"}
@@ -5263,19 +5303,43 @@ Ui RS Report"
                                           {
                                             helper = => 'PerspectiveCameraInteractiveGizmo 
                                             {
-                                              target = {"engine", -> @ec63322f-9a66-40ca-848b-984248026296, "viewportCamera"}, 
-                                              orbitalMoveHelper = {target = {"engine", -> @cc1089b7-252b-4d3e-8443-eb53d80b4c95}}, 
+                                              target = {"engine", -> @405ae5ac-ad5f-4a0d-af3c-7c8274961978, "viewportCamera"}, 
+                                              orbitalMoveHelper = {target = {"engine", -> @3ee096cb-f862-459d-8ac8-64ccd95c7959}}, 
                                               panningHelper = 
                                               {
-                                                target = {"engine", -> @ec63322f-9a66-40ca-848b-984248026296, "viewportCamera"}
+                                                target = {"engine", -> @405ae5ac-ad5f-4a0d-af3c-7c8274961978, "viewportCamera"}
                                               }, 
-                                              distanceHelper = {target = {"engine", -> @cc1089b7-252b-4d3e-8443-eb53d80b4c95}}, 
-                                              fovHelper = {target = {"engine", -> @f0f486d1-74ee-4354-9afd-29d44fb10149, "horizontal"}}
+                                              distanceHelper = {target = {"engine", -> @3ee096cb-f862-459d-8ac8-64ccd95c7959}}, 
+                                              fovHelper = {target = {"engine", -> @3143ead3-33b7-454e-b6b5-fe0609d7a208, "horizontal"}}
                                             }
                                           }, 
-                                          currentTool = => 'ManipulationTool void, 
+                                          currentTool = => 'ManipulationTool 
+                                          {
+                                            helpers = 
+                                            {
+                                              => 'Placement2dTransformGizmo 
+                                              {
+                                                target = {"data", -> @4adec6ba-30f0-4f74-920b-c7cdb4cbfb3a}, 
+                                                topRight = {x = 1.}, 
+                                                bottomLeft = {y = 1.}, 
+                                                bottomRight = {x = 1., y = 1.}, 
+                                                center = {x = 0.5, y = 0.5}, 
+                                                anchorHelper = {target = {"data", -> @4adec6ba-30f0-4f74-920b-c7cdb4cbfb3a}}, 
+                                                movePlacement = {target = {"data", -> @4adec6ba-30f0-4f74-920b-c7cdb4cbfb3a}}, 
+                                                rotatePlacement = {target = {"data", -> @4adec6ba-30f0-4f74-920b-c7cdb4cbfb3a}}, 
+                                                topSide = {target = {"data", -> @4adec6ba-30f0-4f74-920b-c7cdb4cbfb3a}}, 
+                                                rightSide = {target = {"data", -> @4adec6ba-30f0-4f74-920b-c7cdb4cbfb3a}}, 
+                                                bottomSide = {target = {"data", -> @4adec6ba-30f0-4f74-920b-c7cdb4cbfb3a}}, 
+                                                leftSide = {target = {"data", -> @4adec6ba-30f0-4f74-920b-c7cdb4cbfb3a}}, 
+                                                topLeftCorner = {target = {"data", -> @4adec6ba-30f0-4f74-920b-c7cdb4cbfb3a}}, 
+                                                topRightCorner = {target = {"data", -> @4adec6ba-30f0-4f74-920b-c7cdb4cbfb3a}}, 
+                                                bottomLeftCorner = {target = {"data", -> @4adec6ba-30f0-4f74-920b-c7cdb4cbfb3a}}, 
+                                                bottomRightCorner = {target = {"data", -> @4adec6ba-30f0-4f74-920b-c7cdb4cbfb3a}}
+                                              }
+                                            }
+                                          }, 
                                           showWireframe = false, 
-                                          currentSelection = {{"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}}, 
+                                          currentSelection = {{"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492}}, 
                                           currentElementTree = {"data", -> @a8d25b33-b8ec-43c3-a60b-24b854caf0bd}, 
                                           viewCamera = 
                                           {
@@ -5289,19 +5353,19 @@ Ui RS Report"
                                             {
                                               clippingDistances = {invertible = false, automatic = false}, 
                                               customAspectRatio = {value = {p = 2, q = 5}}, 
-                                              size = {width = 0.093214851917, height = 0.044439639896, ratio = 2.097560919363}
+                                              size = {width = 0.088097557425, height = 0.041999999434, ratio = 2.097560919363}
                                             }
                                           }, 
                                           viewCameraHelper = 
                                           {
-                                            target = {"engine", -> @ec63322f-9a66-40ca-848b-984248026296, "viewCamera"}, 
+                                            target = {"engine", -> @405ae5ac-ad5f-4a0d-af3c-7c8274961978, "viewCamera"}, 
                                             frustumSizeHelper = 
                                             {
-                                              target = {"engine", -> @ec63322f-9a66-40ca-848b-984248026296, "viewCamera"}
+                                              target = {"engine", -> @405ae5ac-ad5f-4a0d-af3c-7c8274961978, "viewCamera"}
                                             }, 
                                             panningMoveHelper = 
                                             {
-                                              target = {"engine", -> @ec63322f-9a66-40ca-848b-984248026296, "viewCamera"}
+                                              target = {"engine", -> @405ae5ac-ad5f-4a0d-af3c-7c8274961978, "viewCamera"}
                                             }
                                           }
                                         }
@@ -5332,6 +5396,125 @@ Ui RS Report"
                       {
                         key = => 'ClassObject TimelineWorkspaceComponent, 
                         value = => => 'TimelineWorkspaceComponent void
+                      }, 
+                      {
+                        key = => 'ClassObject ParameterBankWorkspaceComponent, 
+                        value = => => 'ParameterBankWorkspaceComponent 
+                        {
+                          widget = 'AttachableWorkspaceComponentContextualEditor 
+                          {
+                            state = 
+                            {
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @a8d25b33-2be4-43c3-a60b-65f34f8b7a23}, 
+                                value = => => 'ParameterBankEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'ParameterBankTableWidget 
+                                    {
+                                      state = 
+                                      {
+                                        header = => 'TableHeader 
+                                        {
+                                          columns = 
+                                          {
+                                            => {name = "apply", width = 22}, 
+                                            => {name = "state"}, 
+                                            => {name = "Bar", width = 22}, 
+                                            => {name = "H/V Banks ", width = 22}, 
+                                            => {name = "Spectrum", width = 22}, 
+                                            => {name = "Spectrum Banks", width = 22}, 
+                                            => {name = "WaveForm", width = 22}, 
+                                            => {name = "WaveForm Banks", width = 22}, 
+                                            => {name = "StackBuffer", width = 22}, 
+                                            => {name = "StackBuffer Banks", width = 22}
+                                          }
+                                        }, 
+                                        expandedRowTargets = {{"data", -> @a8d25b33-2be4-43c3-a60b-65f34f8b7a23}}, 
+                                        selectedRowTargets = {{"data", -> @a8d25b33-0b4e-43c3-a60b-c8454e9e8f42}}, 
+                                        lastSelectedRowTarget = {"data", -> @a8d25b33-0b4e-43c3-a60b-c8454e9e8f42}
+                                      }
+                                    }
+                                  }
+                                }
+                              }, 
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @a8d25b33-5845-43c3-a60b-3c06114ca9a9}, 
+                                value = => => 'ParameterBankEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'ParameterBankTableWidget 
+                                    {
+                                      state = 
+                                      {
+                                        header = => 'TableHeader 
+                                        {
+                                          columns = 
+                                          {
+                                            => {name = "apply", width = 22}, 
+                                            => {name = "state"}, 
+                                            => {name = "Glitch", width = 22}, 
+                                            => {name = "PixellateForVerticalWoodenBox", width = 22}
+                                          }
+                                        }, 
+                                        expandedRowTargets = {{"data", -> @a8d25b33-5845-43c3-a60b-3c06114ca9a9}}, 
+                                        selectedRowTargets = {{"data", -> @a8d25b33-2d25-43c3-a60b-bf0574bd6cf0}}, 
+                                        lastSelectedRowTarget = {"data", -> @a8d25b33-2d25-43c3-a60b-bf0574bd6cf0}
+                                      }
+                                    }
+                                  }
+                                }
+                              }, 
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @d4868e69-8146-4f93-a4b0-38f35dbae983}, 
+                                value = => => 'ParameterBankEditor 
+                                {
+                                  widget = 'ToolsAndContentLayout 
+                                  {
+                                    content = 'ParameterBankTableWidget 
+                                    {
+                                      state = 
+                                      {
+                                        header = => 'TableHeader 
+                                        {
+                                          columns = 
+                                          {
+                                            => {name = "apply", width = 22}, 
+                                            => {name = "state", width = 100}, 
+                                            => {name = "BankSelector", width = 100}, 
+                                            => {name = "CDP", width = 100}, 
+                                            => {name = "CS", width = 100}, 
+                                            => {name = "CBT", width = 100}, 
+                                            => {name = "Invert", width = 100}, 
+                                            => {name = "Shape", width = 100}, 
+                                            => {name = "Energy Chgt Detector", width = 100}, 
+                                            => {name = "Energy", width = 100}, 
+                                            => {name = "BPMx5", width = 100}, 
+                                            => {name = "MidiPocket To RS Activation", width = 22}, 
+                                            => {name = "Energy -> CDP Proba", width = 100}, 
+                                            => {name = "Energy -> CS Proba", width = 100}, 
+                                            => {name = "Energy -> CBT Proba", width = 100}, 
+                                            => {name = "BPMx5 -> Modificator Proba", width = 100}, 
+                                            => {name = "BPMx5 -> Invert Proba", width = 100}, 
+                                            => {name = "StackBuffer Exp Window Size", width = 100}, 
+                                            => {name = "StackBuffer Float Buffer Size", width = 100}, 
+                                            => {name = "ColorEffectProbaChgt", width = 100}, 
+                                            => {name = "LedColorChgtTrigger", width = 100}, 
+                                            => {name = "Led 16x40 Color State Bank Apply Random", width = 100}, 
+                                            => {name = "MidiInputForLedColorEffectState", width = 100}
+                                          }
+                                        }, 
+                                        expandedRowTargets = {{"data", -> @d4868e69-8146-4f93-a4b0-38f35dbae983}}
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
                       }, 
                       {
                         key = => 'ClassObject ElementTreeWorkspaceComponent, 
@@ -5390,44 +5573,45 @@ Ui RS Report"
                                           {"data", -> @a8d25b33-9a08-43c3-a60b-67baa894fcd3}, 
                                           {
                                             "data", 
-                                            -> @d4868e69-8146-4f93-a4b0-38f35dbae983
+                                            -> @a8d25b33-f5e2-43c3-a60b-3baf26fa9074
                                           }, 
-                                          {"data", -> @a8d25b33-4109-43c3-a60b-7dbc2bbe9c18}, 
+                                          {"data", -> @d4868e69-8146-4f93-a4b0-38f35dbae983}, 
                                           {
                                             "data", 
-                                            -> @9c80255e-d9e5-4bc1-a8c8-9938dc3f8fd4
+                                            -> @a8d25b33-4109-43c3-a60b-7dbc2bbe9c18
                                           }, 
-                                          {"data", -> @d8e3b07a-2855-4f23-a356-1e04aa24dcf5}, 
+                                          {"data", -> @9c80255e-d9e5-4bc1-a8c8-9938dc3f8fd4}, 
+                                          {
+                                            "data", 
+                                            -> @d8e3b07a-2855-4f23-a356-1e04aa24dcf5
+                                          }, 
+                                          {"data", -> @e320049a-7435-4ae1-a8fa-1d0b3246a9c7, "parameters"}, 
                                           {
                                             "data", 
                                             -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492
                                           }, 
-                                          {"data", -> @a8d25b33-9a08-43c3-a60b-67baa894fcd3, "links"}, 
+                                          {"data", -> @a8d25b33-bad4-43c3-a60b-16d43bded363}, 
                                           {
                                             "data", 
-                                            -> @36ac87d5-e513-430d-b9d5-ad4064188af2
+                                            -> @a8d25b33-9a08-43c3-a60b-67baa894fcd3, 
+                                            "links"
                                           }, 
-                                          {"data", -> @e320049a-c629-4ae1-a8fa-92cd0d1b5c23}, 
+                                          {"data", -> @36ac87d5-e513-430d-b9d5-ad4064188af2}, 
                                           {
                                             "data", 
-                                            -> @a8d25b33-20e7-43c3-a60b-b5cead888ce5, 
-                                            "modifiers"
-                                          }, 
-                                          {"data", -> @8df0dd34-9ae6-4e51-a4fd-529161b69679}, 
-                                          {
-                                            "data", 
-                                            -> @e320049a-f064-4ae1-a8fa-4ec72101133d
+                                            -> @e320049a-c629-4ae1-a8fa-92cd0d1b5c23
                                           }, 
                                           {"data", -> @a8d25b33-4109-43c3-a60b-7dbc2bbe9c18, "links"}, 
                                           {
                                             "data", 
-                                            -> @a8d25b33-f5e2-43c3-a60b-3baf26fa9074
+                                            -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92, 
+                                            "tools"
                                           }, 
-                                          {"data", -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92, "tools"}, 
+                                          {"data", -> @9c80255e-d9e5-4bc1-a8c8-9938dc3f8fd4, "animations"}, 
                                           {
                                             "data", 
-                                            -> @9c80255e-d9e5-4bc1-a8c8-9938dc3f8fd4, 
-                                            "animations"
+                                            -> @e320049a-c629-4ae1-a8fa-92cd0d1b5c23, 
+                                            "targets"
                                           }, 
                                           {"data", -> @d8e3b07a-2855-4f23-a356-1e04aa24dcf5, "listSourceBank"}, 
                                           {
@@ -5435,10 +5619,10 @@ Ui RS Report"
                                             -> @d8e3b07a-2855-4f23-a356-1e04aa24dcf5, 
                                             "outputParameterBanks"
                                           }, 
-                                          {"data", -> @e320049a-7435-4ae1-a8fa-1d0b3246a9c7, "parameters"}, 
+                                          {"data", -> @36ac87d5-e513-430d-b9d5-ad4064188af2, "targets"}, 
                                           {
                                             "data", 
-                                            -> @36ac87d5-e513-430d-b9d5-ad4064188af2, 
+                                            -> @a8d25b33-bad4-43c3-a60b-16d43bded363, 
                                             "targets"
                                           }, 
                                           {"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492, "generator"}, 
@@ -5449,13 +5633,24 @@ Ui RS Report"
                                           {"data", -> @e320049a-7435-4ae1-a8fa-1d0b3246a9c7}, 
                                           {
                                             "data", 
+                                            -> @e320049a-f064-4ae1-a8fa-4ec72101133d
+                                          }, 
+                                          {"data", -> @7ba14173-b852-4d68-aefa-605a40b3e28d}, 
+                                          {
+                                            "data", 
+                                            -> @7ba14173-b852-4d68-aefa-605a40b3e28d, 
+                                            "modifiers"
+                                          }, 
+                                          {"data", -> @a8d25b33-20e7-43c3-a60b-b5cead888ce5}, 
+                                          {
+                                            "data", 
                                             -> @a8d25b33-f5e2-43c3-a60b-3baf26fa9074, 
                                             "source"
                                           }, 
-                                          {"data", -> @7ba14173-b852-4d68-aefa-605a40b3e28d, "modifiers"}, 
+                                          {"data", -> @a8d25b33-20e7-43c3-a60b-b5cead888ce5, "modifiers"}, 
                                           {
                                             "data", 
-                                            -> @a8d25b33-20e7-43c3-a60b-b5cead888ce5
+                                            -> @8df0dd34-9ae6-4e51-a4fd-529161b69679
                                           }, 
                                           {"data", -> @b3a69bc7-9286-4d02-8ea3-74e23c4e9c0c}, 
                                           {
@@ -5471,12 +5666,12 @@ Ui RS Report"
                                           {"data", -> @a8d25b33-d9d8-43c3-a60b-dec001f8f7be, "targets"}, 
                                           {
                                             "data", 
-                                            -> @7ba14173-b852-4d68-aefa-605a40b3e28d
-                                          }, 
-                                          {"data", -> @e320049a-c629-4ae1-a8fa-92cd0d1b5c23, "targets"}
+                                            -> @a8d25b33-bad4-43c3-a60b-16d43bded363, 
+                                            "modifiers"
+                                          }
                                         }, 
-                                        selectedRowTargets = {{"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}}, 
-                                        lastSelectedRowTarget = {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}
+                                        selectedRowTargets = {{"data", -> @a8d25b33-5845-43c3-a60b-3c06114ca9a9}}, 
+                                        lastSelectedRowTarget = {"data", -> @a8d25b33-5845-43c3-a60b-3c06114ca9a9}
                                       }
                                     }
                                   }
@@ -5532,6 +5727,20 @@ Ui RS Report"
                                                     "energyPercentageToMaximumArray"
                                                   }
                                                 }, 
+                                                selectedRowTargets = 
+                                                {
+                                                  {
+                                                    "data", 
+                                                    -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500, 
+                                                    "energyPercentageToMaximumArray.listFunction"
+                                                  }
+                                                }, 
+                                                lastSelectedRowTarget = 
+                                                {
+                                                  "data", 
+                                                  -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500, 
+                                                  "energyPercentageToMaximumArray.listFunction"
+                                                }, 
                                                 rowHeightByTarget = 
                                                 {
                                                   {
@@ -5548,9 +5757,68 @@ Ui RS Report"
                                   }, 
                                   currentSection = {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}
                                 }
+                              }, 
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}, 
+                                value = => => 'ItemParametersEditor 
+                                {
+                                  widget = 'WeakPointerContextualEditor 
+                                  {
+                                    state = 
+                                    {
+                                      {
+                                        key = => 'ObjectWeakPointer {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}, 
+                                        value = => => 'ParametersSectionEditor 
+                                        {
+                                          widget = 'ToolsAndContentLayout 
+                                          {
+                                            content = 'TableWidget 
+                                            {
+                                              state = 
+                                              {
+                                                header = => 'TableHeader 
+                                                {
+                                                  stretchToFit = true, 
+                                                  columns = 
+                                                  {
+                                                    => {name = "name", width = 166}, 
+                                                    => {name = "pointerToSources", width = 22}, 
+                                                    => {name = "value", width = 247}
+                                                  }
+                                                }, 
+                                                expandedRowTargets = 
+                                                {
+                                                  {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}, 
+                                                  {
+                                                    "data", 
+                                                    -> @a8d25b33-e186-43c3-a60b-e2375f036cda, 
+                                                    "midiAction"
+                                                  }
+                                                }, 
+                                                rowHeightByTarget = 
+                                                {
+                                                  {
+                                                    key = => {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}, 
+                                                    value = => 40
+                                                  }, 
+                                                  {
+                                                    key = => {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda, "midiAction"}, 
+                                                    value = => 40
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }, 
+                                  currentSection = {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}
+                                }
                               }
                             }
-                          }
+                          }, 
+                          attachment = {pinned = true, targetPointer = {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}}
                         }
                       }
                     }
@@ -5584,10 +5852,8 @@ Ui RS Report"
                                 {
                                   content = 'ElementTableWidget 
                                   {
-                                    widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 1164}}}, 
                                     state = 
                                     {
-                                      viewPosition = {y = 1164}, 
                                       header = => 'TableHeader 
                                       {
                                         stretchToFit = true, 
@@ -5622,40 +5888,46 @@ Ui RS Report"
                                           -> @a8d25b33-b8ec-43c3-a60b-24b854caf0bd, 
                                           "tools"
                                         }, 
-                                        {"data", -> @d4868e69-8146-4f93-a4b0-38f35dbae983}, 
+                                        {"data", -> @a8d25b33-f5e2-43c3-a60b-3baf26fa9074}, 
                                         {
                                           "data", 
-                                          -> @a8d25b33-4109-43c3-a60b-7dbc2bbe9c18
+                                          -> @d4868e69-8146-4f93-a4b0-38f35dbae983
                                         }, 
-                                        {"data", -> @9c80255e-d9e5-4bc1-a8c8-9938dc3f8fd4}, 
+                                        {"data", -> @a8d25b33-4109-43c3-a60b-7dbc2bbe9c18}, 
                                         {
                                           "data", 
-                                          -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500
+                                          -> @a8d25b33-2be4-43c3-a60b-65f34f8b7a23
+                                        }, 
+                                        {"data", -> @a8d25b33-5845-43c3-a60b-3c06114ca9a9}, 
+                                        {
+                                          "data", 
+                                          -> @e320049a-7435-4ae1-a8fa-1d0b3246a9c7, 
+                                          "parameters"
                                         }, 
                                         {"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492}, 
                                         {
                                           "data", 
-                                          -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500, 
-                                          "listNumberOfStatePerBank"
+                                          -> @e320049a-c629-4ae1-a8fa-92cd0d1b5c23
                                         }, 
                                         {"data", -> @a8d25b33-4109-43c3-a60b-7dbc2bbe9c18, "links"}, 
                                         {
                                           "data", 
-                                          -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92, 
-                                          "tools"
+                                          -> @a8d25b33-2be4-43c3-a60b-65f34f8b7a23, 
+                                          "parameters"
                                         }, 
-                                        {"data", -> @9c80255e-d9e5-4bc1-a8c8-9938dc3f8fd4, "animations"}, 
+                                        {"data", -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92, "tools"}, 
                                         {
                                           "data", 
-                                          -> @7ba14173-b852-4d68-aefa-605a40b3e28d
+                                          -> @9c80255e-d9e5-4bc1-a8c8-9938dc3f8fd4, 
+                                          "animations"
                                         }, 
-                                        {"data", -> @d8e3b07a-2855-4f23-a356-1e04aa24dcf5, "listSourceBank"}, 
+                                        {"data", -> @e320049a-c629-4ae1-a8fa-92cd0d1b5c23, "targets"}, 
                                         {
                                           "data", 
                                           -> @d8e3b07a-2855-4f23-a356-1e04aa24dcf5, 
-                                          "outputParameterBanks"
+                                          "listSourceBank"
                                         }, 
-                                        {"data", -> @e320049a-7435-4ae1-a8fa-1d0b3246a9c7, "parameters"}, 
+                                        {"data", -> @d8e3b07a-2855-4f23-a356-1e04aa24dcf5, "outputParameterBanks"}, 
                                         {
                                           "data", 
                                           -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492, 
@@ -5664,24 +5936,18 @@ Ui RS Report"
                                         {"data", -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92}, 
                                         {
                                           "data", 
-                                          -> @e320049a-7435-4ae1-a8fa-1d0b3246a9c7
+                                          -> @7ba14173-b852-4d68-aefa-605a40b3e28d
                                         }, 
-                                        {"data", -> @e320049a-d4ab-4ae1-a8fa-c4eb96d70054}, 
+                                        {"data", -> @8df0dd34-9ae6-4e51-a4fd-529161b69679, "listParameterBanks"}, 
                                         {
                                           "data", 
-                                          -> @8df0dd34-9ae6-4e51-a4fd-529161b69679, 
-                                          "listParameterBanks"
-                                        }, 
-                                        {"data", -> @e320049a-f064-4ae1-a8fa-4ec72101133d, "links"}, 
-                                        {
-                                          "data", 
-                                          -> @e320049a-c629-4ae1-a8fa-92cd0d1b5c23, 
-                                          "targets"
+                                          -> @e320049a-f064-4ae1-a8fa-4ec72101133d, 
+                                          "links"
                                         }, 
                                         {"data", -> @a8d25b33-d9d8-43c3-a60b-dec001f8f7be, "targets"}
                                       }, 
-                                      selectedRowTargets = {{"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}}, 
-                                      lastSelectedRowTarget = {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}
+                                      selectedRowTargets = {{"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492}}, 
+                                      lastSelectedRowTarget = {"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492}
                                     }
                                   }
                                 }
@@ -5693,7 +5959,6 @@ Ui RS Report"
                     }
                   }
                 }, 
-                headerTool = 'ViewportLayout {content = 'WorkspaceLeafToolbar {widgets = {'SearchWidget {query = "modif"}}}}, 
                 componentClass = ElementTreeWorkspaceComponent
               }, 
               second = 'WorkspaceLeaf 
@@ -5710,6 +5975,52 @@ Ui RS Report"
                         {
                           state = 
                           {
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-321d-43c3-a60b-3e1d17157b30}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-321d-43c3-a60b-3e1d17157b30}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 318}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 417}
+                                                }
+                                              }, 
+                                              expandedRowTargets = {{"data", -> @a8d25b33-321d-43c3-a60b-3e1d17157b30}}, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @a8d25b33-321d-43c3-a60b-3e1d17157b30}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @a8d25b33-321d-43c3-a60b-3e1d17157b30}
+                              }
+                            }, 
                             {
                               key = => 'ObjectWeakPointer {"data", -> @a8d25b33-f8c7-43c3-a60b-b68ab8cd62bb}, 
                               value = => => 'ItemParametersEditor 
@@ -5878,52 +6189,6 @@ Ui RS Report"
                               }
                             }, 
                             {
-                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-321d-43c3-a60b-3e1d17157b30}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-321d-43c3-a60b-3e1d17157b30}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 318}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 417}
-                                                }
-                                              }, 
-                                              expandedRowTargets = {{"data", -> @a8d25b33-321d-43c3-a60b-3e1d17157b30}}, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @a8d25b33-321d-43c3-a60b-3e1d17157b30}, 
-                                                  value = => 40
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @a8d25b33-321d-43c3-a60b-3e1d17157b30}
-                              }
-                            }, 
-                            {
                               key = => 'ObjectWeakPointer {"data", -> @a8e594fb-45b5-47bb-b578-8be68ba2906d}, 
                               value = => => 'ItemParametersEditor 
                               {
@@ -6032,52 +6297,6 @@ Ui RS Report"
                               }
                             }, 
                             {
-                              key = => 'ObjectWeakPointer {"data", -> @a7c5a16e-a5ef-4728-8f62-db283cc479a2}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @a7c5a16e-a5ef-4728-8f62-db283cc479a2}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 318}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 417}
-                                                }
-                                              }, 
-                                              expandedRowTargets = {{"data", -> @a7c5a16e-a5ef-4728-8f62-db283cc479a2}}, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @a7c5a16e-a5ef-4728-8f62-db283cc479a2}, 
-                                                  value = => 40
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @a7c5a16e-a5ef-4728-8f62-db283cc479a2}
-                              }
-                            }, 
-                            {
                               key = => 'ObjectWeakPointer {"data", -> @a8d25b33-2be4-43c3-a60b-65f34f8b7a23}, 
                               value = => => 'ItemParametersEditor 
                               {
@@ -6121,6 +6340,52 @@ Ui RS Report"
                                   }
                                 }, 
                                 currentSection = {"data", -> @a8d25b33-2be4-43c3-a60b-65f34f8b7a23}
+                              }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @a7c5a16e-a5ef-4728-8f62-db283cc479a2}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @a7c5a16e-a5ef-4728-8f62-db283cc479a2}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 318}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 417}
+                                                }
+                                              }, 
+                                              expandedRowTargets = {{"data", -> @a7c5a16e-a5ef-4728-8f62-db283cc479a2}}, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @a7c5a16e-a5ef-4728-8f62-db283cc479a2}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @a7c5a16e-a5ef-4728-8f62-db283cc479a2}
                               }
                             }, 
                             {
@@ -6250,6 +6515,64 @@ Ui RS Report"
                               }
                             }, 
                             {
+                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-a7fa-43c3-a60b-efccf94ec995}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-a7fa-43c3-a60b-efccf94ec995, "source"}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 318}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 417}
+                                                }
+                                              }, 
+                                              expandedRowTargets = 
+                                              {
+                                                {"data", -> @a8d25b33-32b0-43c3-a60b-83f08cad91ae, "controllerIdentifier"}, 
+                                                {
+                                                  "data", 
+                                                  -> @a8d25b33-a7fa-43c3-a60b-efccf94ec995, 
+                                                  "source"
+                                                }
+                                              }, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @a8d25b33-32b0-43c3-a60b-83f08cad91ae, "controllerIdentifier"}, 
+                                                  value = => 40
+                                                }, 
+                                                {
+                                                  key = => {"data", -> @a8d25b33-a7fa-43c3-a60b-efccf94ec995, "source"}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @a8d25b33-a7fa-43c3-a60b-efccf94ec995, "source"}
+                              }
+                            }, 
+                            {
                               key = => 'ObjectWeakPointer {"data", -> @a8d25b33-8f79-43c3-a60b-5f0955e0e7e5}, 
                               value = => => 'ItemParametersEditor 
                               {
@@ -6313,7 +6636,7 @@ Ui RS Report"
                               }
                             }, 
                             {
-                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-a7fa-43c3-a60b-efccf94ec995}, 
+                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-f5e2-43c3-a60b-3baf26fa9074}, 
                               value = => => 'ItemParametersEditor 
                               {
                                 widget = 'WeakPointerContextualEditor 
@@ -6321,7 +6644,7 @@ Ui RS Report"
                                   state = 
                                   {
                                     {
-                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-a7fa-43c3-a60b-efccf94ec995, "source"}, 
+                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-f5e2-43c3-a60b-3baf26fa9074, "source"}, 
                                       value = => => 'ParametersSectionEditor 
                                       {
                                         widget = 'ToolsAndContentLayout 
@@ -6342,21 +6665,21 @@ Ui RS Report"
                                               }, 
                                               expandedRowTargets = 
                                               {
-                                                {"data", -> @a8d25b33-32b0-43c3-a60b-83f08cad91ae, "controllerIdentifier"}, 
+                                                {"data", -> @a8d25b33-f5e2-43c3-a60b-3baf26fa9074, "source"}, 
                                                 {
                                                   "data", 
-                                                  -> @a8d25b33-a7fa-43c3-a60b-efccf94ec995, 
-                                                  "source"
+                                                  -> @a8d25b33-20e7-43c3-a60b-b5cead888ce5, 
+                                                  "controllerIdentifier"
                                                 }
                                               }, 
                                               rowHeightByTarget = 
                                               {
                                                 {
-                                                  key = => {"data", -> @a8d25b33-32b0-43c3-a60b-83f08cad91ae, "controllerIdentifier"}, 
+                                                  key = => {"data", -> @a8d25b33-f5e2-43c3-a60b-3baf26fa9074, "source"}, 
                                                   value = => 40
                                                 }, 
                                                 {
-                                                  key = => {"data", -> @a8d25b33-a7fa-43c3-a60b-efccf94ec995, "source"}, 
+                                                  key = => {"data", -> @a8d25b33-20e7-43c3-a60b-b5cead888ce5, "controllerIdentifier"}, 
                                                   value = => 40
                                                 }
                                               }
@@ -6367,7 +6690,7 @@ Ui RS Report"
                                     }
                                   }
                                 }, 
-                                currentSection = {"data", -> @a8d25b33-a7fa-43c3-a60b-efccf94ec995, "source"}
+                                currentSection = {"data", -> @a8d25b33-f5e2-43c3-a60b-3baf26fa9074, "source"}
                               }
                             }, 
                             {
@@ -6430,64 +6753,6 @@ Ui RS Report"
                                   }
                                 }, 
                                 currentSection = {"data", -> @a8d25b33-12da-43c3-a60b-d164fffed8bf}
-                              }
-                            }, 
-                            {
-                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-f5e2-43c3-a60b-3baf26fa9074}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-f5e2-43c3-a60b-3baf26fa9074, "source"}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 318}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 417}
-                                                }
-                                              }, 
-                                              expandedRowTargets = 
-                                              {
-                                                {"data", -> @a8d25b33-f5e2-43c3-a60b-3baf26fa9074, "source"}, 
-                                                {
-                                                  "data", 
-                                                  -> @a8d25b33-20e7-43c3-a60b-b5cead888ce5, 
-                                                  "controllerIdentifier"
-                                                }
-                                              }, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @a8d25b33-f5e2-43c3-a60b-3baf26fa9074, "source"}, 
-                                                  value = => 40
-                                                }, 
-                                                {
-                                                  key = => {"data", -> @a8d25b33-20e7-43c3-a60b-b5cead888ce5, "controllerIdentifier"}, 
-                                                  value = => 40
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @a8d25b33-f5e2-43c3-a60b-3baf26fa9074, "source"}
                               }
                             }, 
                             {
@@ -6593,52 +6858,6 @@ Ui RS Report"
                               }
                             }, 
                             {
-                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-cef3-43c3-a60b-3151a6444b59}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-cef3-43c3-a60b-3151a6444b59}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 318}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 417}
-                                                }
-                                              }, 
-                                              expandedRowTargets = {{"data", -> @a8d25b33-cef3-43c3-a60b-3151a6444b59}}, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @a8d25b33-cef3-43c3-a60b-3151a6444b59}, 
-                                                  value = => 40
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @a8d25b33-cef3-43c3-a60b-3151a6444b59}
-                              }
-                            }, 
-                            {
                               key = => 'ObjectWeakPointer {"data", -> @a8d25b33-1183-43c3-a60b-005c81d83682}, 
                               value = => => 'ItemParametersEditor 
                               {
@@ -6682,6 +6901,52 @@ Ui RS Report"
                                   }
                                 }, 
                                 currentSection = {"data", -> @a8d25b33-1183-43c3-a60b-005c81d83682}
+                              }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-cef3-43c3-a60b-3151a6444b59}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-cef3-43c3-a60b-3151a6444b59}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 318}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 417}
+                                                }
+                                              }, 
+                                              expandedRowTargets = {{"data", -> @a8d25b33-cef3-43c3-a60b-3151a6444b59}}, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @a8d25b33-cef3-43c3-a60b-3151a6444b59}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @a8d25b33-cef3-43c3-a60b-3151a6444b59}
                               }
                             }, 
                             {
@@ -6731,6 +6996,70 @@ Ui RS Report"
                               }
                             }, 
                             {
+                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 309}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 408}
+                                                }
+                                              }, 
+                                              expandedRowTargets = 
+                                              {
+                                                {"data", -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e}, 
+                                                {
+                                                  "data", 
+                                                  -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e, 
+                                                  "energyPercentageToMaximumArray"
+                                                }
+                                              }, 
+                                              selectedRowTargets = 
+                                              {
+                                                {"data", -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e, "listNumberOfStatePerBank"}
+                                              }, 
+                                              lastSelectedRowTarget = 
+                                              {
+                                                "data", 
+                                                -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e, 
+                                                "listNumberOfStatePerBank"
+                                              }, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e}
+                              }
+                            }, 
+                            {
                               key = => 'ObjectWeakPointer {"data", -> @69ff2826-e135-4ef0-9384-389d128c3275}, 
                               value = => => 'ItemParametersEditor 
                               {
@@ -6777,52 +7106,6 @@ Ui RS Report"
                               }
                             }, 
                             {
-                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-0e2f-43c3-a60b-3b813698d94d}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-0e2f-43c3-a60b-3b813698d94d}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 318}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 417}
-                                                }
-                                              }, 
-                                              expandedRowTargets = {{"data", -> @a8d25b33-0e2f-43c3-a60b-3b813698d94d}}, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @a8d25b33-0e2f-43c3-a60b-3b813698d94d}, 
-                                                  value = => 40
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @a8d25b33-0e2f-43c3-a60b-3b813698d94d}
-                              }
-                            }, 
-                            {
                               key = => 'ObjectWeakPointer {"data", -> @a3be6381-6544-4b55-9404-295f554e4023}, 
                               value = => => 'ItemParametersEditor 
                               {
@@ -6866,6 +7149,52 @@ Ui RS Report"
                                   }
                                 }, 
                                 currentSection = {"data", -> @a3be6381-6544-4b55-9404-295f554e4023}
+                              }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-0e2f-43c3-a60b-3b813698d94d}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-0e2f-43c3-a60b-3b813698d94d}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 318}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 417}
+                                                }
+                                              }, 
+                                              expandedRowTargets = {{"data", -> @a8d25b33-0e2f-43c3-a60b-3b813698d94d}}, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @a8d25b33-0e2f-43c3-a60b-3b813698d94d}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @a8d25b33-0e2f-43c3-a60b-3b813698d94d}
                               }
                             }, 
                             {
@@ -7237,98 +7566,6 @@ Ui RS Report"
                               }
                             }, 
                             {
-                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-bad4-43c3-a60b-16d43bded363}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-bad4-43c3-a60b-16d43bded363}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 318}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 417}
-                                                }
-                                              }, 
-                                              expandedRowTargets = {{"data", -> @a8d25b33-bad4-43c3-a60b-16d43bded363}}, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @a8d25b33-bad4-43c3-a60b-16d43bded363}, 
-                                                  value = => 40
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @a8d25b33-bad4-43c3-a60b-16d43bded363}
-                              }
-                            }, 
-                            {
-                              key = => 'ObjectWeakPointer {"data", -> @33f4c945-6561-4833-9853-61454c4b3ddf}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @33f4c945-6561-4833-9853-61454c4b3ddf}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 309}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 408}
-                                                }
-                                              }, 
-                                              expandedRowTargets = {{"data", -> @33f4c945-6561-4833-9853-61454c4b3ddf}}, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @33f4c945-6561-4833-9853-61454c4b3ddf}, 
-                                                  value = => 40
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @33f4c945-6561-4833-9853-61454c4b3ddf}
-                              }
-                            }, 
-                            {
                               key = => 'ObjectWeakPointer {"data", -> @a8d25b33-0b31-43c3-a60b-9f4c39a9a2a8}, 
                               value = => => 'ItemParametersEditor 
                               {
@@ -7396,6 +7633,144 @@ Ui RS Report"
                               }
                             }, 
                             {
+                              key = => 'ObjectWeakPointer {"data", -> @33f4c945-6561-4833-9853-61454c4b3ddf}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @33f4c945-6561-4833-9853-61454c4b3ddf}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 309}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 408}
+                                                }
+                                              }, 
+                                              expandedRowTargets = {{"data", -> @33f4c945-6561-4833-9853-61454c4b3ddf}}, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @33f4c945-6561-4833-9853-61454c4b3ddf}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @33f4c945-6561-4833-9853-61454c4b3ddf}
+                              }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-bad4-43c3-a60b-16d43bded363}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-bad4-43c3-a60b-16d43bded363}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 318}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 417}
+                                                }
+                                              }, 
+                                              expandedRowTargets = {{"data", -> @a8d25b33-bad4-43c3-a60b-16d43bded363}}, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @a8d25b33-bad4-43c3-a60b-16d43bded363}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @a8d25b33-bad4-43c3-a60b-16d43bded363}
+                              }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-4be7-43c3-a60b-578c1e471929}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-4be7-43c3-a60b-578c1e471929}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 318}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 417}
+                                                }
+                                              }, 
+                                              expandedRowTargets = {{"data", -> @a8d25b33-4be7-43c3-a60b-578c1e471929}}, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @a8d25b33-4be7-43c3-a60b-578c1e471929}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @a8d25b33-4be7-43c3-a60b-578c1e471929}
+                              }
+                            }, 
+                            {
                               key = => 'ObjectWeakPointer {"data", -> @a8d25b33-f30d-43c3-a60b-f843c17bd2e7}, 
                               value = => => 'ItemParametersEditor 
                               {
@@ -7460,52 +7835,6 @@ Ui RS Report"
                                   }
                                 }, 
                                 currentSection = {"data", -> @a8d25b33-f30d-43c3-a60b-f843c17bd2e7, "generator"}
-                              }
-                            }, 
-                            {
-                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-4be7-43c3-a60b-578c1e471929}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-4be7-43c3-a60b-578c1e471929}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 318}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 417}
-                                                }
-                                              }, 
-                                              expandedRowTargets = {{"data", -> @a8d25b33-4be7-43c3-a60b-578c1e471929}}, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @a8d25b33-4be7-43c3-a60b-578c1e471929}, 
-                                                  value = => 40
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @a8d25b33-4be7-43c3-a60b-578c1e471929}
                               }
                             }, 
                             {
@@ -7617,7 +7946,7 @@ Ui RS Report"
                               }
                             }, 
                             {
-                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}, 
+                              key = => 'ObjectWeakPointer {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d}, 
                               value = => => 'ItemParametersEditor 
                               {
                                 widget = 'WeakPointerContextualEditor 
@@ -7625,7 +7954,7 @@ Ui RS Report"
                                   state = 
                                   {
                                     {
-                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}, 
+                                      key = => 'ObjectWeakPointer {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d}, 
                                       value = => => 'ParametersSectionEditor 
                                       {
                                         widget = 'ToolsAndContentLayout 
@@ -7646,21 +7975,26 @@ Ui RS Report"
                                               }, 
                                               expandedRowTargets = 
                                               {
-                                                {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}, 
+                                                {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d}, 
                                                 {
                                                   "data", 
-                                                  -> @a8d25b33-e186-43c3-a60b-e2375f036cda, 
-                                                  "midiAction"
-                                                }
+                                                  -> @7c3da599-3ca8-4095-9efa-1beb477ad70d, 
+                                                  "parameters"
+                                                }, 
+                                                {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d, "playState"}
                                               }, 
                                               rowHeightByTarget = 
                                               {
                                                 {
-                                                  key = => {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}, 
+                                                  key = => {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d}, 
                                                   value = => 40
                                                 }, 
                                                 {
-                                                  key = => {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda, "midiAction"}, 
+                                                  key = => {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d, "parameters"}, 
+                                                  value = => 40
+                                                }, 
+                                                {
+                                                  key = => {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d, "playState"}, 
                                                   value = => 40
                                                 }
                                               }
@@ -7671,7 +8005,7 @@ Ui RS Report"
                                     }
                                   }
                                 }, 
-                                currentSection = {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}
+                                currentSection = {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d}
                               }
                             }, 
                             {
@@ -7780,52 +8114,6 @@ Ui RS Report"
                                   }
                                 }, 
                                 currentSection = {"data", -> @a8d25b33-93b6-43c3-a60b-b6dce2371ecb}
-                              }
-                            }, 
-                            {
-                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-3f45-43c3-a60b-bab2c9cea146}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-3f45-43c3-a60b-bab2c9cea146}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 318}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 417}
-                                                }
-                                              }, 
-                                              expandedRowTargets = {{"data", -> @a8d25b33-3f45-43c3-a60b-bab2c9cea146}}, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @a8d25b33-3f45-43c3-a60b-bab2c9cea146}, 
-                                                  value = => 40
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @a8d25b33-3f45-43c3-a60b-bab2c9cea146}
                               }
                             }, 
                             {
@@ -8105,73 +8393,6 @@ Ui RS Report"
                               }
                             }, 
                             {
-                              key = => 'ObjectWeakPointer {"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492, "generator"}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 309}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 408}
-                                                }
-                                              }, 
-                                              expandedRowTargets = 
-                                              {
-                                                {"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492, "generator"}, 
-                                                {
-                                                  "data", 
-                                                  -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92, 
-                                                  "rasterizer"
-                                                }, 
-                                                {"data", -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92, "rasterizer.quality"}
-                                              }, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92, "rasterizer.quality"}, 
-                                                  value = => 40
-                                                }, 
-                                                {
-                                                  key = => {"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492, "generator"}, 
-                                                  value = => 40
-                                                }, 
-                                                {
-                                                  key = => {"data", -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92, "rasterizer"}, 
-                                                  value = => 40
-                                                }, 
-                                                {
-                                                  key = => {"data", -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92, "rasterizer.resolution"}, 
-                                                  value = => 62
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492, "generator"}
-                              }
-                            }, 
-                            {
                               key = => 'ObjectWeakPointer {"data", -> @a8d25b33-a4b2-43c3-a60b-39f7abaebbd7}, 
                               value = => => 'ItemParametersEditor 
                               {
@@ -8411,6 +8632,56 @@ Ui RS Report"
                                   }
                                 }, 
                                 currentSection = {"data", -> @a8d25b33-c36c-43c3-a60b-ec8fa38c6534, "source"}
+                              }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-9d92-43c3-a60b-941d29508650}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-9d92-43c3-a60b-941d29508650}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 318}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 417}
+                                                }
+                                              }, 
+                                              expandedRowTargets = {{"data", -> @a8d25b33-9d92-43c3-a60b-941d29508650}}, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @a8d25b33-9d92-43c3-a60b-941d29508650}, 
+                                                  value = => 40
+                                                }, 
+                                                {
+                                                  key = => {"data", -> @a8d25b33-9d92-43c3-a60b-941d29508650, "documentation"}, 
+                                                  value = => 100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @a8d25b33-9d92-43c3-a60b-941d29508650}
                               }
                             }, 
                             {
@@ -8718,7 +8989,7 @@ Ui RS Report"
                               }
                             }, 
                             {
-                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e}, 
+                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-4089-43c3-a60b-932f38453d66}, 
                               value = => => 'ItemParametersEditor 
                               {
                                 widget = 'WeakPointerContextualEditor 
@@ -8726,71 +8997,7 @@ Ui RS Report"
                                   state = 
                                   {
                                     {
-                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 309}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 408}
-                                                }
-                                              }, 
-                                              expandedRowTargets = 
-                                              {
-                                                {"data", -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e}, 
-                                                {
-                                                  "data", 
-                                                  -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e, 
-                                                  "energyPercentageToMaximumArray"
-                                                }
-                                              }, 
-                                              selectedRowTargets = 
-                                              {
-                                                {"data", -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e, "listNumberOfStatePerBank"}
-                                              }, 
-                                              lastSelectedRowTarget = 
-                                              {
-                                                "data", 
-                                                -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e, 
-                                                "listNumberOfStatePerBank"
-                                              }, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e}, 
-                                                  value = => 40
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @a8d25b33-1f5f-43c3-a60b-f4e595d8764e}
-                              }
-                            }, 
-                            {
-                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-9d92-43c3-a60b-941d29508650}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-9d92-43c3-a60b-941d29508650}, 
+                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-4089-43c3-a60b-932f38453d66}, 
                                       value = => => 'ParametersSectionEditor 
                                       {
                                         widget = 'ToolsAndContentLayout 
@@ -8809,78 +9016,11 @@ Ui RS Report"
                                                   => {name = "value", width = 417}
                                                 }
                                               }, 
-                                              expandedRowTargets = {{"data", -> @a8d25b33-9d92-43c3-a60b-941d29508650}}, 
+                                              expandedRowTargets = {{"data", -> @a8d25b33-4089-43c3-a60b-932f38453d66}}, 
                                               rowHeightByTarget = 
                                               {
                                                 {
-                                                  key = => {"data", -> @a8d25b33-9d92-43c3-a60b-941d29508650}, 
-                                                  value = => 40
-                                                }, 
-                                                {
-                                                  key = => {"data", -> @a8d25b33-9d92-43c3-a60b-941d29508650, "documentation"}, 
-                                                  value = => 100
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @a8d25b33-9d92-43c3-a60b-941d29508650}
-                              }
-                            }, 
-                            {
-                              key = => 'ObjectWeakPointer {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 309}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 408}
-                                                }
-                                              }, 
-                                              expandedRowTargets = 
-                                              {
-                                                {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d}, 
-                                                {
-                                                  "data", 
-                                                  -> @7c3da599-3ca8-4095-9efa-1beb477ad70d, 
-                                                  "parameters"
-                                                }, 
-                                                {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d, "playState"}
-                                              }, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d}, 
-                                                  value = => 40
-                                                }, 
-                                                {
-                                                  key = => {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d, "parameters"}, 
-                                                  value = => 40
-                                                }, 
-                                                {
-                                                  key = => {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d, "playState"}, 
+                                                  key = => {"data", -> @a8d25b33-4089-43c3-a60b-932f38453d66}, 
                                                   value = => 40
                                                 }
                                               }
@@ -8891,7 +9031,7 @@ Ui RS Report"
                                     }
                                   }
                                 }, 
-                                currentSection = {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d}
+                                currentSection = {"data", -> @a8d25b33-4089-43c3-a60b-932f38453d66}
                               }
                             }, 
                             {
@@ -9437,72 +9577,6 @@ Ui RS Report"
                               }
                             }, 
                             {
-                              key = => 'ObjectWeakPointer {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 77}}}, 
-                                            state = 
-                                            {
-                                              viewPosition = {y = 77}, 
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 309}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 408}
-                                                }
-                                              }, 
-                                              expandedRowTargets = 
-                                              {
-                                                {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}, 
-                                                {
-                                                  "data", 
-                                                  -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500, 
-                                                  "energyPercentageToMaximumArray"
-                                                }
-                                              }, 
-                                              selectedRowTargets = 
-                                              {
-                                                {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500, "bankSelectionPercentage"}
-                                              }, 
-                                              lastSelectedRowTarget = 
-                                              {
-                                                "data", 
-                                                -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500, 
-                                                "bankSelectionPercentage"
-                                              }, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}, 
-                                                  value = => 40
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}
-                              }
-                            }, 
-                            {
                               key = => 'ObjectWeakPointer {"data", -> @d8e3b07a-2855-4f23-a356-1e04aa24dcf5}, 
                               value = => => 'ItemParametersEditor 
                               {
@@ -9643,6 +9717,266 @@ Ui RS Report"
                               }
                             }, 
                             {
+                              key = => 'ObjectWeakPointer {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 309}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 408}
+                                                }
+                                              }, 
+                                              expandedRowTargets = 
+                                              {
+                                                {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}, 
+                                                {
+                                                  "data", 
+                                                  -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500, 
+                                                  "energyPercentageToMaximumArray"
+                                                }
+                                              }, 
+                                              selectedRowTargets = 
+                                              {
+                                                {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500, "bankSelectionPercentage"}
+                                              }, 
+                                              lastSelectedRowTarget = 
+                                              {
+                                                "data", 
+                                                -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500, 
+                                                "bankSelectionPercentage"
+                                              }, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}
+                              }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-8962-43c3-a60b-3704a901e3fd}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-8962-43c3-a60b-3704a901e3fd}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 318}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 417}
+                                                }
+                                              }, 
+                                              expandedRowTargets = {{"data", -> @a8d25b33-8962-43c3-a60b-3704a901e3fd}}, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @a8d25b33-8962-43c3-a60b-3704a901e3fd}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @a8d25b33-8962-43c3-a60b-3704a901e3fd}
+                              }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-d0f5-43c3-a60b-a340bede1088}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-d0f5-43c3-a60b-a340bede1088}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 318}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 417}
+                                                }
+                                              }, 
+                                              expandedRowTargets = {{"data", -> @a8d25b33-d0f5-43c3-a60b-a340bede1088}}, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @a8d25b33-d0f5-43c3-a60b-a340bede1088}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @a8d25b33-d0f5-43c3-a60b-a340bede1088}
+                              }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 309}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 408}
+                                                }
+                                              }, 
+                                              expandedRowTargets = 
+                                              {
+                                                {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}, 
+                                                {
+                                                  "data", 
+                                                  -> @a8d25b33-e186-43c3-a60b-e2375f036cda, 
+                                                  "midiAction"
+                                                }
+                                              }, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}, 
+                                                  value = => 40
+                                                }, 
+                                                {
+                                                  key = => {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda, "midiAction"}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @a8d25b33-e186-43c3-a60b-e2375f036cda}
+                              }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @a8d25b33-3f45-43c3-a60b-bab2c9cea146}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @a8d25b33-3f45-43c3-a60b-bab2c9cea146}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 318}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 417}
+                                                }
+                                              }, 
+                                              expandedRowTargets = {{"data", -> @a8d25b33-3f45-43c3-a60b-bab2c9cea146}}, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @a8d25b33-3f45-43c3-a60b-bab2c9cea146}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @a8d25b33-3f45-43c3-a60b-bab2c9cea146}
+                              }
+                            }, 
+                            {
                               key = => 'ObjectWeakPointer {"data", -> @e320049a-d4ab-4ae1-a8fa-c4eb96d70054}, 
                               value = => => 'ItemParametersEditor 
                               {
@@ -9671,8 +10005,8 @@ Ui RS Report"
                                                 }
                                               }, 
                                               expandedRowTargets = {{"data", -> @e320049a-d4ab-4ae1-a8fa-c4eb96d70054}}, 
-                                              selectedRowTargets = {{"data", -> @8a66b799-86bd-44b1-a9be-186349aa3f8d}}, 
-                                              lastSelectedRowTarget = {"data", -> @8a66b799-86bd-44b1-a9be-186349aa3f8d}, 
+                                              selectedRowTargets = {{"data", -> @e320049a-d4ab-4ae1-a8fa-c4eb96d70054, "entries"}}, 
+                                              lastSelectedRowTarget = {"data", -> @e320049a-d4ab-4ae1-a8fa-c4eb96d70054, "entries"}, 
                                               rowHeightByTarget = 
                                               {
                                                 {
@@ -9693,10 +10027,76 @@ Ui RS Report"
                                 }, 
                                 currentSection = {"data", -> @e320049a-d4ab-4ae1-a8fa-c4eb96d70054}
                               }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492, "generator"}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 309}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 408}
+                                                }
+                                              }, 
+                                              expandedRowTargets = 
+                                              {
+                                                {"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492, "generator"}, 
+                                                {
+                                                  "data", 
+                                                  -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92, 
+                                                  "rasterizer"
+                                                }, 
+                                                {"data", -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92, "rasterizer.quality"}
+                                              }, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92, "rasterizer.quality"}, 
+                                                  value = => 40
+                                                }, 
+                                                {
+                                                  key = => {"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492, "generator"}, 
+                                                  value = => 40
+                                                }, 
+                                                {
+                                                  key = => {"data", -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92, "rasterizer"}, 
+                                                  value = => 40
+                                                }, 
+                                                {
+                                                  key = => {"data", -> @e320049a-cb40-4ae1-a8fa-7beb59a38f92, "rasterizer.resolution"}, 
+                                                  value = => 62
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492, "generator"}
+                              }
                             }
                           }
-                        }, 
-                        attachment = {pinned = true, targetPointer = {"data", -> @e320049a-d4ab-4ae1-a8fa-c4eb96d70054}}
+                        }
                       }
                     }
                   }
@@ -9710,9 +10110,8 @@ Ui RS Report"
           {
             currentElementTree = {"data", -> @a8d25b33-b8ec-43c3-a60b-24b854caf0bd}, 
             currentVisualizedElement = {"data", -> @a8d25b33-b8ec-43c3-a60b-24b854caf0bd}, 
-            currentElementWithCurve = {"data", -> @7c3da599-3ca8-4095-9efa-1beb477ad70d}, 
-            currentSelection = {{"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}}, 
-            currentItem = {"data", -> @1e802d4a-f62d-40e0-8295-ed4b1bebb500}, 
+            currentSelection = {{"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492}}, 
+            currentItem = {"data", -> @a6565a89-1ad7-42ea-a4e6-1effa6bbb492}, 
             currentParameterBank = {"data", -> @d4868e69-8146-4f93-a4b0-38f35dbae983}
           }
         }, 
