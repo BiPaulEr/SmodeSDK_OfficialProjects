@@ -1,0 +1,733 @@
+
+{
+  softwareVersion = {programName = "Smode SDK", branchName = "master", majorVersion = 14, patch = 732, commitHash = "0a41212288"}, 
+  content = => 'Compo @5fdde1c1-263f-42af-b2a8-256eb12a9bc4 
+  {
+    label = "RandomSystemMidiLinkTemplate", 
+    tools = 
+    {
+      => 'ParameterBank @687b6b32-6c39-47dd-bee2-6676b533fdd5 
+      {
+        label = "MainParameters", 
+        parameters = 
+        {
+          => 'Parameter(Percentage) @8a51628e-086c-4b43-a387-f3c58c919ea4 
+          {
+            label = "BankSelector", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @c75ca428-552d-4526-b4a8-3edfa83af6db 
+              {
+                label = "RSVideo Set Index Bank From Percentage", 
+                modifiers = 
+                {
+                  => 'FunctionLinkModifier(Percentage, Percentage) @141871a0-a8ca-4ff5-af2a-d563632b843b 
+                  {
+                    function = => 'KeyframeFunction(Percentage, Percentage) @8dbf38b3-044b-45c3-a880-d6b3f32e5aed 
+                    {
+                      keyframes = 
+                      {
+                        => @667f2ee4-52e3-452c-b534-9e76d5e6ed3a 
+                        {
+                          inputInterpolator = => 'LinearKeyframeInterpolator @e6ca4b6a-701a-47cb-ac35-d12e590a29f5 void, 
+                          outputInterpolator = => 'LinearKeyframeInterpolator @1f37c6a3-c304-40fe-8862-4de3d1651a27 void
+                        }, 
+                        => @17e8df6b-f533-40c9-b9b9-684c6cb395a7 
+                        {
+                          position = 1., 
+                          key = 1., 
+                          inputInterpolator = => 'LinearKeyframeInterpolator @f7170ad7-bec3-4ee4-9ff8-6e2f47bcba4f void, 
+                          outputInterpolator = => 'LinearKeyframeInterpolator @cd8bb29a-6d1b-44d8-ab28-06cdde4037b1 void
+                        }
+                      }
+                    }
+                  }
+                }, 
+                target = {"data", -> @4591350d-cf30-49d3-92f7-bb14fc6ea49b, "bankSelectionPercentage"}
+              }
+            }
+          }, 
+          => 'Parameter(Trigger) @5fdde1c1-30a1-42af-b2a8-c15bfebb4381 
+          {
+            label = "CDP", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @b12543f6-d8c0-4437-b599-e4d4726fb545 
+              {
+                target = {"data", -> @4591350d-cf30-49d3-92f7-bb14fc6ea49b, "changeDuoParameter"}
+              }
+            }
+          }, 
+          => 'Parameter(Trigger) @5fdde1c1-c293-42af-b2a8-61fd66d12e6b 
+          {
+            label = "CS", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @edefde6c-2771-4c5b-988c-9af26475fe79 
+              {
+                target = {"data", -> @4591350d-cf30-49d3-92f7-bb14fc6ea49b, "changeState"}
+              }
+            }
+          }, 
+          => 'Parameter(Trigger) @5fdde1c1-1f62-42af-b2a8-8e4b83e67fb9 
+          {
+            label = "CBT", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @6939be6c-f4bd-4772-97cb-c20120188ff5 
+              {
+                target = {"data", -> @4591350d-cf30-49d3-92f7-bb14fc6ea49b, "changeBankTrigger"}
+              }
+            }
+          }, 
+          => 'Parameter(Trigger) @5fdde1c1-75ad-42af-b2a8-c1ec0245f477 
+          {
+            label = "Invert", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @d1f1c109-883f-4f81-8e1d-bc19feac87f2 
+              {
+                target = {"data", -> @96891c61-9810-4d83-b376-e9c24095ee5e, "inputTrigger"}
+              }
+            }
+          }, 
+          => 'Parameter(Trigger) @5fdde1c1-9e23-42af-b2a8-612761771700 
+          {
+            label = "Shape", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @93598a46-bb31-40f1-89f5-f412f1d36681 
+              {
+                target = {"data", -> @13202a81-635b-4f8f-9fe6-20a6367f84f9, "inputTrigger"}
+              }
+            }
+          }, 
+          => 'Parameter(Trigger) @5fdde1c1-2b56-42af-b2a8-cc48e5924875 
+          {
+            label = "Energy Chgt Detector", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-e316-42af-b2a8-54aaf7fa413b 
+              {
+                target = {"data", -> @5fdde1c1-f1c8-42af-b2a8-d6d92b40391c, "value"}
+              }
+            }
+          }, 
+          => 'Parameter(Percentage) @bde90664-d487-4563-af7c-ce99cd2dc4a7 {label = "Energy", value = 1.}, 
+          => 'Parameter(Percentage) @a9c07970-641c-4d30-8e38-6285e217cb0f 
+          {
+            label = "BPMx5", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @c22abd32-25ad-473f-97c3-0a654eec54f0 
+              {
+                target = {"data", -> @5fdde1c1-4023-42af-b2a8-8a3a69054d5b, "value"}
+              }
+            }, 
+            value = 0.041666666667
+          }, 
+          => 'Parameter(ActivationState) @5fdde1c1-519e-42af-b2a8-25a691ba908e 
+          {
+            label = "MidiPocket To RS Activation", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-85af-42af-b2a8-9e7fda2203af 
+              {
+                target = {"data", -> @5fdde1c1-1d1b-42af-b2a8-1042c988076b, "activation"}
+              }
+            }
+          }, 
+          => 'Parameter(Percentage) @5fdde1c1-95c1-42af-b2a8-6df09c4bf89d 
+          {
+            label = "Energy -> CDP Proba", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-1dff-42af-b2a8-ac9e997f6fac 
+              {
+                label = "Energy -> CDP Proba", 
+                target = {"data", -> @5fdde1c1-b92d-42af-b2a8-ac30008c31a2, "probability"}
+              }
+            }, 
+            value = 0.014
+          }, 
+          => 'Parameter(Percentage) @5fdde1c1-df14-42af-b2a8-9b076dc3961b 
+          {
+            label = "Energy -> CS Proba", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-b9dd-42af-b2a8-3ab91a16b272 
+              {
+                label = "Energy -> CS Proba", 
+                target = {"data", -> @5fdde1c1-c6e8-42af-b2a8-c44905e8b1d1, "probability"}
+              }
+            }
+          }, 
+          => 'Parameter(Percentage) @5fdde1c1-2161-42af-b2a8-c0541c345069 
+          {
+            label = "Energy -> CBT Proba", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-c3ec-42af-b2a8-c6cc05c31be8 
+              {
+                label = "Energy -> CBT Proba", 
+                target = {"data", -> @5fdde1c1-6300-42af-b2a8-0f7520f09ee6, "probability"}
+              }
+            }, 
+            value = 0.033
+          }, 
+          => 'Parameter(Percentage) @5fdde1c1-e1b6-42af-b2a8-bea020afab62 
+          {
+            label = "BPMx5 -> Modificator Proba", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-fc9e-42af-b2a8-c2ae606209b9 
+              {
+                label = "BPMx5 -> Modificator Proba", 
+                target = {"data", -> @5fdde1c1-3e9b-42af-b2a8-f4a98f9d25ab, "probability"}
+              }
+            }
+          }, 
+          => 'Parameter(Percentage) @5fdde1c1-016c-42af-b2a8-ccf617be3783 
+          {
+            label = "BPMx5 -> Invert Proba", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-fc72-42af-b2a8-52596513f9d6 
+              {
+                label = "BPMx5 -> Invert Proba", 
+                target = {"data", -> @5fdde1c1-34f8-42af-b2a8-c85eef64d968, "probability"}
+              }
+            }
+          }
+        }
+      }, 
+      => 'ParameterBank @5fdde1c1-994a-42af-b2a8-438edacfbd91 
+      {
+        label = "N-> Bank", 
+        parameters = 
+        {
+          => 'Parameter(Percentage) @5fdde1c1-4023-42af-b2a8-8a3a69054d5b 
+          {
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-31ae-42af-b2a8-66a431efe1c4 
+              {
+                target = {"data", -> @5fdde1c1-ce0a-42af-b2a8-d5c5a620318f, "value"}
+              }
+            }, 
+            value = 0.041666666667
+          }
+        }
+      }, 
+      => 'ParameterBank @5fdde1c1-8c9f-42af-b2a8-45242daea064 
+      {
+        label = "RandomSystem Inter Trigger", 
+        parameters = 
+        {
+          => 'Parameter(Percentage) @5fdde1c1-ce0a-42af-b2a8-d5c5a620318f 
+          {
+            label = "BPMx5  -> Inter", 
+            modifiers = 
+            {
+              => 'FunctionLinkModifier(Percentage, Percentage) @5fdde1c1-a25e-42af-b2a8-cf18737e2665 
+              {
+                function = => 'ParametricScalarFunction(Percentage, Percentage) @5fdde1c1-f643-42af-b2a8-4386356da824 
+                {
+                  shape = => 'LinearRampFunctionShape @5fdde1c1-6255-42af-b2a8-07351cfb6563 void, 
+                  parameters = {maximum = 1., period = 1., repetitions = 3}
+                }
+              }
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-1676-42af-b2a8-d5c16bb6e23d 
+              {
+                label = "Modifier Inter BPMx5 Target", 
+                target = {"data", -> @5fdde1c1-c033-42af-b2a8-6753bf8a15f7, "value"}
+              }, 
+              => 'ParameterLinkTarget @5fdde1c1-0c7a-42af-b2a8-a387a4625dc2 
+              {
+                label = "Invert Inter BPMx5 Target", 
+                target = {"data", -> @5fdde1c1-f6bc-42af-b2a8-f79e00698c94, "value"}
+              }
+            }, 
+            expose = false, 
+            value = 0.041666666667
+          }, 
+          => 'Parameter(Trigger) @5fdde1c1-2ffb-42af-b2a8-9b9afe2fb65b 
+          {
+            label = "Rep", 
+            modifiers = 
+            {
+              => 'IncrementalModifier @5fdde1c1-0be3-42af-b2a8-01b0dafcd13d {currentValue = 3}
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-d6d3-42af-b2a8-d92ca0091d68 
+              {
+                target = {"data", -> @5fdde1c1-f643-42af-b2a8-4386356da824, "parameters.repetitions"}
+              }
+            }, 
+            expose = false
+          }, 
+          => 'Parameter(Percentage) @5fdde1c1-f6bc-42af-b2a8-f79e00698c94 
+          {
+            label = "Invert Inter", 
+            modifiers = 
+            {
+              => 'TriggerProbabilityModifier @5fdde1c1-34f8-42af-b2a8-c85eef64d968 {probability = 0.}
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-cbae-42af-b2a8-577847b38246 
+              {
+                label = "Modificator BPMx5 Target", 
+                target = {"data", -> @5fdde1c1-9e23-42af-b2a8-612761771700, "value"}
+              }
+            }, 
+            expose = false, 
+            value = 0.125
+          }, 
+          => 'Parameter(Percentage) @5fdde1c1-c033-42af-b2a8-6753bf8a15f7 
+          {
+            label = "Modifier Inter", 
+            modifiers = 
+            {
+              => 'TriggerProbabilityModifier @5fdde1c1-3e9b-42af-b2a8-f4a98f9d25ab {probability = 0.}
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-12d7-42af-b2a8-0b88fae88b31 
+              {
+                label = "Invert BPMx5 Target", 
+                target = {"data", -> @5fdde1c1-75ad-42af-b2a8-c1ec0245f477, "value"}
+              }
+            }, 
+            expose = false, 
+            value = 0.125
+          }, 
+          => 'Parameter(Trigger) @5fdde1c1-f1c8-42af-b2a8-d6d92b40391c 
+          {
+            label = "InputEnergy", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-961e-42af-b2a8-01b44d0b2b9a 
+              {
+                label = "CDP Energy Target", 
+                modifiers = 
+                {
+                  => 'ProbabilityTriggerLinkModifier @5fdde1c1-b92d-42af-b2a8-ac30008c31a2 {probability = 0.014}
+                }, 
+                target = {"data", -> @5fdde1c1-30a1-42af-b2a8-c15bfebb4381, "value"}
+              }, 
+              => 'ParameterLinkTarget @5fdde1c1-2473-42af-b2a8-043fcbe51101 
+              {
+                label = "CS  Energy Target", 
+                modifiers = 
+                {
+                  => 'ProbabilityTriggerLinkModifier @5fdde1c1-c6e8-42af-b2a8-c44905e8b1d1 {probability = 0.}
+                }, 
+                target = {"data", -> @5fdde1c1-c293-42af-b2a8-61fd66d12e6b, "value"}
+              }, 
+              => 'ParameterLinkTarget @5fdde1c1-e5fb-42af-b2a8-7a8cdaf6b256 
+              {
+                label = "CBT  Energy Target", 
+                modifiers = 
+                {
+                  => 'ProbabilityTriggerLinkModifier @5fdde1c1-6300-42af-b2a8-0f7520f09ee6 {probability = 0.033}
+                }, 
+                target = {"data", -> @5fdde1c1-1f62-42af-b2a8-8e4b83e67fb9, "value"}
+              }
+            }
+          }
+        }
+      }, 
+      => 'LinkBank @5fdde1c1-1d1b-42af-b2a8-1042c988076b 
+      {
+        label = "Pocket To RS", 
+        links = 
+        {
+          => @5fdde1c1-66ac-42af-b2a8-f43b3f98e1e7 
+          {
+            label = "BPMx5 -> Invert Proba  C1C9", 
+            source = => 'SinglePrecisionDeviceLinkSource @5fdde1c1-5900-42af-b2a8-f5c9da70c378 
+            {
+              modifiers = 
+              {
+                => 'ToPercentageLinkModifier @5fdde1c1-65b7-42af-b2a8-c807245634d1 {maximum = 127.}
+              }, 
+              device = {factory = "Remote Control", deviceName = "Pocket Control"}, 
+              controllerIdentifier = => 'MidiControllerIdentifier @5fdde1c1-f58a-42af-b2a8-ba6e92b22c9a {channel = 1, controller = 9}
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-751b-42af-b2a8-f6a91f393a8b 
+              {
+                target = {"data", -> @5fdde1c1-016c-42af-b2a8-ccf617be3783, "value"}
+              }
+            }
+          }, 
+          => @5fdde1c1-e331-42af-b2a8-f0411b58e9c2 
+          {
+            label = "BPMx5 -> Modificator  C1C10", 
+            source = => 'SinglePrecisionDeviceLinkSource @5fdde1c1-0bc0-42af-b2a8-e89228931113 
+            {
+              modifiers = 
+              {
+                => 'ToPercentageLinkModifier @5fdde1c1-62a2-42af-b2a8-da498ce40ef4 {maximum = 127.}
+              }, 
+              device = {factory = "Remote Control", deviceName = "Pocket Control"}, 
+              controllerIdentifier = => 'MidiControllerIdentifier @5fdde1c1-84c8-42af-b2a8-c3ecb9454c1d {channel = 1, controller = 10}
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-d13a-42af-b2a8-f0c983c7c5b6 
+              {
+                target = {"data", -> @5fdde1c1-e1b6-42af-b2a8-bea020afab62, "value"}
+              }
+            }
+          }, 
+          => @5fdde1c1-3ec9-42af-b2a8-8219a3d4da25 
+          {
+            label = "Energy -> CDP Proba C1C17", 
+            source = => 'SinglePrecisionDeviceLinkSource @5fdde1c1-ac9b-42af-b2a8-b2f15841039e 
+            {
+              modifiers = 
+              {
+                => 'ToPercentageLinkModifier @5fdde1c1-0cc4-42af-b2a8-e574fa2893ff {maximum = 127.}
+              }, 
+              device = {factory = "Remote Control", deviceName = "Pocket Control"}, 
+              controllerIdentifier = => 'MidiControllerIdentifier @5fdde1c1-7c95-42af-b2a8-489745107330 {channel = 1, controller = 6}
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-5478-42af-b2a8-914428f97ce9 
+              {
+                target = {"data", -> @5fdde1c1-95c1-42af-b2a8-6df09c4bf89d, "value"}
+              }
+            }
+          }, 
+          => @5fdde1c1-122c-42af-b2a8-0f709a7ea3d8 
+          {
+            label = "Energy -> CS Proba C1C18", 
+            source = => 'SinglePrecisionDeviceLinkSource @5fdde1c1-5b8e-42af-b2a8-18bbcfdebdb1 
+            {
+              modifiers = 
+              {
+                => 'ToPercentageLinkModifier @5fdde1c1-5b7a-42af-b2a8-52474013abfa {maximum = 127.}
+              }, 
+              device = {factory = "Remote Control", deviceName = "Pocket Control"}, 
+              controllerIdentifier = => 'MidiControllerIdentifier @5fdde1c1-1ef6-42af-b2a8-04edb699266b {channel = 1, controller = 7}
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-2c6a-42af-b2a8-7877badc342c 
+              {
+                target = {"data", -> @5fdde1c1-df14-42af-b2a8-9b076dc3961b, "value"}
+              }
+            }
+          }, 
+          => @5fdde1c1-8b3c-42af-b2a8-fb012a4e90f3 
+          {
+            label = "Energy -> CBT Proba C1C19", 
+            source = => 'SinglePrecisionDeviceLinkSource @5fdde1c1-f495-42af-b2a8-e331d016f954 
+            {
+              modifiers = 
+              {
+                => 'ToPercentageLinkModifier @5fdde1c1-2878-42af-b2a8-6a54a66dbefd {maximum = 127.}
+              }, 
+              device = {factory = "Remote Control", deviceName = "Pocket Control"}, 
+              controllerIdentifier = => 'MidiControllerIdentifier @5fdde1c1-deb1-42af-b2a8-9cd82cf1ef16 {channel = 1, controller = 8}
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-b018-42af-b2a8-94a34fb3acd7 
+              {
+                target = {"data", -> @5fdde1c1-2161-42af-b2a8-c0541c345069, "value"}
+              }
+            }
+          }, 
+          => @5fdde1c1-9b2c-42af-b2a8-b9399baa9ea8 
+          {
+            label = "Rep C1C31", 
+            source = => 'SinglePrecisionDeviceLinkSource @5fdde1c1-8d3e-42af-b2a8-dec58881cdc1 
+            {
+              modifiers = 
+              {
+                => 'IfEqualLinkCondition @5fdde1c1-9e2d-42af-b2a8-cb8fab0df04a 
+                {
+                  value = => 'PositiveInteger7Bits @5fdde1c1-fc84-42af-b2a8-1121e671e23b 127
+                }, 
+                => 'TrigLinkModifier @5fdde1c1-0225-42af-b2a8-c7a7b69da63c void
+              }, 
+              device = {factory = "Remote Control", deviceName = "Pocket Control"}, 
+              controllerIdentifier = => 'MidiControllerIdentifier @5fdde1c1-b2de-42af-b2a8-f6c00695fec5 {channel = 1, controller = 31}
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-376b-42af-b2a8-7e3252c5f3be 
+              {
+                target = {"data", -> @5fdde1c1-2ffb-42af-b2a8-9b9afe2fb65b, "value"}
+              }
+            }
+          }, 
+          => @5fdde1c1-d927-42af-b2a8-4381321a2289 
+          {
+            label = "CDP C1C26", 
+            source = => 'SinglePrecisionDeviceLinkSource @5fdde1c1-4c6d-42af-b2a8-2fbd47f97ab2 
+            {
+              modifiers = 
+              {
+                => 'IfEqualLinkCondition @5fdde1c1-055c-42af-b2a8-898739c79983 
+                {
+                  value = => 'PositiveInteger7Bits @5fdde1c1-d292-42af-b2a8-5a5d3a899424 127
+                }, 
+                => 'TrigLinkModifier @5fdde1c1-eddd-42af-b2a8-49f752b42f0d void
+              }, 
+              device = {factory = "Remote Control", deviceName = "Pocket Control"}, 
+              controllerIdentifier = => 'MidiControllerIdentifier @5fdde1c1-9151-42af-b2a8-be8833f18b66 {channel = 1, controller = 26}
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-30bf-42af-b2a8-caad2c034867 
+              {
+                target = {"data", -> @5fdde1c1-30a1-42af-b2a8-c15bfebb4381, "value"}
+              }
+            }
+          }, 
+          => @5fdde1c1-5589-42af-b2a8-08314c1b4b2a 
+          {
+            label = "CDP C1C27", 
+            source = => 'SinglePrecisionDeviceLinkSource @5fdde1c1-c0c3-42af-b2a8-640d39f81311 
+            {
+              modifiers = 
+              {
+                => 'IfEqualLinkCondition @5fdde1c1-89f2-42af-b2a8-c23747c6f020 
+                {
+                  value = => 'PositiveInteger7Bits @5fdde1c1-5e3c-42af-b2a8-11ed4488fd87 127
+                }, 
+                => 'TrigLinkModifier @5fdde1c1-6173-42af-b2a8-02472cb546ae void
+              }, 
+              device = {factory = "Remote Control", deviceName = "Pocket Control"}, 
+              controllerIdentifier = => 'MidiControllerIdentifier @5fdde1c1-1dff-42af-b2a8-f5384df0e2c5 {channel = 1, controller = 27}
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-bc11-42af-b2a8-811d520221c4 
+              {
+                target = {"data", -> @5fdde1c1-c293-42af-b2a8-61fd66d12e6b, "value"}
+              }
+            }
+          }, 
+          => @5fdde1c1-4502-42af-b2a8-2afbc95d246e 
+          {
+            label = "CBT C1C28", 
+            source = => 'SinglePrecisionDeviceLinkSource @5fdde1c1-d048-42af-b2a8-46c7bcbe7c55 
+            {
+              modifiers = 
+              {
+                => 'IfEqualLinkCondition @5fdde1c1-9979-42af-b2a8-e0fdc2809f64 
+                {
+                  value = => 'PositiveInteger7Bits @5fdde1c1-4eb7-42af-b2a8-3327c1ce92c3 127
+                }, 
+                => 'TrigLinkModifier @5fdde1c1-71f8-42af-b2a8-208da9f329ea void
+              }, 
+              device = {factory = "Remote Control", deviceName = "Pocket Control"}, 
+              controllerIdentifier = => 'MidiControllerIdentifier @5fdde1c1-0d74-42af-b2a8-d7f2c8b68d81 {channel = 1, controller = 28}
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-ac9a-42af-b2a8-a3d7d7444e80 
+              {
+                target = {"data", -> @5fdde1c1-1f62-42af-b2a8-8e4b83e67fb9, "value"}
+              }
+            }
+          }, 
+          => @5fdde1c1-5764-42af-b2a8-21f0b4f87fbe 
+          {
+            label = "Invert C1C29", 
+            source = => 'SinglePrecisionDeviceLinkSource @5fdde1c1-c22e-42af-b2a8-4dccc11b2785 
+            {
+              modifiers = 
+              {
+                => 'IfEqualLinkCondition @5fdde1c1-8b1f-42af-b2a8-ebf6bf25c4b4 
+                {
+                  value = => 'PositiveInteger7Bits @5fdde1c1-5cd1-42af-b2a8-382cbc6bc913 127
+                }, 
+                => 'TrigLinkModifier @5fdde1c1-639e-42af-b2a8-2b86d456723a void
+              }, 
+              device = {factory = "Remote Control", deviceName = "Pocket Control"}, 
+              controllerIdentifier = => 'MidiControllerIdentifier @5fdde1c1-1f12-42af-b2a8-dcf9b513d651 {channel = 1, controller = 29}
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-befc-42af-b2a8-a8dcaae11550 
+              {
+                target = {"data", -> @5fdde1c1-75ad-42af-b2a8-c1ec0245f477, "value"}
+              }
+            }
+          }, 
+          => @5fdde1c1-20e9-42af-b2a8-98349852322d 
+          {
+            label = "Modificator C1C30", 
+            source = => 'SinglePrecisionDeviceLinkSource @5fdde1c1-b5a3-42af-b2a8-f408edb16a16 
+            {
+              modifiers = 
+              {
+                => 'IfEqualLinkCondition @5fdde1c1-fc92-42af-b2a8-5232938f8927 
+                {
+                  value = => 'PositiveInteger7Bits @5fdde1c1-2b5c-42af-b2a8-81e890c18480 127
+                }, 
+                => 'TrigLinkModifier @5fdde1c1-1413-42af-b2a8-9242f8fc3fa9 void
+              }, 
+              device = {factory = "Remote Control", deviceName = "Pocket Control"}, 
+              controllerIdentifier = => 'MidiControllerIdentifier @5fdde1c1-689f-42af-b2a8-653d99b99bc2 {channel = 1, controller = 30}
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @5fdde1c1-c971-42af-b2a8-1118864b58c3 
+              {
+                target = {"data", -> @5fdde1c1-9e23-42af-b2a8-612761771700, "value"}
+              }
+            }
+          }, 
+          => @15786fa7-242f-4fbb-9a46-d328690c7e8b 
+          {
+            source = => 'ParameterLinkSource @185e776a-01d0-471b-9255-3ae7a7d95b3b 
+            {
+              target = {"data", -> @5fdde1c1-39d4-42af-b2a8-9a6e7e5e1402, "state"}, 
+              numChanges = 47
+            }, 
+            targets = 
+            {
+              => 'ParameterLinkTarget @009b5ff2-9ea9-4dc9-ba8d-b58e4260e9c2 
+              {
+                target = {"data", -> @8f092c1e-881e-407d-8201-3fc0a4c22989, "stringValue"}
+              }
+            }
+          }
+        }
+      }, 
+      => 'DescriptionTool @5fdde1c1-2ac3-42af-b2a8-b2f7271d236e 
+      {
+        author = "Paul-Ernest Martin", 
+        documentation = "Template to Facilitate The Link Between Random System et MIDI controleur.
+
+Organisation : 
+
+N- > Bank : 
+     - Midi Pocket Avtivation : enables to desactiavte links between midi to intern parameters
+     - BPMx5 : to link to BPMx5 to enabmes to this mode
+      - Energy Chgt Detcetor : to link to a Ernergy Chgt Detector to enable this mode.
+	   -  UI Trigger : to update description
+   - WeakPointer to RS to fill enables to have complete description. 
+    
+Random System Inter Trigger : Intermediare Banks
+
+Links Banks :
+   - Pcket TO Rs : link directly from MDI to parametrs 
+    - IMPORTANT : Triggers to link to the Trigger of the Random System you want to animate  IMPORTANT 
+
+Ui RS Report"
+      }, 
+      => 'ListObjectStateUi @5fdde1c1-39d4-42af-b2a8-9a6e7e5e1402 
+      {
+        label = "2D Modifier", 
+        entries = 
+        {
+          => @369b52c2-6bc2-4cff-b3ec-46e6a1232bdb {target = {"data", -> @4591350d-cf30-49d3-92f7-bb14fc6ea49b, "stateParameters"}}, 
+          => @9d761bd6-7388-4df6-8d54-b28cc70fc626 {target = {"data", -> @4591350d-cf30-49d3-92f7-bb14fc6ea49b, "bankStateSelected"}}, 
+          => @dea89488-4c91-4405-b5b6-9f0c4fcae4b9 {target = {"data", -> @4591350d-cf30-49d3-92f7-bb14fc6ea49b, "bankSelected"}}, 
+          => @b96e331e-bfaf-4cc9-ab9a-800867b4659c {target = {"data", -> @5fdde1c1-30a1-42af-b2a8-c15bfebb4381, "value"}, key = "CDP"}, 
+          => @494853ee-f04b-4ba7-bf0c-21787270e459 {target = {"data", -> @5fdde1c1-c293-42af-b2a8-61fd66d12e6b, "value"}, key = "CBS"}, 
+          => @12ea31d2-e8bc-4011-9e93-d8d03a1bc1be {target = {"data", -> @5fdde1c1-1f62-42af-b2a8-8e4b83e67fb9, "value"}, key = "CBT"}, 
+          => @556f5aeb-f606-45c1-a66f-f29f8b2485d3 {target = {"data", -> @5fdde1c1-75ad-42af-b2a8-c1ec0245f477, "value"}, key = "Invert"}, 
+          => @341a5922-e81e-44d4-966d-dcc6e632fd3d {target = {"data", -> @5fdde1c1-9e23-42af-b2a8-612761771700, "value"}, key = "Shape"}, 
+          => @740a51af-3f74-4c8c-9c42-36ec76cf2296 
+          {
+            target = {"data", -> @5fdde1c1-95c1-42af-b2a8-6df09c4bf89d, "value"}, 
+            key = "Energy -> CDP Proba"
+          }, 
+          => @4e14fe68-8093-4c81-8178-0e5cc2a9f0a1 
+          {
+            target = {"data", -> @5fdde1c1-df14-42af-b2a8-9b076dc3961b, "value"}, 
+            key = "Energy -> CS Proba"
+          }, 
+          => @991bb21c-3687-4f41-b8c9-4e22b99a102d 
+          {
+            target = {"data", -> @5fdde1c1-2161-42af-b2a8-c0541c345069, "value"}, 
+            key = "Energy -> CBT Proba"
+          }, 
+          => @16c8cbd5-c40b-4bd7-9b54-f744434c4076 
+          {
+            target = {"data", -> @5fdde1c1-e1b6-42af-b2a8-bea020afab62, "value"}, 
+            key = "BPMx5 -> Modificator Proba"
+          }, 
+          => @e0feb17c-3b0a-4d48-a026-2a4640dab425 
+          {
+            target = {"data", -> @5fdde1c1-016c-42af-b2a8-ccf617be3783, "value"}, 
+            key = "BPMx5 -> Invert Proba"
+          }
+        }, 
+        autoUpdate = true, 
+        state = "{ \"Identifier\": \"2D Modifier\",
+\"State Parameters\": \"Custom Blur Intensity_max(x1), Glitch Shifter.fs Intensity_max(x2), Custom Blur Intensity_max(x5)\",
+\"Bank State Selected\": \"Glitch_1\",
+\"Bank Selected\": \"Glitch1\",
+\"CDP\": \"Trigger()\",
+\"CBS\": \"Trigger()\",
+\"CBT\": \"Trigger()\",
+\"Invert\": \"Trigger()\",
+\"Shape\": \"Trigger()\",
+\"Energy -> CDP Proba\": 0.014,
+\"Energy -> CS Proba\": 0.0,
+\"Energy -> CBT Proba\": 0.033,
+\"BPMx5 -> Modificator Proba\": 0.0,
+\"BPMx5 -> Invert Proba\": 0.0
+}
+"
+      }, 
+      => 'OscPacketSender @8f092c1e-881e-407d-8201-3fc0a4c22989 
+      {
+        label = "OSC_Sender", 
+        device = {factory = "Remote Osc Control", deviceName = "Osc sender"}, 
+        address = "/Smode/ReportRandomSystem", 
+        type = "oscString", 
+        stringValue = "{ \"Identifier\": \"2D Modifier\",
+\"State Parameters\": \"Custom Blur Intensity_max(x1), Glitch Shifter.fs Intensity_max(x2), Custom Blur Intensity_max(x5)\",
+\"Bank State Selected\": \"Glitch_1\",
+\"Bank Selected\": \"Glitch1\",
+\"CDP\": \"Trigger()\",
+\"CBS\": \"Trigger()\",
+\"CBT\": \"Trigger()\",
+\"Invert\": \"Trigger()\",
+\"Shape\": \"Trigger()\",
+\"Energy -> CDP Proba\": 0.014,
+\"Energy -> CS Proba\": 0.0,
+\"Energy -> CBT Proba\": 0.033,
+\"BPMx5 -> Modificator Proba\": 0.0,
+\"BPMx5 -> Invert Proba\": 0.0
+}
+", 
+        send = {condition = "onChange"}
+      }
+    }, 
+    rasterizer = #1 {resolution = #1 {preset = "hd1080", width = 1920, height = 1080}}, 
+    defaultCamera = 
+    {
+      placement = => 'TargetOrientationDistance3dPlacement @5fdde1c1-2f2f-42af-b2a8-1e5913d58b83 
+      {
+        orientation = {x = -0.785398185253, y = 0.785398185253}, 
+        distance = 20.
+      }, 
+      focusParameters = {distance = 20.}, 
+      frustum = => 'FieldOfViewPerspectiveFrustum @5fdde1c1-1e9f-42af-b2a8-74fda07dad1a #2 
+      {
+        clippingDistances = {center = 1000.1, size = 1999.8, begin = 0.2, end = 2000.}, 
+        customAspectRatio = {value = {p = 16, q = 9}}, 
+        vertical = 1.047198383614
+      }
+    }
+  }, 
+  uiState = void
+}
