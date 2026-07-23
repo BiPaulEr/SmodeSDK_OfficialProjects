@@ -1,5 +1,5 @@
 {
-  "MINIWASH710": { "mode": "RGBW" },
+  "MINIWASH710": { "mode": "RGBW", "dimmerRange": [8, 134] },
   "MS60": {
     "mode": "ColorWheel",
     "channel": 6,
