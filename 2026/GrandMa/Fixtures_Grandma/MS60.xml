@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GMA3 DataVersion="2.3.2.0">
+  <FixtureType Name="MS60" Guid="DB C2 70 DA F9 9A 48 09 A6 EE 7C 63 2B 7B AF EA"
+      Color="1.0000000000,1.0000000000,1.0000000000,1.0000000000"
+      ShortName="MS60" Manufacturer="Algam Lighting" Universal="No">
+    <AttributeDefinitions>
+      <DeactivationGroups/>
+      <ActivationGroups>
+        <ActivationGroup Name="PanTilt"/>
+        <ActivationGroup Name="Gobo1"/>
+        <ActivationGroup Name="Prism"/>
+      </ActivationGroups>
+      <FeatureGroups>
+        <FeatureGroup Name="Position"><Feature Name="PanTilt"/>    </FeatureGroup>
+        <FeatureGroup Name="Control"> <Feature Name="Control"/>    </FeatureGroup>
+        <FeatureGroup Name="Dimmer">  <Feature Name="Dimmer"/>     </FeatureGroup>
+        <FeatureGroup Name="Beam">
+          <Feature Name="Beam"/>
+          <Feature Name="Focus"/>
+        </FeatureGroup>
+        <FeatureGroup Name="Color">   <Feature Name="Color"/>      </FeatureGroup>
+        <FeatureGroup Name="Gobo">    <Feature Name="Gobo"/>       </FeatureGroup>
+      </FeatureGroups>
+      <Attributes>
+        <Attribute Name="Pan"              Pretty="P"          ActivationGroup="PanTilt"    Feature="Position.PanTilt" Special="PanTilt"   SpecialIndex="0" PhysicalUnit="Angle"            NaturalReadout="Physical" EncoderResolution="Coarse" Color="0.0000000000,0.0000000000,0.0000000000,1.0000000000"/>
+        <Attribute Name="Tilt"             Pretty="T"          ActivationGroup="PanTilt"    Feature="Position.PanTilt" Special="PanTilt"   SpecialIndex="1" PhysicalUnit="Angle"            NaturalReadout="Physical" EncoderResolution="Coarse" Color="0.0000000000,0.0000000000,0.0000000000,1.0000000000"/>
+        <Attribute Name="PositionMSpeed"   Pretty="Pos MSpeed"                              Feature="Control.Control"                      SpecialIndex="0"                                  NaturalReadout="Percent"  EncoderResolution="Coarse" Color="0.0000000000,0.0000000000,0.0000000000,1.0000000000"/>
+        <Attribute Name="Dimmer"           Pretty="Dim"                                     Feature="Dimmer.Dimmer"    Special="Dimmer"    SpecialIndex="0" PhysicalUnit="LuminousIntensity" NaturalReadout="Percent"  EncoderResolution="Coarse" Color="0.0000000000,0.0000000000,0.0000000000,1.0000000000"/>
+        <Attribute Name="ShutterStrobe"    Pretty="Strobe"                                  Feature="Beam.Beam"                            SpecialIndex="0" PhysicalUnit="Frequency"         NaturalReadout="Percent"  EncoderResolution="Coarse" Color="0.0000000000,0.0000000000,0.0000000000,1.0000000000"/>
+        <Attribute Name="Color1"           Pretty="C1"         Special="Color"                                           Feature="Color.Color"     SpecialIndex="0"                                  NaturalReadout="Percent"  EncoderResolution="Coarse" Color="0.0000000000,0.0000000000,0.0000000000,1.0000000000"/>
+        <Attribute Name="Gobo1"            Pretty="G1"         ActivationGroup="Gobo1"      Special="Gobo"             Feature="Gobo.Gobo"                            SpecialIndex="0"                                  NaturalReadout="Percent"  EncoderResolution="Coarse" Color="0.0000000000,0.0000000000,0.0000000000,1.0000000000"/>
+        <Attribute Name="Prism1"           Pretty="Prism1"     ActivationGroup="Prism"      Feature="Beam.Beam"        Special="Prism"     SpecialIndex="0"                                  NaturalReadout="Percent"  EncoderResolution="Coarse" Color="0.0000000000,0.0000000000,0.0000000000,1.0000000000"/>
+        <Attribute Name="Focus"            Pretty="Focus"                                   Feature="Beam.Focus"                           SpecialIndex="0"                                  NaturalReadout="Percent"  EncoderResolution="Coarse" Color="0.0000000000,0.0000000000,0.0000000000,1.0000000000"/>
+        <Attribute Name="NoFeature"        Pretty="NoFeature"                               Feature="Control.Control"  Special="NoFeature" SpecialIndex="0"                                  NaturalReadout="Percent"  EncoderResolution="Coarse" Color="0.0000000000,0.0000000000,0.0000000000,1.0000000000"/>
+      </Attributes>
+    </AttributeDefinitions>
+    <Wheels>
+      <Wheel Name="ColorWheelSelect">
+        <Slot Name="Open" Color="0.9998409152,1.0000231266,1.0002399683,1.0000000000"/>
+        <Slot Name="Red" Color="1.2854729891,-0.0852012336,0.0020318171,1.0000000000"/>
+        <Slot Name="Yellow" Color="1.7115323544,0.7446563244,-0.0905996040,1.0000000000"/>
+        <Slot Name="Blue" Color="0.0682568848,-0.0724685043,1.0711412430,1.0000000000"/>
+        <Slot Name="Green" Color="-0.8175424337,1.6398234367,0.0158751309,1.0000000000"/>
+        <Slot Name="Orange" Color="2.7552764416,0.4070564210,-0.0980914459,1.0000000000"/>
+        <Slot Name="Magenta" Color="1.9094097614,-0.1789770871,0.3036541343,1.0000000000"/>
+        <Slot Name="Cyan" Color="-1.5667845011,1.6586529016,2.0370390415,1.0000000000"/>
+      </Wheel>
+      <Wheel Name="GoboWheel1">
+        <Slot Name="Open"/>
+        <Slot Name="Gobo 1"/>
+        <Slot Name="Gobo 2"/>
+        <Slot Name="Gobo 3"/>
+        <Slot Name="Gobo 4"/>
+        <Slot Name="Gobo 5"/>
+        <Slot Name="Gobo 6"/>
+        <Slot Name="Gobo 7"/>
+      </Wheel>
+    </Wheels>
+    <PhysicalDescriptions>
+      <Emitters/><CRIs/><FTFilters/><Connectors/>
+      <PhysicalProperties><PhysicalPropertiesData/></PhysicalProperties>
+      <ColorSpaceCollect/><GamutCollect/>
+    </PhysicalDescriptions>
+    <Models>
+      <Model Name="BASE" Length="0.1500" Width="0.1500" Height="0.1000" DimensionsfollowRatio="No" CastShadow="Yes" Mesh="[base_3ds]" File="MESH/gdtf_generic/base.3ds">
+        <DependencyExport Size="1">
+          <Dependency Base="ShowData.Meshes" RelAddr="[base_3ds]" RelAddrNum="4" Address="ShowData.Meshes.[base_3ds]" AddressNum="14.7.4">
+            <Mesh Lock="UL" Name="[base_3ds]" Guid="D2 39 57 D0 56 75 10 0A 9F B3 78 39 38 9C A3 3E" FileName="base.3ds" FilePath="gdtf_generic" Culling="No">
+              <Material Name="Material 1" Guid="D2 39 57 D0 BB 7A 10 0A 4A 3A 90 26 38 9C A3 3E" FilePath="gdtf_generic"/>
+            </Mesh>
+          </Dependency>
+        </DependencyExport>
+      </Model>
+      <Model Name="YOKE" Length="0.1500" Width="0.0500" Height="0.1000" DimensionsfollowRatio="No" CastShadow="Yes" Mesh="[yoke_3ds]" File="MESH/gdtf_generic/yoke.3ds">
+        <DependencyExport Size="1">
+          <Dependency Base="ShowData.Meshes" RelAddr="[yoke_3ds]" RelAddrNum="5" Address="ShowData.Meshes.[yoke_3ds]" AddressNum="14.7.5">
+            <Mesh Lock="UL" Name="[yoke_3ds]" Guid="D2 39 57 D0 53 6F 10 0A 01 A5 AB 23 38 9C A3 3E" FileName="yoke.3ds" FilePath="gdtf_generic" Culling="No">
+              <Material Name="Material 1" Guid="D2 39 57 D0 D5 68 10 0A FC 2F C3 28 38 9C A3 3E" FilePath="gdtf_generic"/>
+            </Mesh>
+          </Dependency>
+        </DependencyExport>
+      </Model>
+      <Model Name="HEAD" Length="0.1000" Width="0.1000" Height="0.1000" DimensionsfollowRatio="No" CastShadow="Yes" Mesh="[head_3ds]" File="MESH/gdtf_generic/head.3ds">
+        <DependencyExport Size="1">
+          <Dependency Base="ShowData.Meshes" RelAddr="[head_3ds]" RelAddrNum="6" Address="ShowData.Meshes.[head_3ds]" AddressNum="14.7.6">
+            <Mesh Lock="UL" Name="[head_3ds]" Guid="D2 39 57 D0 2B 35 10 0A AB D6 DA 15 39 9C A3 3E" FileName="head.3ds" FilePath="gdtf_generic" Culling="No">
+              <Material Name="Material 1" Guid="D2 39 57 D0 17 62 10 0A 66 51 F2 12 39 9C A3 3E" FilePath="gdtf_generic"/>
+            </Mesh>
+          </Dependency>
+        </DependencyExport>
+      </Model>
+    </Models>
+    <Geometries>
+      <Geometry Name="Base" Model="BASE" PosZ="0.0698" GridAuto="Auto">
+        <Axis Name="Yoke" Model="YOKE" PosZ="-0.1458" GridAuto="Auto" GridX="0" GridY="0" GridZ="0">
+          <Axis Name="Head" Model="HEAD" PosZ="-0.0449" GridAuto="Auto" GridX="0" GridY="0" GridZ="0">
+            <Beam Name="Beam" PosZ="-0.1037" GridAuto="Auto" GridX="0" GridY="0" GridZ="0" LampType="LED" BeamType="Spot" BeamAngle="15.0" BeamRadius="0.030" ColorTemperature="6000"/>
+          </Axis>
+        </Axis>
+      </Geometry>
+    </Geometries>
+    <DMXModes>
+      <DMXMode Name="11 Channel" Geometry="Base" XYZ="No" DiveInto="Yes">
+        <DMXChannels>
+          <DMXChannel Coarse="1" Default="800000" Geometry="Base.Yoke"><LogicalChannel Attribute="Pan"><ChannelFunction Attribute="Pan" PhysicalFrom="-270.0000" PhysicalTo="270.0000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="2" Default="800000" Geometry="Base.Yoke.Head"><LogicalChannel Attribute="Tilt"><ChannelFunction Attribute="Tilt" PhysicalFrom="-115.0000" PhysicalTo="115.0000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="3" DefaultChannelFunction="PositionMSpeed.PositionMSpeed 1" Geometry="Base.Yoke"><LogicalChannel Attribute="PositionMSpeed"><ChannelFunction Attribute="PositionMSpeed" Default="000000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="4" DefaultChannelFunction="Dimmer.Dimmer 1" Geometry="Base.Yoke.Head.Beam"><LogicalChannel Attribute="Dimmer"><ChannelFunction Attribute="Dimmer" Default="000000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="5" DefaultChannelFunction="ShutterStrobe.ShutterStrobe 1" Geometry="Base.Yoke.Head.Beam"><LogicalChannel Attribute="ShutterStrobe"><ChannelFunction Attribute="ShutterStrobe" Default="000000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="6" Default="050000" Geometry="Base.Yoke.Head.Beam"><LogicalChannel Attribute="Color1" Snap="Yes"><ChannelFunction Attribute="Color1" Wheel="ColorWheelSelect"><ChannelSet Name="Open" WheelSlotIndex="1"/><ChannelSet Name="Red" DMXFrom="0A0000" WheelSlotIndex="2"/><ChannelSet Name="Yellow" DMXFrom="140000" WheelSlotIndex="3"/><ChannelSet Name="Blue" DMXFrom="1E0000" WheelSlotIndex="4"/><ChannelSet Name="Green" DMXFrom="280000" WheelSlotIndex="5"/><ChannelSet Name="Orange" DMXFrom="320000" WheelSlotIndex="6"/><ChannelSet Name="Magenta" DMXFrom="3C0000" WheelSlotIndex="7"/><ChannelSet Name="Cyan" DMXFrom="460000" WheelSlotIndex="8"/><ChannelSet Name="Cyan+Magenta" DMXFrom="500000"/><ChannelSet Name="Magenta+Orange" DMXFrom="5A0000"/><ChannelSet Name="Orange+Green" DMXFrom="640000"/><ChannelSet Name="Green+Bleu fonce" DMXFrom="6E0000"/><ChannelSet Name="Bleu fonce+Jaune" DMXFrom="780000"/><ChannelSet Name="Jaune+Rouge" DMXFrom="820000"/><ChannelSet Name="Auto" DMXFrom="8C0000"/></ChannelFunction></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="7" Default="070000" Geometry="Base.Yoke.Head.Beam"><LogicalChannel Attribute="Gobo1" Snap="Yes"><ChannelFunction Attribute="Gobo1" Wheel="GoboWheel1"><ChannelSet Name="Open" WheelSlotIndex="1"/><ChannelSet Name="Gobo 1" DMXFrom="010000" WheelSlotIndex="2"/><ChannelSet Name="Gobo 2" DMXFrom="0A0000" WheelSlotIndex="3"/><ChannelSet Name="Gobo 3" DMXFrom="140000" WheelSlotIndex="4"/><ChannelSet Name="Gobo 4" DMXFrom="1E0000" WheelSlotIndex="5"/><ChannelSet Name="Gobo 5" DMXFrom="280000" WheelSlotIndex="6"/><ChannelSet Name="Gobo 6" DMXFrom="320000" WheelSlotIndex="7"/><ChannelSet Name="Gobo 7" DMXFrom="3C0000" WheelSlotIndex="8"/><ChannelSet Name="Shake" DMXFrom="460000"/><ChannelSet Name="Auto" DMXFrom="810000"/></ChannelFunction></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="8" DefaultChannelFunction="Prism1.Prism1 1" Geometry="Base.Yoke.Head"><LogicalChannel Attribute="Prism1" Snap="Yes"><ChannelFunction Attribute="Prism1" Default="000000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="9" DefaultChannelFunction="Focus.Focus 1" Geometry="Base.Yoke.Head"><LogicalChannel Attribute="Focus"><ChannelFunction Attribute="Focus" Default="000000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="10" DefaultChannelFunction="NoFeature.NoFeature 1" Geometry="Base"><LogicalChannel Attribute="NoFeature" Snap="Yes"><ChannelFunction Attribute="NoFeature" Default="000000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="11" DefaultChannelFunction="NoFeature.NoFeature 1" Geometry="Base"><LogicalChannel Attribute="NoFeature" Snap="Yes"><ChannelFunction Attribute="NoFeature" Default="000000"/></LogicalChannel></DMXChannel>
+        </DMXChannels>
+        <Relations/><FTMacros/><SoftwareVersions/><FTPresets/>
+      </DMXMode>
+      <DMXMode Name="13 Channel" Geometry="Base" XYZ="No" DiveInto="Yes">
+        <DMXChannels>
+          <DMXChannel Coarse="1" Fine="2" Default="800000" Geometry="Base.Yoke"><LogicalChannel Attribute="Pan"><ChannelFunction Attribute="Pan" PhysicalFrom="-270.0000" PhysicalTo="270.0000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="3" Fine="4" Default="800000" Geometry="Base.Yoke.Head"><LogicalChannel Attribute="Tilt"><ChannelFunction Attribute="Tilt" PhysicalFrom="-115.0000" PhysicalTo="115.0000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="5" DefaultChannelFunction="PositionMSpeed.PositionMSpeed 1" Geometry="Base.Yoke"><LogicalChannel Attribute="PositionMSpeed"><ChannelFunction Attribute="PositionMSpeed" Default="000000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="6" DefaultChannelFunction="Dimmer.Dimmer 1" Geometry="Base.Yoke.Head.Beam"><LogicalChannel Attribute="Dimmer"><ChannelFunction Attribute="Dimmer" Default="000000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="7" DefaultChannelFunction="ShutterStrobe.ShutterStrobe 1" Geometry="Base.Yoke.Head.Beam"><LogicalChannel Attribute="ShutterStrobe"><ChannelFunction Attribute="ShutterStrobe" Default="000000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="8" Default="050000" Geometry="Base.Yoke.Head"><LogicalChannel Attribute="Color1" Snap="Yes"><ChannelFunction Attribute="Color1" Wheel="ColorWheelSelect"><ChannelSet Name="Open" WheelSlotIndex="1"/><ChannelSet Name="Red" DMXFrom="0A0000" WheelSlotIndex="2"/><ChannelSet Name="Yellow" DMXFrom="140000" WheelSlotIndex="3"/><ChannelSet Name="Blue" DMXFrom="1E0000" WheelSlotIndex="4"/><ChannelSet Name="Green" DMXFrom="280000" WheelSlotIndex="5"/><ChannelSet Name="Orange" DMXFrom="320000" WheelSlotIndex="6"/><ChannelSet Name="Magenta" DMXFrom="3C0000" WheelSlotIndex="7"/><ChannelSet Name="Cyan" DMXFrom="460000" WheelSlotIndex="8"/><ChannelSet Name="Cyan+Magenta" DMXFrom="500000"/><ChannelSet Name="Magenta+Orange" DMXFrom="5A0000"/><ChannelSet Name="Orange+Green" DMXFrom="640000"/><ChannelSet Name="Green+Bleu fonce" DMXFrom="6E0000"/><ChannelSet Name="Bleu fonce+Jaune" DMXFrom="780000"/><ChannelSet Name="Jaune+Rouge" DMXFrom="820000"/><ChannelSet Name="Auto" DMXFrom="8C0000"/></ChannelFunction></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="9" Default="070000" Geometry="Base.Yoke.Head"><LogicalChannel Attribute="Gobo1" Snap="Yes"><ChannelFunction Attribute="Gobo1" Wheel="GoboWheel1"><ChannelSet Name="Open" WheelSlotIndex="1"/><ChannelSet Name="Gobo 1" DMXFrom="010000" WheelSlotIndex="2"/><ChannelSet Name="Gobo 2" DMXFrom="0A0000" WheelSlotIndex="3"/><ChannelSet Name="Gobo 3" DMXFrom="140000" WheelSlotIndex="4"/><ChannelSet Name="Gobo 4" DMXFrom="1E0000" WheelSlotIndex="5"/><ChannelSet Name="Gobo 5" DMXFrom="280000" WheelSlotIndex="6"/><ChannelSet Name="Gobo 6" DMXFrom="320000" WheelSlotIndex="7"/><ChannelSet Name="Gobo 7" DMXFrom="3C0000" WheelSlotIndex="8"/><ChannelSet Name="Shake" DMXFrom="460000"/><ChannelSet Name="Auto" DMXFrom="810000"/></ChannelFunction></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="10" DefaultChannelFunction="Prism1.Prism1 1" Geometry="Base.Yoke.Head"><LogicalChannel Attribute="Prism1" Snap="Yes"><ChannelFunction Attribute="Prism1" Default="000000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="11" DefaultChannelFunction="Focus.Focus 1" Geometry="Base.Yoke.Head"><LogicalChannel Attribute="Focus"><ChannelFunction Attribute="Focus" Default="000000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="12" DefaultChannelFunction="NoFeature.NoFeature 1" Geometry="Base"><LogicalChannel Attribute="NoFeature" Snap="Yes"><ChannelFunction Attribute="NoFeature" Default="000000"/></LogicalChannel></DMXChannel>
+          <DMXChannel Coarse="13" DefaultChannelFunction="NoFeature.NoFeature 1" Geometry="Base"><LogicalChannel Attribute="NoFeature" Snap="Yes"><ChannelFunction Attribute="NoFeature" Default="000000"/></LogicalChannel></DMXChannel>
+        </DMXChannels>
+        <Relations/><FTMacros/><SoftwareVersions/><FTPresets/>
+      </DMXMode>
+    </DMXModes>
+    <Revisions>
+      <Revision Text="v8 - Retire !NaN! sur Attribute ColorWheelSelect (bloquait le pupitre Dimmer/Color), revert a Color=0,0,0,1. Slots Wheel restent en valeurs natives ROXX-FC.xml." Date="21.07.2026 00:00:00" UserID="0"/>
+      <Revision Text="v9 - ChannelFunction de la roue de couleur: Attribute change de ColorWheelSelect (inconnu du dictionnaire MA3, absent de attribute_definitions.xml) vers Color1 (attribut systeme reconnu, meme role que dans ROXX-FC.xml). LogicalChannel et Wheel= inchanges. Objectif: faire calculer la teinte du faisceau 3D par MA3 a partir des Slots." Date="21.07.2026 00:00:00" UserID="0"/>
+      <Revision Text="v10 - GoboWheel1 corrige d'apres datasheet reelle: 8 positions au total (Open+7 gobos), retrait du Gobo 8 fantome. DMXFrom recales: Open=000, Gobo1=001, Gobo2=010, Gobo3=020, Gobo4=030, Gobo5=040, Gobo6=050, Gobo7=060. Seuil Auto (046) place par extrapolation du pas de 10, NON confirme par la datasheet (table fournie s'arretait a 060-069)." Date="21.07.2026 00:00:00" UserID="0"/>
+      <Revision Text="v11 - GoboWheel1: table CH9 complete fournie (070-128 Shake, 129-255 Auto). Ajout ChannelSet Shake=070 distinct de Auto=129 (valeur Auto=129 = valeur d'origine du fichier, deja correcte)." Date="21.07.2026 00:00:00" UserID="0"/>
+      <Revision Text="v12 - Ajout PhysicalFrom/PhysicalTo/HasPhysical=Yes sur chaque ChannelSet (roue couleur Color1 + roue gobo GoboWheel1), calibres pour afficher la vraie valeur DMX (0-255) au pupitre au lieu d'une valeur non calibree. DMXFrom inchange (reste la seule valeur fonctionnelle envoyee en DMX)." Date="21.07.2026 00:00:00" UserID="0"/>
+      <Revision Text="v13 - REVERT de v12: PhysicalFrom/PhysicalTo/HasPhysical retires de tous les ChannelSet (couleur+gobo). Cause de regression constatee en test reel: nom de slot errone (Gobo1 affiche Open, Cyan pas cyan) et rendu 3D couleur casse. Retour a DMXFrom seul, qui fonctionnait." Date="21.07.2026 00:00:00" UserID="0"/>
+      <Revision Text="v14 - TEST: NaturalReadout Percent vers Decimal8 sur Attribute ColorWheelSelect et GoboWheel1 (seul changement, ChannelSet non touches). Objectif: afficher un nombre DMX propre sans PhysicalFrom/PhysicalTo (evite la regression de v12)." Date="21.07.2026 00:00:00" UserID="0"/>
+      <Revision Text="v15 - ROLLBACK de v14: Decimal8 casse la 3D (comme Physical avant). Retour a NaturalReadout=Percent sur ColorWheelSelect et GoboWheel1. Etat fonctionnel connu = v13 (DMXFrom seul, sans PhysicalFrom/PhysicalTo, NaturalReadout=Percent). Ne plus toucher NaturalReadout/PhysicalFrom sur ces attributs sans nouvelle piste solide." Date="21.07.2026 00:00:00" UserID="0"/>
+      <Revision Text="v16 - LogicalChannel de la roue couleur renomme de ColorWheelSelect vers Color1, et de la roue gobo de GoboWheel1 vers Gobo1 : les deux anciens noms sont absents du dictionnaire officiel MA3 (attribute_definitions.xml), Color1/Gobo1 sont les vrais noms systeme. ChannelFunction deja en Color1 (inchange). ActivationGroup/FeatureGroup mis a jour en consequence (ActivationGroup=Gobo1, FeatureGroup Color->Feature Color). NaturalReadout/PhysicalFrom non touches (cf. v15). Les noms des <Wheel> (ColorWheelSelect, GoboWheel1) et le fixtures.csv/fixture_types.json de Smode ne sont pas affectes par ce changement." Date="23.07.2026 00:00:00" UserID="0"/>
+      <Revision Text="v16 - ROOT CAUSE bug cyan (present depuis le debut): MA3 envoie le MILIEU de la plage active du ChannelSet selectionne par nom, pas DMXFrom. Cyan(70) suivi directement de Auto(140) faisait croire a MA3 que la plage de Cyan etait 70-139, milieu=104, qui tombe dans la zone reelle Orange+Vert (100-109) de la datasheet CH8 = melange vert-orange observe. Fix: ajout des 6 zones de melange CH8 (Cyan+Magenta=80, Magenta+Orange=90, Orange+Green=100, Green+Bleu fonce=110, Bleu fonce+Jaune=120, Jaune+Rouge=130) entre Cyan et Auto, ce qui resserre la plage de Cyan a 70-79 (milieu ~74, cyan pur)." Date="22.07.2026 00:00:00" UserID="0"/>
+    </Revisions>
+    <Protocols>
+      <RDMFixtureType>
+        <Parameters/>
+        <Notifications><RDMAbsentNotification/></Notifications>
+        <FTRDMPersonalityCollect/>
+      </RDMFixtureType>
+    </Protocols>
+  </FixtureType>
+</GMA3>

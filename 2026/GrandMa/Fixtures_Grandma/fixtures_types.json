@@ -1,0 +1,17 @@
+{
+  "MINIWASH710": { "mode": "RGBW" },
+  "MS60": {
+    "mode": "ColorWheel",
+    "channel": 6,
+    "palette": [
+      {"name": "White",          "rgb": [255, 255, 255], "dmx": 5,   "range": [0,   9] },
+      {"name": "Red",           "rgb": [255,   0,   0], "dmx": 15,  "range": [10,  19]  },
+      {"name": "Yellow",        "rgb": [255, 255,   0], "dmx": 25,  "range": [20,  29]  },
+      {"name": "Blue",          "rgb": [  0,   0, 255], "dmx": 35,  "range": [30,  39]},
+      {"name": "Green",         "rgb": [  0, 255,   0], "dmx": 45,  "range": [40,  49]},
+      {"name": "Orange",        "rgb": [255, 128,   0], "dmx": 55,  "range": [50,  59]},
+      {"name": "Magenta",       "rgb": [255,   0, 255], "dmx": 65,  "range": [60,  69]},
+      {"name": "Cyan",          "rgb": [  0, 255, 255], "dmx": 75,  "range": [70,  79]}
+    ]
+  }
+}
