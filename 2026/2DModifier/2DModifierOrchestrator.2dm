@@ -216,8 +216,8 @@
       => 'VirtualParameterBankOrchestrator @e6ab6858-6440-4793-83c1-0c21aa0087d9 
       {
         label = "Orchestrator", 
-        bankSelected = "Glitch1", 
-        stateParameters = "Custom Blur Intensity_max(x5), Interlace Mirror.fs Intensity_max(x4), Light Paint I Intensity_max(x1)", 
+        bankSelected = "Paperizer_4", 
+        stateParameters = "Glass Effect Intensity(x3), Motion Glitcher Intensity(x2), [30th movie look.2dm] Intensity(x1)", 
         duoParameterNavigator = => 'RandomDuoParameterNavigator @8062f4fa-341b-4ed6-b764-a1a75c6c1803 void, 
         stateNavigator = => 'RandomStateNavigator @91c1eb40-1458-4e7e-ab62-b642788969cf void, 
         bankNavigator = => 'RandomBankNavigator @46b64b9e-5dda-4c29-94ac-7337e8d11f3b void, 
@@ -303,108 +303,7 @@
             stateBank = {"data", -> @aed793ee-1410-4c75-9756-6fbf9432cdea}
           }
         }, 
-        bpmPhase = {"data", -> @06040448-d248-4b14-a849-bdc09914caa6, "value"}, 
-        estimationOfAudioEnergy = {"data", -> @122d7b5c-62d3-4347-890d-11dcb62ec50e, "value"}, 
-        outputParameterBanks = 
-        {
-          => @da714746-6d87-4b36-bcc1-56bad86d1195 
-          {
-            label = "Glitch1", 
-            parameters = 
-            {
-              => 'Parameter(Percentage) @c258a68f-63cd-4f42-b3c0-2c428cc8943b {label = "Bad TV.fs Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @ed28e857-635a-4f11-8951-2a8319f24287 {label = "Bad TV.fs Intensity_period"}, 
-              => 'Parameter(Percentage) @4af73b42-eba7-48fc-82b7-4aacb4651069 {label = "Glitch Shifter.fs Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @6f8e7079-a71f-4aec-8970-33b395cac3ff {label = "Glitch Shifter.fs Intensity_period"}, 
-              => 'Parameter(Percentage) @46962365-7395-4106-8d56-51ed4d09665d {label = "Interlace Mirror.fs Intensity_max", value = 0.8}, 
-              => 'Parameter(StrictlyPositiveInteger) @661d30b2-17c2-4172-865b-d26ab3bd31c2 {label = "Interlace Mirror.fs Intensity_period"}, 
-              => 'Parameter(Percentage) @e13cc5bf-bb7c-482f-8492-7f38183e7445 {label = "Custom Blur Intensity_max", value = 1.}, 
-              => 'Parameter(StrictlyPositiveInteger) @f94b5088-dfdf-4c17-9790-5667ccb7034f {label = "Custom Blur Intensity_period"}, 
-              => 'Parameter(Percentage) @6bb9b6a8-3623-47d2-8dbb-eaf1a6aa35d6 {label = "Light Paint I Intensity_max", value = 0.6}, 
-              => 'Parameter(StrictlyPositiveInteger) @9f95a994-416e-443a-882b-d93aef2da6e7 {label = "Light Paint I Intensity_period"}, 
-              => 'Parameter(Percentage) @e82327fb-c806-4e1b-9b83-7273495e969e {label = "Custom Blur Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @3022fc37-cd40-4b2a-ad44-e852c41a3db0 {label = "Custom Blur Intensity_period"}
-            }
-          }, 
-          => @6b94cc1c-b711-4715-ab32-12de44bc06bd 
-          {
-            label = "Curtains_2", 
-            parameters = 
-            {
-              => 'Parameter(Percentage) @d6e85533-6495-4a0d-8802-369ff7097e2b {label = "Light Paint I Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @840916c1-4b85-4b08-9add-8adbe9090af8 {label = "Light Paint I Intensity_period"}, 
-              => 'Parameter(Percentage) @0a66d114-4134-4bcb-9043-1e5b13c5d166 {label = "Curtains Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @2d046602-d33c-4cd3-ac77-957c57e8ee70 {label = "Curtains Intensity_period"}, 
-              => 'Parameter(Percentage) @5c5323b4-f7f8-4c35-85bc-2a915408c35b {label = "Shivering Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @8be5e4a7-ec7d-41d6-b17a-26467b3f4cac {label = "Shivering Intensity_period"}, 
-              => 'Parameter(Percentage) @6977760f-6134-4fea-b247-b7e1b9f79ecb {label = "v002-CRT-Displacement.fs Amount_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @857ce4f4-99ba-49c6-8343-c54ae6604f10 
-              {
-                label = "v002-CRT-Displacement.fs Amount_period"
-              }, 
-              => 'Parameter(Percentage) @0d3fc5b6-d529-449f-8cb0-1b44ea08a9ac {label = "Overlay1 Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @5394858b-2682-43f5-ad7b-14256bc82d84 {label = "Overlay1 Intensity_period"}, 
-              => 'Parameter(Percentage) @d9422bd3-94b8-422a-b84a-4d9c7c6c7391 {label = "Overlay2 Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @bdcd1547-8832-4b30-81e9-4c3c57fed847 {label = "Overlay2 Intensity_period"}
-            }
-          }, 
-          => @def663d6-e43c-4ab8-861d-19ab69192e93 
-          {
-            label = "Zoom_Alpha_3", 
-            parameters = 
-            {
-              => 'Parameter(Percentage) @d57d0ea2-76eb-4e26-9567-65cd0b1c1729 {label = "Edge Trace.fs Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @32bd7ee2-0240-4468-94b8-e679c452c711 {label = "Edge Trace.fs Intensity_period"}, 
-              => 'Parameter(Percentage) @7d12dd55-1400-4cfc-bc44-602f9b2b356f {label = "Line Screen.fs Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @0979b72a-4645-43d2-9eb3-6bceabdc010b {label = "Line Screen.fs Intensity_period"}, 
-              => 'Parameter(Percentage) @1c5e2e87-7ed3-4e16-9415-7cd9cf555b2e {label = "2D Transform Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @9fb7fb7f-7790-4827-8ba6-b44b57fc5035 {label = "2D Transform Intensity_period"}, 
-              => 'Parameter(Percentage) @ea75a8b7-600c-42d5-b723-dc127a2980d1 {label = "Smoke Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @8abc8fa5-125a-473c-b1c1-ee9c427d1df7 {label = "Smoke Intensity_period"}, 
-              => 'Parameter(Percentage) @b3499320-38af-4085-9ef3-52d360fafe5c {label = "Allante Alpha Edger Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @24d558b5-1fcd-47bf-9cc3-fa435b83b0c4 {label = "Allante Alpha Edger Intensity_period"}, 
-              => 'Parameter(Percentage) @d92bcf6f-5758-4239-966a-acaaa56d86cf {label = "Convergence.fs Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @b4286fb8-83f5-4f4b-841d-599be11bf077 {label = "Convergence.fs Intensity_period"}
-            }
-          }, 
-          => @4c116126-1101-4e41-bb64-f0fea4e2ed53 
-          {
-            label = "Paperizer_4", 
-            parameters = 
-            {
-              => 'Parameter(Percentage) @49335b71-45cc-4477-a763-9d49f4e26bb0 {label = "Paperizer II Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @b3dd4c91-c4af-48f4-baf2-3e4f18e1fb9e {label = "Paperizer II Intensity_period"}, 
-              => 'Parameter(Percentage) @e0209cd1-686a-437e-847b-91a8a83e0518 {label = "Motion Glitcher Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @09327f15-4d70-48b4-a470-569df61d3c81 {label = "Motion Glitcher Intensity_period"}, 
-              => 'Parameter(Percentage) @5d2a73a9-e06e-45cc-9f0d-aed856092d3c {label = "Glass Effect Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @32db0744-a34e-46dd-9f67-a66d2ba145a9 {label = "Glass Effect Intensity_period"}, 
-              => 'Parameter(Percentage) @075558f2-6946-40ca-b195-e6bc11b24eee {label = "Zoomer Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @3d53fdd9-12c4-4450-b6d3-b4d3a7845972 {label = "Zoomer Intensity_period"}, 
-              => 'Parameter(Percentage) @4ab15bf5-5a17-49d4-ba83-f9c48b85fd50 {label = "[30th movie look.2dm] Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @7b866647-b111-4fe6-88d5-9c77edfa3710 
-              {
-                label = "[30th movie look.2dm] Intensity_period"
-              }
-            }
-          }, 
-          => @2f0758a9-2640-4f27-973b-375795a3261f 
-          {
-            label = "AddRenderer_5", 
-            parameters = 
-            {
-              => 'Parameter(Percentage) @d9680611-444d-4a55-a853-f5fb69db1941 {label = "Light Paint I Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @850b602f-11b4-44be-98cd-bb397cd96a82 {label = "Light Paint I Intensity_period"}, 
-              => 'Parameter(Percentage) @deddf076-ea96-4107-b099-87a7aeabc1d0 {label = "Paperizer II Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @ef3d1faa-3088-4e3f-9c73-38aa233710ce {label = "Paperizer II Intensity_period"}, 
-              => 'Parameter(Percentage) @bdcf65e4-9bcc-416e-b091-e384b50c9df9 {label = "Binarize Smooth Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @e95b16cb-bb18-41c5-a996-c31766672516 {label = "Binarize Smooth Intensity_period"}, 
-              => 'Parameter(Percentage) @5c0fbc06-20b9-495f-9d99-6bff0f6208b9 {label = "Bloom Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @4e59ce50-b6f4-4d6a-8def-5fa2f87d1ef1 {label = "Bloom Intensity_period"}, 
-              => 'Parameter(Percentage) @f4496b41-4b50-44df-8b69-25adb3aabb08 {label = "Edges.fs Intensity_max"}, 
-              => 'Parameter(StrictlyPositiveInteger) @518ba03d-0e8b-432c-be68-f618c140e283 {label = "Edges.fs Intensity_period"}
-            }
-          }
-        }
+        bpmPhase = {"data", -> @06040448-d248-4b14-a849-bdc09914caa6, "value"}
       }, 
       => 'ParameterBank @18e7c8ea-0602-443b-8445-645171b43c6f 
       {
@@ -420,7 +319,8 @@
                 target = {"data", -> @75d69f6e-46e3-44f1-bafd-781e26c3b779, "activation"}
               }
             }, 
-            expose = false
+            expose = false, 
+            value = "inactive"
           }, 
           => 'Parameter(ActivationState) @22324a1e-3904-4b68-8204-5f32dc6c2fdd 
           {
@@ -456,8 +356,7 @@
                 target = {"data", -> @296efa8f-f161-40d9-a362-5d1020003cd1, "activation"}
               }
             }, 
-            expose = false, 
-            value = "inactive"
+            expose = false
           }, 
           => 'Parameter(ActivationState) @e9e87686-0c71-4cb7-b642-673736b30381 
           {
@@ -610,7 +509,8 @@
             }
           }
         }, 
-        currentState = {"data", -> @3596ab61-00d6-41a9-b278-e2952a1b608a}
+        currentStateIndex = {value = 3, bound = 5}, 
+        currentState = {"data", -> @9703478a-2bed-4043-b83f-590021245ef3}
       }, 
       => 'ParameterBank @9ecbe783-ca67-4bf2-90ea-4d9c0e3e025b 
       {
@@ -720,8 +620,7 @@
                 target = {"data", -> @a209b2c5-668e-4c59-b3e4-68c7e5a94201, "intensity"}
               }
             }, 
-            expose = false, 
-            value = 0.633333333334
+            expose = false
           }, 
           => 'Parameter(Percentage) @61fa9142-e020-4c7e-abd6-e397e0ad728e 
           {
@@ -756,8 +655,7 @@
                 target = {"data", -> @f1216105-a856-4894-ba20-5a5d9aafd211, "intensity"}
               }
             }, 
-            expose = false, 
-            value = 0.791666666667
+            expose = false
           }, 
           => 'Parameter(Percentage) @69238098-1c5d-4fa8-b5ff-a830e69289c1 
           {
@@ -792,8 +690,7 @@
                 target = {"data", -> @e7976595-fe2a-4d61-95bd-265b108cf103, "intensity"}
               }
             }, 
-            expose = false, 
-            value = 0.475
+            expose = false
           }, 
           => 'Parameter(Percentage) @9025de59-8675-4131-b621-ad58f5b53574 
           {
@@ -1339,7 +1236,8 @@
                 target = {"data", -> @1783eb91-f79d-46b9-9a75-f3c08c1381dc, "intensity"}
               }
             }, 
-            expose = false
+            expose = false, 
+            value = 0.466666666667
           }, 
           => 'Parameter(Percentage) @e85d22e6-bcee-4cb9-a556-f7ee73a7dde5 
           {
@@ -1374,7 +1272,8 @@
                 target = {"data", -> @24145db9-52ea-4e9c-9889-f950352ea511, "intensity"}
               }
             }, 
-            expose = false
+            expose = false, 
+            value = 0.375000000001
           }, 
           => 'Parameter(Percentage) @cfdecde3-744f-4c86-add8-deee977afecb 
           {
@@ -1444,7 +1343,8 @@
                 target = {"data", -> @3c282437-bfa8-42d5-a54c-51b592bb3ef4, "intensity"}
               }
             }, 
-            expose = false
+            expose = false, 
+            value = 0.475
           }
         }
       }, 
@@ -2228,7 +2128,7 @@
                     source = => 'ParameterLinkSource @b79a0a52-b784-413f-b424-e5a2dcda5a92 
                     {
                       target = {"data", -> @f0199cf9-8f80-448b-94d9-452b055d15ab, "state"}, 
-                      numChanges = 49
+                      numChanges = 53
                     }, 
                     targets = 
                     {
@@ -2326,9 +2226,9 @@ Ui RS Report"
                 }, 
                 autoUpdate = true, 
                 state = "{ \"Identifier\": \"2D Modifier\",
-\"State Parameters\": \"Custom Blur Intensity_max(x5), Interlace Mirror.fs Intensity_max(x4), Light Paint I Intensity_max(x1)\",
+\"State Parameters\": \"Glass Effect Intensity(x3), Motion Glitcher Intensity(x2), [30th movie look.2dm] Intensity(x1)\",
 \"Bank State Selected\": \"\",
-\"Bank Selected\": \"Glitch1\",
+\"Bank Selected\": \"Paperizer_4\",
 \"CDP\": 0,
 \"CBS\": 0,
 \"CBT\": 0,
@@ -2349,9 +2249,9 @@ Ui RS Report"
                 address = "/Smode/ReportRandomSystem", 
                 type = "oscString", 
                 stringValue = "{ \"Identifier\": \"2D Modifier\",
-\"State Parameters\": \"Custom Blur Intensity_max(x5), Interlace Mirror.fs Intensity_max(x4), Light Paint I Intensity_max(x1)\",
+\"State Parameters\": \"Glass Effect Intensity(x3), Motion Glitcher Intensity(x2), [30th movie look.2dm] Intensity(x1)\",
 \"Bank State Selected\": \"\",
-\"Bank Selected\": \"Glitch1\",
+\"Bank Selected\": \"Paperizer_4\",
 \"CDP\": 0,
 \"CBS\": 0,
 \"CBT\": 0,
@@ -2886,7 +2786,7 @@ Ui RS Report"
                   => 'IsfFileTextureModifier @a209b2c5-668e-4c59-b3e4-68c7e5a94201 
                   {
                     activation = "activationRequested", 
-                    intensity = 0.633333333334, 
+                    intensity = 0., 
                     file = {path = "Standard Pack/ISF/Stylize/Glitch/Interlace Mirror.fs"}, 
                     dynamicVariables = 
                     {
@@ -2927,7 +2827,7 @@ Ui RS Report"
                   {
                     activation = "activationRequested", 
                     preset = {libraryName = "Advanced Presets", presetName = "Glitch - Old VHS"}, 
-                    intensity = 0.791666666667, 
+                    intensity = 0., 
                     radius = 20., 
                     shape = "custom", 
                     algorithm = => 'CombineBlurAlgorithm @e3bd7cdc-607c-44f7-ab02-b893f3511262 
@@ -2978,7 +2878,7 @@ Ui RS Report"
                   {
                     activation = "activationRequested", 
                     preset = {libraryName = "Default", presetName = "Light Paint I"}, 
-                    intensity = 0.475, 
+                    intensity = 0., 
                     preRasterizeQuality = {pixelType = "hdr16Bits"}, 
                     quality = {pixelType = "hdr16Bits"}, 
                     blendingMode = "darkerColor", 
@@ -3516,11 +3416,13 @@ Ui RS Report"
                           function = => 'PerlinNoiseFunction @6c518af2-0ceb-4f57-a715-36d626119e74 {activation = "activationRequested"}, 
                           transport = 
                           {
+                            state = "playing", 
+                            position = 1.416666666667, 
                             timeBase = {value = {p = 50}}, 
                             player = => @42367176-17b7-4b69-aa4e-b103f2ded89e 
                             {
                               activation = "activationRequested", 
-                              parameters = {launchMode = "restartWithActivation", looping = true}
+                              parameters = {launchMode = "restartWithActivation", out = {value = +oo}, looping = true}
                             }
                           }
                         }, 
@@ -3692,12 +3594,10 @@ Ui RS Report"
               => 'GroupTextureModifier @296efa8f-f161-40d9-a362-5d1020003cd1 
               {
                 label = "Paperizer_4", 
-                activation = "inactive", 
                 modifiers = 
                 {
                   => 'OverlayTextureModifier @906d96c0-f766-4df1-9563-c3381b31c804 
                   {
-                    activation = "activationRequested", 
                     preset = {libraryName = "Legacy-Advanced Presets", presetName = "Paperizer II"}, 
                     intensity = 0., 
                     preRasterizeQuality = {pixelType = "hdr16Bits"}, 
@@ -3705,25 +3605,20 @@ Ui RS Report"
                     {
                       => 'OverlayTextureModifier @8488be7d-0a8b-4baa-9baf-de12a0963e0c 
                       {
-                        activation = "activationRequested", 
                         preRasterizeQuality = {pixelType = "hdr16Bits"}, 
                         modifiers = 
                         {
                           => 'Transform2dTextureModifier @c43117ed-eb62-450f-ade3-9821c7de8144 
                           {
-                            activation = "activationRequested", 
                             masks = 
                             {
                               => 'TextureLayerTextureMask @aff01835-7ed5-4dcb-b886-405dc4309c8b 
                               {
-                                activation = "activationRequested", 
                                 resolution = #1 {preset = "custom", width = 3200, height = 1067}, 
                                 generator = => 'ParentInputTextureGenerator @413b758d-8105-45e0-86f8-8dd21b889ec4 
                                 {
-                                  activation = "activationRequested", 
                                   extractor = => 'Parametric2dPlacement @addcdfb0-c110-4e07-a06b-dab0d23060ce 
                                   {
-                                    activation = "activationRequested", 
                                     anchor = {x = 0., y = 0.}, 
                                     position = {x = 0., y = 0.}, 
                                     scale = => 'SizePlacement2dScale @04915d0c-e934-4259-af45-f1cbdf536dda 
@@ -3734,15 +3629,10 @@ Ui RS Report"
                                 }, 
                                 colorSelector = => 'ChannelColorSelector @b835897e-5c88-47d9-9069-6648158b0ce7 
                                 {
-                                  activation = "activationRequested", 
-                                  function = => 'ColorLevelFunction @22297435-f382-4d0c-9b08-76a15ac10f8e 
-                                  {
-                                    activation = "activationRequested"
-                                  }
+                                  function = => 'ColorLevelFunction @22297435-f382-4d0c-9b08-76a15ac10f8e void
                                 }, 
                                 placement = => 'Parametric2dPlacement @ec73c1af-a88e-433d-bb85-0fcae204690c 
                                 {
-                                  activation = "activationRequested", 
                                   scale = => 'SizePlacement2dScale @e61d18c2-cb1f-47cb-b2b8-ee6d76817d81 
                                   {
                                     size = {width = 1., height = 1., ratio = 1.}
@@ -3752,7 +3642,6 @@ Ui RS Report"
                             }, 
                             frame = => 'Parametric2dPlacement @96f71a18-e78e-4a20-bed1-3279375b4073 
                             {
-                              activation = "activationRequested", 
                               position = {x = 0.503, y = 0.507}, 
                               scale = => 'ScaleFactorPlacement2dScale @95c6eda2-977b-4c4f-b5ed-2784b128695a 
                               {
@@ -3765,15 +3654,12 @@ Ui RS Report"
                       }, 
                       => 'ColorizeTextureModifier @b96faf5a-8c3e-4e5c-81b9-143974fe20e0 
                       {
-                        activation = "activationRequested", 
                         colorSelector = => 'ChannelColorSelector @f313ce0d-a130-45a5-ac6d-1c7aeb81501d 
                         {
-                          activation = "activationRequested", 
-                          function = => 'ColorLevelFunction @cacfd638-8a24-45e7-80ce-0f33961dceae {activation = "activationRequested"}
+                          function = => 'ColorLevelFunction @cacfd638-8a24-45e7-80ce-0f33961dceae void
                         }, 
                         gradient = => 'TritoneColorFunction @75d4e742-8e4a-465b-a880-83fe5109e9ee 
                         {
-                          activation = "activationRequested", 
                           beginColor = {red = 1., green = 1., blue = 1., value = 1.}, 
                           intermediateColor = {red = 1., green = 1., blue = 1., value = 1.}, 
                           endColor = {red = 0.0156863, green = 0.0156863, blue = 0.0156863, value = 0.015686299652}, 
@@ -3785,16 +3671,14 @@ Ui RS Report"
                   }, 
                   => 'OverlayTextureModifier @1783eb91-f79d-46b9-9a75-f3c08c1381dc 
                   {
-                    activation = "activationRequested", 
                     preset = {libraryName = "Legacy-Advanced Presets", presetName = "Motion Glitcher"}, 
-                    intensity = 0., 
+                    intensity = 0.466666666667, 
                     preRasterize = true, 
                     preRasterizeQuality = {pixelType = "hdr16Bits"}, 
                     modifiers = 
                     {
                       => 'FeedbackTextureModifier @4cc88f94-2354-4e02-b610-4269b261b599 
                       {
-                        activation = "activationRequested", 
                         preRasterize = true, 
                         preRasterizeQuality = {pixelType = "hdr16Bits"}, 
                         quality = {automatic = false, pixelType = "clamped16Bits"}, 
@@ -3805,33 +3689,24 @@ Ui RS Report"
                     }, 
                     blendingMode = "vividLight"
                   }, 
-                  => 'RasterizeTextureModifier @dc4a04ff-d8fb-4339-a0e4-3996b85862cd 
-                  {
-                    activation = "activationRequested", 
-                    quality = {pixelType = "hdr16Bits"}
-                  }, 
+                  => 'RasterizeTextureModifier @dc4a04ff-d8fb-4339-a0e4-3996b85862cd {quality = {pixelType = "hdr16Bits"}}, 
                   => 'CompoBasedTextureModifier @24145db9-52ea-4e9c-9889-f950352ea511 
                   {
-                    activation = "activationRequested", 
                     preset = {libraryName = "Legacy-Advanced Presets", presetName = "Glass Effect"}, 
-                    intensity = 0., 
+                    intensity = 0.375000000001, 
                     compo = 
                     {
-                      activation = "activationRequested", 
-                      rasterizer = #1 {activation = "activationRequested", resolution = #1 {width = 1920, height = 1200}}, 
+                      rasterizer = #1 {resolution = #1 {width = 1920, height = 1200}}, 
                       defaultCamera = 
                       {
-                        activation = "activationRequested", 
                         placement = => 'TargetOrientationDistance3dPlacement @a0feaca4-5094-42e0-a686-6a828270d05d 
                         {
-                          activation = "activationRequested", 
                           orientation = {x = -0.314159274, y = 0.314159274}, 
                           distance = 3.5
                         }, 
                         focusParameters = {distance = 3.5}, 
                         frustum = => 'FieldOfViewPerspectiveFrustum @e5d6cf04-5384-4484-a5ca-f0c6dab76c09 #2 
                         {
-                          activation = "activationRequested", 
                           clippingDistances = {center = 175.0175, size = 349.965, begin = 0.035, end = 350.}, 
                           customAspectRatio = {value = {p = 8, q = 5}}, 
                           horizontal = 1.047197551197, 
@@ -3842,29 +3717,23 @@ Ui RS Report"
                       {
                         => 'TextureLayer @7b18efdc-0749-4937-b70a-6878e49f4442 
                         {
-                          activation = "activationRequested", 
                           generator = => 'ParentInputTextureGenerator @b32df1e9-2490-482e-8f9e-0322611ea39b 
                           {
-                            activation = "activationRequested", 
                             modifiers = 
                             {
                               => 'Transform2dTextureModifier @6fd55fde-c441-4e7d-a39c-090f829a2d0d 
                               {
-                                activation = "activationRequested", 
                                 masks = 
                                 {
                                   => 'TextureLayerTextureMask @d2f1459a-f46d-46b3-86e2-b9e77d34219c 
                                   {
-                                    activation = "activationRequested", 
                                     resolution = #1 {width = 1920, height = 1200}, 
                                     generator = => 'ParentInputTextureGenerator @ea07f2d0-acb0-4133-9f5a-1e9d69f60eb6 
                                     {
-                                      activation = "activationRequested", 
                                       modifiers = 
                                       {
                                         => 'SobelTextureModifier @c73872cf-8adf-4796-9f1d-ab85234a32cb 
                                         {
-                                          activation = "activationRequested", 
                                           preRasterizeQuality = {pixelType = "hdr16Bits"}, 
                                           size = {width = 0.000520833333, height = 0.000833333333, ratio = 0.62499999985}, 
                                           threshold = 0.203, 
@@ -3872,28 +3741,18 @@ Ui RS Report"
                                         }, 
                                         => 'BlurV8TextureModifier @b93bf194-d3f4-4942-a38a-b1d93528ad3d 
                                         {
-                                          activation = "activationRequested", 
                                           radius = 18.5, 
                                           algorithm = => 'MultiPassBlurAlgorithm @cea473ce-516c-494b-9e01-4927af7b5362 
                                           {
-                                            activation = "activationRequested", 
                                             passes = 
                                             {
                                               => 'DirectionalBlurAlgorithm @c905ebf0-b168-422d-8b67-a820abd8f778 
                                               {
-                                                activation = "activationRequested", 
-                                                shape = => 'GaussFunctionShape @a94bfd52-d68e-4796-9d84-1e671a3ae526 
-                                                {
-                                                  activation = "activationRequested"
-                                                }
+                                                shape = => 'GaussFunctionShape @a94bfd52-d68e-4796-9d84-1e671a3ae526 void
                                               }, 
                                               => 'DirectionalBlurAlgorithm @45a9ccc5-2527-4216-9f08-309b62878829 
                                               {
-                                                activation = "activationRequested", 
-                                                shape = => 'GaussFunctionShape @57d0be97-1a43-4072-bf9f-711f7adc241a 
-                                                {
-                                                  activation = "activationRequested"
-                                                }, 
+                                                shape = => 'GaussFunctionShape @57d0be97-1a43-4072-bf9f-711f7adc241a void, 
                                                 direction = 1.570796326795
                                               }
                                             }
@@ -3933,7 +3792,6 @@ Ui RS Report"
                                       }, 
                                       extractor = => 'Parametric2dPlacement @1918b84f-13fb-4b2b-8c47-96bcc72cc44a 
                                       {
-                                        activation = "activationRequested", 
                                         anchor = {x = 0., y = 0.}, 
                                         position = {x = 0., y = 0.}, 
                                         scale = => 'SizePlacement2dScale @f10e3037-99db-4632-8f29-7cfbf6719929 
@@ -3944,15 +3802,10 @@ Ui RS Report"
                                     }, 
                                     colorSelector = => 'ChannelColorSelector @dbe3cd35-d4a8-46e9-ac8b-97a8e6f38846 
                                     {
-                                      activation = "activationRequested", 
-                                      function = => 'ColorLevelFunction @5a26821b-f3c4-4597-b712-a7ab3186e5a5 
-                                      {
-                                        activation = "activationRequested"
-                                      }
+                                      function = => 'ColorLevelFunction @5a26821b-f3c4-4597-b712-a7ab3186e5a5 void
                                     }, 
                                     placement = => 'Parametric2dPlacement @63d7e327-bdd9-4a36-a12e-f80ebf95c30c 
                                     {
-                                      activation = "activationRequested", 
                                       scale = => 'SizePlacement2dScale @9cd093a4-ce93-4cfd-a62a-e665fd7c9a5d 
                                       {
                                         size = {width = 1., height = 1., ratio = 1.}
@@ -3962,7 +3815,6 @@ Ui RS Report"
                                 }, 
                                 frame = => 'Parametric2dPlacement @e3abb00e-fa6f-41ce-bf2e-638028d65271 
                                 {
-                                  activation = "activationRequested", 
                                   scale = => 'ScaleFactorPlacement2dScale @a9078103-ee98-4cd9-b037-1347a1e94806 
                                   {
                                     scaleFactor = {width = 1.393, height = 1.393, ratio = 1.}
@@ -3972,7 +3824,6 @@ Ui RS Report"
                             }, 
                             extractor = => 'Parametric2dPlacement @fd3c8b37-88ad-439d-b017-acac237f52d3 
                             {
-                              activation = "activationRequested", 
                               anchor = {x = 0., y = 0.}, 
                               position = {x = 0., y = 0.}, 
                               scale = => 'SizePlacement2dScale @7b3a50dc-4869-4957-b46e-e4fe2cd8b3a2 
@@ -3983,20 +3834,16 @@ Ui RS Report"
                           }, 
                           renderer = => 'GroupTextureRenderer @025cc114-232e-4429-b189-4026c723b56e 
                           {
-                            activation = "activationRequested", 
                             placement = => 'Parametric2dPlacement @b57e6bf2-68e8-468b-b0f7-7c6dccf9cff8 
                             {
-                              activation = "activationRequested", 
                               scale = => 'ScaleFactorPlacement2dScale @fb9c214d-e3dd-44a0-b26a-726a59dbc5f7 void
                             }, 
                             renderers = 
                             {
                               => 'SingleTextureRenderer @6c7d9356-488c-428a-84d9-f89ddad3467e 
                               {
-                                activation = "activationRequested", 
                                 placement = => 'Parametric2dPlacement @b5b8c62b-19e3-462c-89e3-8e9afff43a55 
                                 {
-                                  activation = "activationRequested", 
                                   scale = => 'ScaleFactorPlacement2dScale @7ecf69c6-7835-4d45-8e70-06c47a6ceaec void
                                 }
                               }
@@ -4008,7 +3855,6 @@ Ui RS Report"
                   }, 
                   => 'FeedbackTextureModifier @982820b9-0bb5-4d5f-98c0-272f7f7cd428 
                   {
-                    activation = "activationRequested", 
                     preset = {libraryName = "Legacy-Advanced Presets", presetName = "Zoomer"}, 
                     intensity = 0., 
                     preRasterize = true, 
@@ -4017,10 +3863,8 @@ Ui RS Report"
                     {
                       => 'Transform2dTextureModifier @5c1d8d81-c6cc-416a-8777-a41594ed0609 
                       {
-                        activation = "activationRequested", 
                         frame = => 'Parametric2dPlacement @048851b3-4e97-49cc-a8cd-71ee33305dcf 
                         {
-                          activation = "activationRequested", 
                           scale = => 'ScaleFactorPlacement2dScale @1cce9522-d186-42a3-9755-2ff8ab663680 
                           {
                             scaleFactor = {width = 1.01, height = 1.01, ratio = 1.}
@@ -4034,15 +3878,10 @@ Ui RS Report"
                     sourceLevel = 0.9, 
                     feedbackLevel = 0.9
                   }, 
-                  => 'RasterizeTextureModifier @eca88223-0ee4-4cd7-be92-6abc75310d88 
-                  {
-                    activation = "activationRequested", 
-                    quality = {pixelType = "hdr16Bits"}
-                  }, 
+                  => 'RasterizeTextureModifier @eca88223-0ee4-4cd7-be92-6abc75310d88 {quality = {pixelType = "hdr16Bits"}}, 
                   => 'ReferenceTextureModifier @3c282437-bfa8-42d5-a54c-51b592bb3ef4 
                   {
-                    activation = "activationRequested", 
-                    intensity = 0., 
+                    intensity = 0.475, 
                     referencer = 
                     {
                       address = {location = "external", file = {path = "Standard Pack/Modules/2D/Modifiers/Filters/30th movie look.2dm"}}, 
@@ -4376,7 +4215,7 @@ Ui RS Report"
                                   {
                                     widget = 'AssetDatabaseEditor 
                                     {
-                                      widget = 'ToolsAndContentLayout {content = 'SplitLayout {ratio = 0.49720671773}}
+                                      widget = 'ToolsAndContentLayout {content = 'SplitLayout {ratio = 0.497142851353}}
                                     }
                                   }
                                 }
@@ -4406,6 +4245,10 @@ Ui RS Report"
                                     }, 
                                     {
                                       key = => 'ObjectWeakPointer {"data", -> @ce492479-9565-4bb4-ab96-f200f0f97962}, 
+                                      value = => => 'CompositeFilePreviewWidget void
+                                    }, 
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @332a0979-1735-4a1a-b0d4-4943ec618d09}, 
                                       value = => => 'CompositeFilePreviewWidget void
                                     }
                                   }
@@ -4562,21 +4405,22 @@ Ui RS Report"
                                                 {
                                                   helper = => 'PerspectiveCameraInteractiveGizmo 
                                                   {
-                                                    target = {"engine", -> @b85733e7-8718-4f63-b8d8-54b2cfb5ee6b, "viewportCamera"}, 
-                                                    orbitalMoveHelper = {target = {"engine", -> @a3beda70-bc23-46f1-8b8d-755801bdd031}}, 
+                                                    target = {"engine", -> @0cb58161-5dcf-458c-9cec-d26dc869e33b, "viewportCamera"}, 
+                                                    orbitalMoveHelper = {target = {"engine", -> @88af41d1-d661-49b3-bcfd-ad2fac03d0b6}}, 
                                                     panningHelper = 
                                                     {
-                                                      target = {"engine", -> @b85733e7-8718-4f63-b8d8-54b2cfb5ee6b, "viewportCamera"}
+                                                      target = {"engine", -> @0cb58161-5dcf-458c-9cec-d26dc869e33b, "viewportCamera"}
                                                     }, 
-                                                    distanceHelper = {target = {"engine", -> @a3beda70-bc23-46f1-8b8d-755801bdd031}}, 
+                                                    distanceHelper = {target = {"engine", -> @88af41d1-d661-49b3-bcfd-ad2fac03d0b6}}, 
                                                     fovHelper = 
                                                     {
-                                                      target = {"engine", -> @e454f3d6-5379-467d-b253-c01ad09f3287, "horizontal"}
+                                                      target = {"engine", -> @b43d3e97-232d-4e9c-8b79-c99e32376d1a, "horizontal"}
                                                     }
                                                   }
                                                 }, 
                                                 currentTool = => 'ManipulationTool void, 
                                                 showWireframe = false, 
+                                                currentSelection = {{"data", -> @e6ab6858-6440-4793-83c1-0c21aa0087d9}}, 
                                                 currentElementTree = {"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}, 
                                                 viewCamera = 
                                                 {
@@ -4588,19 +4432,19 @@ Ui RS Report"
                                                   frustum = => 'OrthographicFrustum #1 
                                                   {
                                                     clippingDistances = {invertible = false, automatic = false}, 
-                                                    size = {width = 1.049999952316, height = 1.415960788727, ratio = 0.74154592463}
+                                                    size = {width = 1.049999952316, height = 1.094962120056, ratio = 0.958937239091}
                                                   }
                                                 }, 
                                                 viewCameraHelper = 
                                                 {
-                                                  target = {"engine", -> @b85733e7-8718-4f63-b8d8-54b2cfb5ee6b, "viewCamera"}, 
+                                                  target = {"engine", -> @0cb58161-5dcf-458c-9cec-d26dc869e33b, "viewCamera"}, 
                                                   frustumSizeHelper = 
                                                   {
-                                                    target = {"engine", -> @b85733e7-8718-4f63-b8d8-54b2cfb5ee6b, "viewCamera"}
+                                                    target = {"engine", -> @0cb58161-5dcf-458c-9cec-d26dc869e33b, "viewCamera"}
                                                   }, 
                                                   panningMoveHelper = 
                                                   {
-                                                    target = {"engine", -> @b85733e7-8718-4f63-b8d8-54b2cfb5ee6b, "viewCamera"}
+                                                    target = {"engine", -> @0cb58161-5dcf-458c-9cec-d26dc869e33b, "viewCamera"}
                                                   }
                                                 }
                                               }
@@ -4633,21 +4477,22 @@ Ui RS Report"
                                                 {
                                                   helper = => 'PerspectiveCameraInteractiveGizmo 
                                                   {
-                                                    target = {"engine", -> @f8322d7d-8785-40a5-ac27-9cb989e68d10, "viewportCamera"}, 
-                                                    orbitalMoveHelper = {target = {"engine", -> @ba9e7a3e-844f-4442-9b5e-fa81b44828e0}}, 
+                                                    target = {"engine", -> @d425a213-ee91-4009-9726-003380a8217d, "viewportCamera"}, 
+                                                    orbitalMoveHelper = {target = {"engine", -> @b40cd630-1486-4b25-bf97-7f0a4e92c15d}}, 
                                                     panningHelper = 
                                                     {
-                                                      target = {"engine", -> @f8322d7d-8785-40a5-ac27-9cb989e68d10, "viewportCamera"}
+                                                      target = {"engine", -> @d425a213-ee91-4009-9726-003380a8217d, "viewportCamera"}
                                                     }, 
-                                                    distanceHelper = {target = {"engine", -> @ba9e7a3e-844f-4442-9b5e-fa81b44828e0}}, 
+                                                    distanceHelper = {target = {"engine", -> @b40cd630-1486-4b25-bf97-7f0a4e92c15d}}, 
                                                     fovHelper = 
                                                     {
-                                                      target = {"engine", -> @3456cc8a-7188-4a85-b5e9-40b31b0b77f1, "horizontal"}
+                                                      target = {"engine", -> @f9c18b39-c9c5-41d1-b2ea-6e5123683286, "horizontal"}
                                                     }
                                                   }
                                                 }, 
                                                 currentTool = => 'ManipulationTool void, 
                                                 showWireframe = false, 
+                                                currentSelection = {{"data", -> @e6ab6858-6440-4793-83c1-0c21aa0087d9}}, 
                                                 currentElementTree = {"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}, 
                                                 viewCamera = 
                                                 {
@@ -4659,19 +4504,19 @@ Ui RS Report"
                                                   frustum = => 'OrthographicFrustum #1 
                                                   {
                                                     clippingDistances = {invertible = false, automatic = false}, 
-                                                    size = {width = 1.049999952316, height = 1.415960788727, ratio = 0.74154592463}
+                                                    size = {width = 1.049999952316, height = 1.092211127281, ratio = 0.961352549969}
                                                   }
                                                 }, 
                                                 viewCameraHelper = 
                                                 {
-                                                  target = {"engine", -> @f8322d7d-8785-40a5-ac27-9cb989e68d10, "viewCamera"}, 
+                                                  target = {"engine", -> @d425a213-ee91-4009-9726-003380a8217d, "viewCamera"}, 
                                                   frustumSizeHelper = 
                                                   {
-                                                    target = {"engine", -> @f8322d7d-8785-40a5-ac27-9cb989e68d10, "viewCamera"}
+                                                    target = {"engine", -> @d425a213-ee91-4009-9726-003380a8217d, "viewCamera"}
                                                   }, 
                                                   panningMoveHelper = 
                                                   {
-                                                    target = {"engine", -> @f8322d7d-8785-40a5-ac27-9cb989e68d10, "viewCamera"}
+                                                    target = {"engine", -> @d425a213-ee91-4009-9726-003380a8217d, "viewCamera"}
                                                   }
                                                 }
                                               }
@@ -4834,10 +4679,10 @@ Ui RS Report"
                                 {
                                   content = 'ElementTableWidget 
                                   {
-                                    widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 157}}}, 
+                                    widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 73}}}, 
                                     state = 
                                     {
-                                      viewPosition = {y = 157}, 
+                                      viewPosition = {y = 73}, 
                                       header = => 'TableHeader 
                                       {
                                         stretchToFit = true, 
@@ -4860,23 +4705,21 @@ Ui RS Report"
                                       }, 
                                       expandedRowTargets = 
                                       {
-                                        {"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893}, 
+                                        {"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}, 
                                         {
                                           "data", 
-                                          -> @ea29b62a-83eb-44b3-875f-cb407b572a2a
+                                          -> @ea29b62a-83eb-44b3-875f-cb407b572a2a, 
+                                          "tools"
                                         }, 
-                                        {"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a, "tools"}, 
+                                        {"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893, "listSourceBank"}, 
                                         {
                                           "data", 
-                                          -> @18e7c8ea-0602-443b-8445-645171b43c6f
-                                        }, 
-                                        {"data", -> @18e7c8ea-0602-443b-8445-645171b43c6f, "parameters"}, 
-                                        {
-                                          "data", 
-                                          -> @aed793ee-1410-4c75-9756-6fbf9432cdea
+                                          -> @18e7c8ea-0602-443b-8445-645171b43c6f, 
+                                          "parameters"
                                         }
                                       }, 
-                                      lastSelectedRowTarget = {"data", -> @75f90adc-a9c0-425e-95c1-8bc068d84241}
+                                      selectedRowTargets = {{"data", -> @e6ab6858-6440-4793-83c1-0c21aa0087d9}}, 
+                                      lastSelectedRowTarget = {"data", -> @e6ab6858-6440-4793-83c1-0c21aa0087d9}
                                     }
                                   }
                                 }
@@ -5070,52 +4913,6 @@ Ui RS Report"
                               }
                             }, 
                             {
-                              key = => 'ObjectWeakPointer {"data", -> @5e0b6686-9c67-4fcb-a7b3-529b76221d51}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @5e0b6686-9c67-4fcb-a7b3-529b76221d51}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 160}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 238}
-                                                }
-                                              }, 
-                                              expandedRowTargets = {{"data", -> @5e0b6686-9c67-4fcb-a7b3-529b76221d51}}, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @5e0b6686-9c67-4fcb-a7b3-529b76221d51}, 
-                                                  value = => 40
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @5e0b6686-9c67-4fcb-a7b3-529b76221d51}
-                              }
-                            }, 
-                            {
                               key = => 'ObjectWeakPointer {"data", -> @aed793ee-1410-4c75-9756-6fbf9432cdea}, 
                               value = => => 'ItemParametersEditor 
                               {
@@ -5162,7 +4959,7 @@ Ui RS Report"
                               }
                             }, 
                             {
-                              key = => 'ObjectWeakPointer {"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}, 
+                              key = => 'ObjectWeakPointer {"data", -> @5e0b6686-9c67-4fcb-a7b3-529b76221d51}, 
                               value = => => 'ItemParametersEditor 
                               {
                                 widget = 'WeakPointerContextualEditor 
@@ -5170,7 +4967,7 @@ Ui RS Report"
                                   state = 
                                   {
                                     {
-                                      key = => 'ObjectWeakPointer {"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}, 
+                                      key = => 'ObjectWeakPointer {"data", -> @5e0b6686-9c67-4fcb-a7b3-529b76221d51}, 
                                       value = => => 'ParametersSectionEditor 
                                       {
                                         widget = 'ToolsAndContentLayout 
@@ -5184,16 +4981,16 @@ Ui RS Report"
                                                 stretchToFit = true, 
                                                 columns = 
                                                 {
-                                                  => {name = "name", width = 161}, 
+                                                  => {name = "name", width = 160}, 
                                                   => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 237}
+                                                  => {name = "value", width = 238}
                                                 }
                                               }, 
-                                              expandedRowTargets = {{"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}}, 
+                                              expandedRowTargets = {{"data", -> @5e0b6686-9c67-4fcb-a7b3-529b76221d51}}, 
                                               rowHeightByTarget = 
                                               {
                                                 {
-                                                  key = => {"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}, 
+                                                  key = => {"data", -> @5e0b6686-9c67-4fcb-a7b3-529b76221d51}, 
                                                   value = => 40
                                                 }
                                               }
@@ -5204,7 +5001,7 @@ Ui RS Report"
                                     }
                                   }
                                 }, 
-                                currentSection = {"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}
+                                currentSection = {"data", -> @5e0b6686-9c67-4fcb-a7b3-529b76221d51}
                               }
                             }, 
                             {
@@ -5251,100 +5048,6 @@ Ui RS Report"
                                   }
                                 }, 
                                 currentSection = {"data", -> @9ecbe783-ca67-4bf2-90ea-4d9c0e3e025b}
-                              }
-                            }, 
-                            {
-                              key = => 'ObjectWeakPointer {"data", -> @0991c285-8c3f-4247-bd2f-cb2e92c89d6c}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @0991c285-8c3f-4247-bd2f-cb2e92c89d6c}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 189}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 282}
-                                                }
-                                              }, 
-                                              expandedRowTargets = {{"data", -> @0991c285-8c3f-4247-bd2f-cb2e92c89d6c}}, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @0991c285-8c3f-4247-bd2f-cb2e92c89d6c}, 
-                                                  value = => 40
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @0991c285-8c3f-4247-bd2f-cb2e92c89d6c}
-                              }
-                            }, 
-                            {
-                              key = => 'ObjectWeakPointer {"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893}, 
-                              value = => => 'ItemParametersEditor 
-                              {
-                                widget = 'WeakPointerContextualEditor 
-                                {
-                                  state = 
-                                  {
-                                    {
-                                      key = => 'ObjectWeakPointer {"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893}, 
-                                      value = => => 'ParametersSectionEditor 
-                                      {
-                                        widget = 'ToolsAndContentLayout 
-                                        {
-                                          content = 'TableWidget 
-                                          {
-                                            state = 
-                                            {
-                                              header = => 'TableHeader 
-                                              {
-                                                stretchToFit = true, 
-                                                columns = 
-                                                {
-                                                  => {name = "name", width = 189}, 
-                                                  => {name = "pointerToSources", width = 22}, 
-                                                  => {name = "value", width = 282}
-                                                }
-                                              }, 
-                                              expandedRowTargets = {{"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893}}, 
-                                              selectedRowTargets = {{"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893, "listSourceBank"}}, 
-                                              lastSelectedRowTarget = {"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893, "listSourceBank"}, 
-                                              rowHeightByTarget = 
-                                              {
-                                                {
-                                                  key = => {"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893}, 
-                                                  value = => 40
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }, 
-                                currentSection = {"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893}
                               }
                             }, 
                             {
@@ -5831,6 +5534,202 @@ Ui RS Report"
                                 }, 
                                 currentSection = {"data", -> @75f90adc-a9c0-425e-95c1-8bc068d84241}
                               }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 198}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 273}
+                                                }
+                                              }, 
+                                              expandedRowTargets = {{"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}}, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}
+                              }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @0991c285-8c3f-4247-bd2f-cb2e92c89d6c}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @0991c285-8c3f-4247-bd2f-cb2e92c89d6c}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 189}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 282}
+                                                }
+                                              }, 
+                                              expandedRowTargets = {{"data", -> @0991c285-8c3f-4247-bd2f-cb2e92c89d6c}}, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @0991c285-8c3f-4247-bd2f-cb2e92c89d6c}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @0991c285-8c3f-4247-bd2f-cb2e92c89d6c}
+                              }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            state = 
+                                            {
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 189}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 282}
+                                                }
+                                              }, 
+                                              expandedRowTargets = {{"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893}}, 
+                                              selectedRowTargets = {{"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893, "listSourceBank"}}, 
+                                              lastSelectedRowTarget = {"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893, "listSourceBank"}, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @b8ffc800-d910-4531-9f65-ec0d581d8893}
+                              }
+                            }, 
+                            {
+                              key = => 'ObjectWeakPointer {"data", -> @e6ab6858-6440-4793-83c1-0c21aa0087d9}, 
+                              value = => => 'ItemParametersEditor 
+                              {
+                                widget = 'WeakPointerContextualEditor 
+                                {
+                                  state = 
+                                  {
+                                    {
+                                      key = => 'ObjectWeakPointer {"data", -> @e6ab6858-6440-4793-83c1-0c21aa0087d9}, 
+                                      value = => => 'ParametersSectionEditor 
+                                      {
+                                        widget = 'ToolsAndContentLayout 
+                                        {
+                                          content = 'TableWidget 
+                                          {
+                                            widget = 'ToolsAndContentLayout {content = 'ViewportLayout {viewPosition = {y = 52}}}, 
+                                            state = 
+                                            {
+                                              viewPosition = {y = 52}, 
+                                              header = => 'TableHeader 
+                                              {
+                                                stretchToFit = true, 
+                                                columns = 
+                                                {
+                                                  => {name = "name", width = 182}, 
+                                                  => {name = "pointerToSources", width = 22}, 
+                                                  => {name = "value", width = 272}
+                                                }
+                                              }, 
+                                              expandedRowTargets = 
+                                              {
+                                                {"data", -> @e6ab6858-6440-4793-83c1-0c21aa0087d9}, 
+                                                {
+                                                  "data", 
+                                                  -> @e6ab6858-6440-4793-83c1-0c21aa0087d9, 
+                                                  "energyPercentageToMaximumArray"
+                                                }
+                                              }, 
+                                              rowHeightByTarget = 
+                                              {
+                                                {
+                                                  key = => {"data", -> @e6ab6858-6440-4793-83c1-0c21aa0087d9}, 
+                                                  value = => 40
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }, 
+                                currentSection = {"data", -> @e6ab6858-6440-4793-83c1-0c21aa0087d9}
+                              }
                             }
                           }
                         }
@@ -5847,7 +5746,8 @@ Ui RS Report"
           {
             currentElementTree = {"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}, 
             currentVisualizedElement = {"data", -> @ea29b62a-83eb-44b3-875f-cb407b572a2a}, 
-            currentItem = {"data", -> @75f90adc-a9c0-425e-95c1-8bc068d84241}, 
+            currentSelection = {{"data", -> @e6ab6858-6440-4793-83c1-0c21aa0087d9}}, 
+            currentItem = {"data", -> @e6ab6858-6440-4793-83c1-0c21aa0087d9}, 
             currentParameterBank = {"data", -> @18e7c8ea-0602-443b-8445-645171b43c6f}
           }
         }, 
@@ -6378,6 +6278,10 @@ Ui RS Report"
                               {
                                 key = => 'ObjectWeakPointer {"data", -> @ce492479-9565-4bb4-ab96-f200f0f97962}, 
                                 value = => => 'CompositeFilePreviewWidget void
+                              }, 
+                              {
+                                key = => 'ObjectWeakPointer {"data", -> @332a0979-1735-4a1a-b0d4-4943ec618d09}, 
+                                value = => => 'CompositeFilePreviewWidget void
                               }
                             }
                           }
@@ -6631,7 +6535,7 @@ Ui RS Report"
                                           => {name = "path", visible = false, width = 80}
                                         }
                                       }, 
-                                      expandedRowTargets = {{"data", -> @31d0e3a9-7d9d-4d48-a72d-9ce3afe7a4ad, "fileDependencies"}}
+                                      expandedRowTargets = {{"data", -> @e10c0581-8e3b-40f7-a479-f5732f5ba025, "fileDependencies"}}
                                     }
                                   }
                                 }
