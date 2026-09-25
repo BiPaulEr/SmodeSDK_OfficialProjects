@@ -1,0 +1,242 @@
+
+{
+  softwareVersion = {programName = "Smode SDK", branchName = "master", majorVersion = 14, patch = 1015, commitHash = "895e0aad77"}, 
+  content = => 'CompoBasedTextureModifier @3a070156-3720-49fd-8acb-154b6ccc4ea4 
+  {
+    label = "Laser2DModifier", 
+    tools = 
+    {
+      => 'ParameterBank @737970c4-999a-406c-b0c0-5ea051435fe7 
+      {
+        label = "MainParameters", 
+        parameters = 
+        {
+          => 'Parameter(ActivationState) @c51df35a-8b60-4732-a900-4f4bc65b1f5c 
+          {
+            targets = 
+            {
+              => 'ParameterLinkTarget @7f3e1b2e-9b96-4eac-af3b-f80633906c32 
+              {
+                target = {"data", -> @7da9f424-fd1c-482a-88fe-87b60621c2c4, "activation"}
+              }
+            }
+          }, 
+          => 'Parameter(ActivationState) @4f25eceb-a3ad-4adf-9114-8d6ee2ccaab1 
+          {
+            targets = 
+            {
+              => 'ParameterLinkTarget @993c0cf5-56f2-4d73-a236-aad1964e6ca5 
+              {
+                target = {"data", -> @6f9b6e61-872a-4fe2-9b17-0a827c64f5c6, "activation"}
+              }
+            }, 
+            value = "inactive"
+          }, 
+          => 'Parameter(ActivationState) @4b4da649-bb52-4c1b-a993-60647ceb9a43 
+          {
+            targets = 
+            {
+              => 'ParameterLinkTarget @d1ef9ea3-3dc3-430f-97cb-3490e0fefe8d 
+              {
+                target = {"data", -> @107e2dc3-632b-4a48-9507-dcd859de32b1, "activation"}
+              }
+            }, 
+            value = "inactive"
+          }, 
+          => 'Parameter(LaserGeometryType) @30c9f9c4-a819-491b-8324-731369a3ad66 
+          {
+            targets = 
+            {
+              => 'ParameterLinkTarget @394bc208-4ec0-49d1-ab87-a04fe62f6bbc 
+              {
+                target = {"data", -> @107e2dc3-632b-4a48-9507-dcd859de32b1, "geometryType"}
+              }
+            }, 
+            value = "lines"
+          }, 
+          => 'Parameter(Boolean) @7e0c75cb-5b6c-42c2-a4ee-1cfe992d47cf 
+          {
+            label = "Unwrap", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @0e4f80fe-d28b-4548-aed0-c159f8f6fbf5 
+              {
+                target = {"data", -> @107e2dc3-632b-4a48-9507-dcd859de32b1, "uvwrap"}
+              }
+            }, 
+            value = true
+          }, 
+          => 'Parameter(Position3d) @e24b59a4-39c3-495f-800a-a4b174833a80 
+          {
+            label = "BottomRight", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @52bf2a4e-b397-4944-8333-ef672365ba30 
+              {
+                target = {"data", -> @107e2dc3-632b-4a48-9507-dcd859de32b1, "point1"}
+              }
+            }
+          }, 
+          => 'Parameter(Position3d) @fda34437-73d8-4910-b8bc-d0ac1b2961df 
+          {
+            label = "BottomLeft", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @684c175e-4188-406c-9692-185c1e69aec4 
+              {
+                target = {"data", -> @107e2dc3-632b-4a48-9507-dcd859de32b1, "point2"}
+              }
+            }, 
+            value = {x = 1.}
+          }, 
+          => 'Parameter(Position3d) @c9399c2c-f19b-40bd-b36f-5b624f92af2a 
+          {
+            label = "LeftUp", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @bfd1d8eb-b850-4e99-b043-0debe1c80102 
+              {
+                target = {"data", -> @107e2dc3-632b-4a48-9507-dcd859de32b1, "point3"}
+              }
+            }, 
+            value = {x = 1., y = 1.}
+          }, 
+          => 'Parameter(Position3d) @dbe256ab-e06b-46d5-9827-a4fc08eb20a2 
+          {
+            label = "LeftRight", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @90c7af24-1561-4e32-a733-38a56b6e9157 
+              {
+                target = {"data", -> @107e2dc3-632b-4a48-9507-dcd859de32b1, "point4"}
+              }
+            }, 
+            value = {y = 1.}
+          }, 
+          => 'Parameter(Boolean) @aa9a82fd-8d9a-430d-8fd2-f3ff51f3baa0 
+          {
+            label = "UserColorAndMask", 
+            targets = 
+            {
+              => 'ParameterLinkTarget @7db04d57-67ea-44a4-9404-98256cbdd7a4 
+              {
+                target = {"data", -> @f532d981-cbe9-4fef-bb0a-435968809744, "useAlphaChannel"}
+              }
+            }, 
+            value = true
+          }
+        }
+      }
+    }, 
+    compo = 
+    {
+      rasterizer = #1 {resolution = #1 {preset = "custom", width = 256, height = 256}}, 
+      currentCamera = {"data", -> @320b786c-937e-41cf-b739-b990ccc40d54}, 
+      cameras = 
+      {
+        => 'AffineCamera @320b786c-937e-41cf-b739-b990ccc40d54 
+        {
+          preset = {libraryName = "Default", presetName = "Orthographic Front"}, 
+          placement = => 'TargetOrientationDistance3dPlacement @5019ab57-f37e-46f3-b998-071d56363533 {distance = 3.5}, 
+          focusParameters = {distance = 3.5}, 
+          frustum = => 'OrthographicFrustum @4d91462a-d467-430b-b1e2-8099c5d9b45f #1 
+          {
+            customAspectRatio = {enabled = true}, 
+            size = {width = 9.5, height = 9.5, linked = true, ratio = 1.}
+          }
+        }
+      }, 
+      defaultCamera = 
+      {
+        placement = => 'TargetOrientationDistance3dPlacement @214bc321-4fd3-4bf1-ac0f-7ac04ab60dea 
+        {
+          orientation = {x = -0.314159274, y = 0.314159274}, 
+          distance = 3.5
+        }, 
+        focusParameters = {distance = 3.5}, 
+        frustum = => 'FieldOfViewPerspectiveFrustum @71ee64e5-8c53-40e0-8316-fc7770ba4ee9 #2 
+        {
+          clippingDistances = {center = 175.0175, size = 349.965, begin = 0.035, end = 350.}, 
+          horizontal = 1.047197551197
+        }
+      }, 
+      layers = 
+      {
+        => 'GeometryLayer @f7eba8e0-e715-4f4d-b8a0-35fec831f65a 
+        {
+          generator = => 'TextureLinesGeometryGenerator @f532d981-cbe9-4fef-bb0a-435968809744 
+          {
+            generator = => 'ParentInputTextureGenerator @1b6770cc-400c-4893-8492-2c40525e3e4a 
+            {
+              extractor = => 'Parametric2dPlacement @169dfda2-9d74-4f53-b137-5fc35dc925f4 
+              {
+                scale = => 'SizePlacement2dScale @99e34308-37e4-4949-bb3f-95269ca40588 {size = {width = 1., height = 1., ratio = 1.}}
+              }
+            }, 
+            size = {width = 10., height = 10., linked = true, ratio = 1.}, 
+            useAlphaChannel = true
+          }, 
+          placement = => 'PositionOrientationSize3dPlacement @85add1a6-fce5-49bf-b6f5-983736c255c8 void, 
+          renderer = => 'GroupGeometryLayerUser @e9701775-93cc-4803-826b-ebbed1da3fb0 
+          {
+            placement = => 'PositionOrientationSize3dPlacement @ebd9803a-2c68-450a-8e65-12ad18858844 void, 
+            renderers = 
+            {
+              => 'ThickLinesGeometryRenderer @7da9f424-fd1c-482a-88fe-87b60621c2c4 #1 
+              {
+                placement = => 'PositionOrientationSize3dPlacement @26c79191-a58e-4de2-aeaf-4360e92f3ebf void, 
+                map = => 'UniformTextureGenerator @96f5c298-394d-42f7-b840-68a14dc0dc7e 
+                {
+                  resolution = #1 {width = 1024, height = 1024}, 
+                  color = {red = 1., green = 1., blue = 1., value = 1.}
+                }, 
+                thickness = 3., 
+                textureCoordinates = => 'FunctionGeometryMask @8c9bd1f6-295a-4376-a1b1-0fc85819cd87 
+                {
+                  mask = => 'TextureCoordinateGeometryMask @6795c311-680e-43e9-80cb-17f05ff98d29 void, 
+                  function = => 'ParametricScalarFunction(Percentage, Percentage) @f700d9b7-db34-4893-9644-c45fa71017c5 
+                  {
+                    shape = => 'LinearRampFunctionShape @c6093e64-dbaa-4657-81c2-907d6c14a44a void, 
+                    parameters = {maximum = 1., period = 1., wrapMode = "clamp"}
+                  }
+                }
+              }, 
+              => 'SimplePointsGeometryRenderer @6f9b6e61-872a-4fe2-9b17-0a827c64f5c6 
+              {
+                activation = "inactive", 
+                placement = => 'PositionOrientationSize3dPlacement @f77065ef-84b5-4fb6-adb9-abdfe3f70e16 
+                {
+                  activation = "activationRequested"
+                }, 
+                map = => 'UniformTextureGenerator @198f25d3-8226-425c-98ca-1f0c70d47983 
+                {
+                  activation = "activationRequested", 
+                  resolution = #1 {width = 1024, height = 1024}, 
+                  color = {red = 1., green = 1., blue = 1., value = 1.}
+                }
+              }, 
+              => 'LaserGeometryRenderer @107e2dc3-632b-4a48-9507-dcd859de32b1 
+              {
+                activation = "inactive", 
+                placement = => 'PositionOrientationSize3dPlacement @7eec672e-59ed-46e2-ab5a-cb3d72d50689 
+                {
+                  activation = "activationRequested"
+                }, 
+                device = {factory = "Remote Laser", deviceName = "Laser"}, 
+                geometryType = "lines", 
+                generator = => 'UniformTextureGenerator @ed397161-8133-4f31-beca-4f4edd8a9481 
+                {
+                  activation = "activationRequested", 
+                  resolution = #1 {width = 256, height = 256}, 
+                  color = {red = 1., green = 1., blue = 1., value = 1.}
+                }, 
+                uvwrap = true
+              }
+            }
+          }
+        }
+      }
+    }
+  }, 
+  uiState = void
+}
